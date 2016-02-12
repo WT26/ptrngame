@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -76,6 +77,7 @@ public class levelOne extends AppCompatActivity {
         toggle.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 total_toggles += 1;
+                current_toggles += 1;
 
                 MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                 mp.start();
@@ -94,6 +96,7 @@ public class levelOne extends AppCompatActivity {
         toggle2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 total_toggles += 1;
+                current_toggles += 1;
                 MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                 mp.start();
                 if(toggle.isChecked()){
@@ -111,6 +114,8 @@ public class levelOne extends AppCompatActivity {
         toggle3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 total_toggles += 1;
+                current_toggles += 1;
+
                 MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                 mp.start();
                 if(CheckWinningCondition()){
@@ -174,6 +179,9 @@ public class levelOne extends AppCompatActivity {
         else{
             level_one_completed = 1;
         }
+
+        Log.d("current toggles", Integer.toString(current_toggles));
+        Log.d("ster toggles", Integer.toString(toggles_for_star));
 
         if(current_toggles <= toggles_for_star){
             if(level_one_starred == 0){

@@ -41,15 +41,11 @@ public class levelMenuActivity extends AppCompatActivity {
         SharedPreferences preferences4 = PreferenceManager.getDefaultSharedPreferences(this);
         level_one_starred = preferences4.getInt("LevelOneStarred", 0);
 
-        Log.d("TAGG", Integer.toString(level_one_starred));
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_menu);
 
         back = (Button) findViewById(R.id.angry_btn);
         levelone_button = (Button) findViewById(R.id.angry_btn2);
-
-        Log.d("TAGG", Integer.toString(level_one_starred));
 
         if(level_one_completed == 1 && level_one_starred == 0){
             Resources res = getResources();
@@ -93,19 +89,29 @@ public class levelMenuActivity extends AppCompatActivity {
         super.onResume();
         levelone_button = (Button) findViewById(R.id.angry_btn2);
 
-        if(level_one_completed == 0 || level_one_starred == 0){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
-            levelone_button.setBackground(drawable);
-        }
-        else if(level_one_completed == 1 || level_one_starred == 0){
+        Log.d("Resume", "IT RESUMED");
+        Log.d("Resume levelcompl", Integer.toString(level_one_completed));
+        Log.d("Resume levelstar", Integer.toString(level_one_starred));
+
+        SharedPreferences preferences3 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_one_completed = preferences3.getInt("LevelOneCompleted", 0);
+        SharedPreferences preferences4 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_one_starred = preferences4.getInt("LevelOneStarred", 0);
+
+
+        if(level_one_completed == 1 && level_one_starred == 0){
             Resources res = getResources();
             Drawable drawable = res.getDrawable(R.drawable.completed);
             levelone_button.setBackground(drawable);
         }
-        else{
+        else if(level_one_starred == 1 && level_one_completed == 1){
             Resources res = getResources();
             Drawable drawable = res.getDrawable(R.drawable.starred);
+            levelone_button.setBackground(drawable);
+        }
+        else{
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
             levelone_button.setBackground(drawable);
         }
     }
