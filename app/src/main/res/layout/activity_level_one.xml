@@ -124,4 +124,14 @@
         android:layout_above="@+id/adView"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:id="@+id/button4"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/retrybutton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

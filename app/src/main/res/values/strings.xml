@@ -7,5 +7,8 @@
     <string name="title_activity_level_menu">levelMenuActivity</string>
     <string name="title_activity_level_one">levelOne</string>
     <string name="title_activity_infopage">infopage</string>
+    <string name="title_activity_level_two">levelTwo</string>
+    <string name="title_activity_level_three">levelThree</string>
+    <string name="title_activity_level_four">levelFour</string>
 
 </resources>

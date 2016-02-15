@@ -45,6 +45,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.MainActivity" />
         </activity>
+        <activity
+            android:name=".levelTwo"
+            android:label="@string/title_activity_level_two"
+            android:parentActivityName=".levelMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.levelMenuActivity" />
+        </activity>
+        <activity
+            android:name=".levelThree"
+            android:label="@string/title_activity_level_three" >
+        </activity>
+        <activity
+            android:name=".levelFour"
+            android:label="@string/title_activity_level_four"
+            android:parentActivityName=".levelMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.levelMenuActivity" />
+        </activity>
     </application>
 
 </manifest>

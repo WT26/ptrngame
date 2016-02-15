@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-public class levelOne extends AppCompatActivity {
+public class levelFour extends AppCompatActivity {
     public static final String myPrefsKey13 = "MyPrefsFile";
     int sounds_toggle;
 
@@ -23,6 +23,7 @@ public class levelOne extends AppCompatActivity {
     ToggleButton toggle;
     ToggleButton toggle2;
     ToggleButton toggle3;
+    ToggleButton toggle4;
     Button back;
     Button restart;
 
@@ -33,10 +34,9 @@ public class levelOne extends AppCompatActivity {
     int total_completed;
 
     public static final String myPrefsKey3 = "MyPrefsFile";
-    int level_one_completed;
-
+    int level_four_completed;
     public static final String myPrefsKey4 = "MyPrefsFile";
-    int level_one_starred;
+    int level_four_starred;
 
     public static final String myPrefsKey5 = "MyPrefsFile";
     int total_starred;
@@ -51,45 +51,63 @@ public class levelOne extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
 
-
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level_one);
+        setContentView(R.layout.activity_level_four);
 
         current_toggles = 0;
-        toggles_for_star = 2;
+        toggles_for_star = 4;
 
         // Getting information
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         total_toggles = preferences.getInt("TotalToggles", 0);
 
         SharedPreferences preferences3 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_one_completed = preferences3.getInt("LevelOneCompleted", 0);
+        level_four_completed = preferences3.getInt("LevelFourCompleted", 0);
 
         SharedPreferences preferences2 = PreferenceManager.getDefaultSharedPreferences(this);
         total_completed = preferences2.getInt("TotalCompleted", 0);
 
         SharedPreferences preferences4 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_one_starred = preferences4.getInt("LevelOneStarred", 0);
+        level_four_starred = preferences4.getInt("LevelFourStarred", 0);
 
         SharedPreferences preferences5 = PreferenceManager.getDefaultSharedPreferences(this);
         total_starred = preferences5.getInt("TotalStarred", 0);
-
-        SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
-        total_retrys = preferences6.getInt("TotalRetrys", 0);
 
         SharedPreferences preferences99 = PreferenceManager.getDefaultSharedPreferences(this);
         sounds_toggle = preferences99.getInt("SoundsToggle", 1);
 
 
         back = (Button) findViewById(R.id.angry_btn);
-        restart = (Button) findViewById(R.id.button4);
+        restart = (Button) findViewById(R.id.button5);
 
         toggle = (ToggleButton) findViewById(R.id.chkState);
-        toggle2 = (ToggleButton) findViewById(R.id.chkState2);
-        toggle3 = (ToggleButton) findViewById(R.id.toggleButton);
+        toggle2 = (ToggleButton) findViewById(R.id.toggleButton2);
+        toggle3 = (ToggleButton) findViewById(R.id.chkState2);
+        toggle4 = (ToggleButton) findViewById(R.id.toggleButton);
 
         toggle.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                total_toggles += 1;
+                current_toggles += 1;
+                if(sounds_toggle == 0){
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                    mp.start();
+                }
+
+                if(toggle4.isChecked()){
+                    toggle4.setChecked(false);
+                }
+                else {
+                    toggle4.setChecked(true);
+                }
+
+                if(CheckWinningCondition()){
+                    levelWon();
+                }
+            }
+        });
+
+        toggle2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 total_toggles += 1;
                 current_toggles += 1;
@@ -103,13 +121,20 @@ public class levelOne extends AppCompatActivity {
                 else {
                     toggle3.setChecked(true);
                 }
+                if(toggle4.isChecked()){
+                    toggle4.setChecked(false);
+                }
+                else {
+                    toggle4.setChecked(true);
+                }
+
                 if(CheckWinningCondition()){
                     levelWon();
                 }
             }
         });
 
-        toggle2.setOnClickListener(new View.OnClickListener() {
+        toggle3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 total_toggles += 1;
                 current_toggles += 1;
@@ -129,14 +154,25 @@ public class levelOne extends AppCompatActivity {
             }
         });
 
-        toggle3.setOnClickListener(new View.OnClickListener() {
+        toggle4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 total_toggles += 1;
                 current_toggles += 1;
-
                 if(sounds_toggle == 0){
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                     mp.start();
+                }
+                if(toggle.isChecked()){
+                    toggle.setChecked(false);
+                }
+                else {
+                    toggle.setChecked(true);
+                }
+                if(toggle3.isChecked()){
+                    toggle3.setChecked(false);
+                }
+                else {
+                    toggle3.setChecked(true);
                 }
                 if(CheckWinningCondition()){
                     levelWon();
@@ -147,13 +183,12 @@ public class levelOne extends AppCompatActivity {
         restart.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 total_retrys += 1;
+
+                restart_level();
                 if(sounds_toggle == 0){
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                     mp.start();
                 }
-                restart_level();
-                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
-                mp.start();
             }
         });
 
@@ -167,7 +202,8 @@ public class levelOne extends AppCompatActivity {
     }
 
     public boolean CheckWinningCondition(){
-        if(toggle.isChecked() && toggle2.isChecked() && toggle3.isChecked()){
+        if(toggle.isChecked() && toggle2.isChecked() && toggle3.isChecked()
+                && toggle4.isChecked()){
             return true;
         }
         else{
@@ -176,6 +212,8 @@ public class levelOne extends AppCompatActivity {
     }
 
     public void levelWon(){
+        SharedPreferences preferences99 = PreferenceManager.getDefaultSharedPreferences(this);
+        sounds_toggle = preferences99.getInt("SoundsToggle", 1);
 
         // Commit current TotalToggles to save
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -183,20 +221,20 @@ public class levelOne extends AppCompatActivity {
         editor.putInt("TotalToggles", total_toggles);
         editor.apply();
 
-        if(level_one_completed == 0){
-            level_one_completed = 1;
+        if(level_four_completed == 0){
+            level_four_completed = 1;
             total_completed += 1;
         }
         else{
-            level_one_completed = 1;
+            level_four_completed = 1;
         }
 
         Log.d("current toggles", Integer.toString(current_toggles));
         Log.d("ster toggles", Integer.toString(toggles_for_star));
 
         if(current_toggles <= toggles_for_star){
-            if(level_one_starred == 0){
-                level_one_starred = 1;
+            if(level_four_starred == 0){
+                level_four_starred = 1;
                 total_starred += 1;
                 if(sounds_toggle == 0){
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.levelcompletedsfx);
@@ -204,13 +242,13 @@ public class levelOne extends AppCompatActivity {
                 }
             }
             else{
-                level_one_starred = 1;
+                level_four_starred = 1;
             }
         }
 
         SharedPreferences preferences2 = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor2 = preferences2.edit();
-        editor2.putInt("LevelOneCompleted", level_one_completed);
+        editor2.putInt("LevelFourCompleted", level_four_completed);
         editor2.apply();
 
         SharedPreferences preferences3 = PreferenceManager.getDefaultSharedPreferences(this);
@@ -225,7 +263,7 @@ public class levelOne extends AppCompatActivity {
 
         SharedPreferences preferences5 = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor5 = preferences5.edit();
-        editor5.putInt("LevelOneStarred", level_one_starred);
+        editor5.putInt("LevelFourStarred", level_four_starred);
         editor5.apply();
 
         SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
@@ -257,6 +295,9 @@ public class levelOne extends AppCompatActivity {
         }
         if(toggle3.isChecked()){
             toggle3.setChecked(false);
+        }
+        if(toggle4.isChecked()){
+            toggle4.setChecked(false);
         }
         current_toggles = 0;
 
