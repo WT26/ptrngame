@@ -93,6 +93,14 @@
             android:name=".levelEight"
             android:label="@string/title_activity_level_eight" >
         </activity>
+        <activity
+            android:name=".levelNine"
+            android:label="@string/title_activity_level_nine"
+            android:parentActivityName=".levelMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.levelMenuActivity" />
+        </activity>
     </application>
 
 </manifest>

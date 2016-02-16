@@ -330,7 +330,7 @@
                     android:layout_width="126dp"
                     android:layout_height="126dp"
                     android:background="@drawable/notcompleted"
-                    android:onClick="MainMenu"
+                    android:onClick="levelNine"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
             </LinearLayout>

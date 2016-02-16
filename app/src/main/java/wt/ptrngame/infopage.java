@@ -83,6 +83,11 @@ public class infopage extends AppCompatActivity {
     public static final String myPrefsKey20 = "MyPrefsFile";
     int level_eight_starred;
 
+    public static final String myPrefsKey21 = "MyPrefsFile";
+    int level_nine_completed;
+    public static final String myPrefsKey22 = "MyPrefsFile";
+    int level_nine_starred;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -144,6 +149,11 @@ public class infopage extends AppCompatActivity {
         level_eight_completed = preferences19.getInt("LevelEightCompleted", 0);
         SharedPreferences preferences20 = PreferenceManager.getDefaultSharedPreferences(this);
         level_eight_starred = preferences20.getInt("LevelEightStarred", 0);
+
+        SharedPreferences preferences21 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_nine_completed = preferences21.getInt("LevelNineCompleted", 0);
+        SharedPreferences preferences22 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_nine_starred = preferences22.getInt("LevelNineStarred", 0);
 
 
 
@@ -357,6 +367,17 @@ public class infopage extends AppCompatActivity {
         SharedPreferences.Editor editor23 = preferences23.edit();
         editor23.putInt("LevelEightStarred", level_eight_starred);
         editor23.apply();
+
+        level_nine_completed = 0;
+        SharedPreferences preferences24 = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor24 = preferences24.edit();
+        editor24.putInt("LevelNineCompleted", level_nine_completed);
+        editor24.apply();
+        level_nine_starred = 0;
+        SharedPreferences preferences25 = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor25 = preferences25.edit();
+        editor25.putInt("LevelNineStarred", level_nine_starred);
+        editor25.apply();
 
     }
 }

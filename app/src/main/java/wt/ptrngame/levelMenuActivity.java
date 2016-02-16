@@ -68,6 +68,11 @@ public class levelMenuActivity extends AppCompatActivity {
     public static final String myPrefsKey18 = "MyPrefsFile";
     int level_eight_starred;
 
+    public static final String myPrefsKey19 = "MyPrefsFile";
+    int level_nine_completed;
+    public static final String myPrefsKey20 = "MyPrefsFile";
+    int level_nine_starred;
+
 
     Intent intent = getIntent();
     //String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
@@ -80,6 +85,8 @@ public class levelMenuActivity extends AppCompatActivity {
     Button levelsix_button;
     Button levelseven_button;
     Button leveleight_button;
+    Button levelnine_button;
+
 
 
 
@@ -129,6 +136,11 @@ public class levelMenuActivity extends AppCompatActivity {
         SharedPreferences preferences18 = PreferenceManager.getDefaultSharedPreferences(this);
         level_eight_starred = preferences18.getInt("LevelEightStarred", 0);
 
+        SharedPreferences preferences19 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_nine_completed = preferences19.getInt("LevelNineCompleted", 0);
+        SharedPreferences preferences20 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_nine_starred = preferences20.getInt("LevelNineStarred", 0);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_menu);
 
@@ -141,6 +153,7 @@ public class levelMenuActivity extends AppCompatActivity {
         levelsix_button = (Button) findViewById(R.id.level6);
         levelseven_button = (Button) findViewById(R.id.level7);
         leveleight_button = (Button) findViewById(R.id.level8);
+        levelnine_button = (Button) findViewById(R.id.level9);
 
 
         //level1
@@ -279,6 +292,22 @@ public class levelMenuActivity extends AppCompatActivity {
             leveleight_button.setBackground(drawable);
         }
 
+        //level9
+        if(level_nine_completed == 1 && level_nine_starred == 0){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.completed);
+            levelnine_button.setBackground(drawable);
+        }
+        else if(level_nine_starred == 1 && level_nine_completed == 1){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.starred);
+            levelnine_button.setBackground(drawable);
+        }
+        else{
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            levelnine_button.setBackground(drawable);
+        }
 
 
 
@@ -371,6 +400,16 @@ public class levelMenuActivity extends AppCompatActivity {
             }
         });
 
+        levelnine_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                if(sounds_toggle == 0){
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                    mp.start();
+                }
+                levelNine(view);
+            }
+        });
+
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -420,6 +459,11 @@ public class levelMenuActivity extends AppCompatActivity {
         level_eight_completed = preferences17.getInt("LevelEightCompleted", 0);
         SharedPreferences preferences18 = PreferenceManager.getDefaultSharedPreferences(this);
         level_eight_starred = preferences18.getInt("LevelEightStarred", 0);
+
+        SharedPreferences preferences19 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_nine_completed = preferences19.getInt("LevelNineCompleted", 0);
+        SharedPreferences preferences20 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_nine_starred = preferences20.getInt("LevelNineStarred", 0);
 
         if(level_one_completed == 1 && level_one_starred == 0){
             Resources res = getResources();
@@ -563,6 +607,24 @@ public class levelMenuActivity extends AppCompatActivity {
             Drawable drawable = res.getDrawable(R.drawable.notcompleted);
             leveleight_button.setBackground(drawable);
         }
+
+        // Level nine completed?
+        levelnine_button = (Button) findViewById(R.id.level9);
+        if(level_nine_completed == 1 && level_nine_starred == 0){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.completed);
+            levelnine_button.setBackground(drawable);
+        }
+        else if(level_nine_starred == 1 && level_nine_completed == 1){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.starred);
+            levelnine_button.setBackground(drawable);
+        }
+        else{
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            levelnine_button.setBackground(drawable);
+        }
     }
 
     @Override
@@ -640,6 +702,11 @@ public class levelMenuActivity extends AppCompatActivity {
     public  void levelEight(View view){
         Intent intent8 = new Intent(this, levelEight.class);
         startActivity(intent8);
+    }
+
+    public  void levelNine(View view){
+        Intent intent9 = new Intent(this, levelNine.class);
+        startActivity(intent9);
     }
 
 }
