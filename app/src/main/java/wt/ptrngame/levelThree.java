@@ -78,6 +78,9 @@ public class levelThree extends AppCompatActivity {
         SharedPreferences preferences99 = PreferenceManager.getDefaultSharedPreferences(this);
         sounds_toggle = preferences99.getInt("SoundsToggle", 1);
 
+        SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
+        total_retrys = preferences6.getInt("TotalRetrys", 0);
+
 
         back = (Button) findViewById(R.id.angry_btn);
         restart = (Button) findViewById(R.id.button5);

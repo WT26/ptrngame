@@ -152,8 +152,6 @@ public class levelOne extends AppCompatActivity {
                     mp.start();
                 }
                 restart_level();
-                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
-                mp.start();
             }
         });
 
@@ -191,8 +189,6 @@ public class levelOne extends AppCompatActivity {
             level_one_completed = 1;
         }
 
-        Log.d("current toggles", Integer.toString(current_toggles));
-        Log.d("ster toggles", Integer.toString(toggles_for_star));
 
         if(current_toggles <= toggles_for_star){
             if(level_one_starred == 0){

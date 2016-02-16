@@ -25,7 +25,7 @@ import com.google.android.gms.ads.AdView;
 
 public class levelMenuActivity extends AppCompatActivity {
 
-    public static final String myPrefsKey13 = "MyPrefsFile";
+    public static final String mysounds = "MyPrefsFile";
     int sounds_toggle;
 
     public static final String myPrefsKey3 = "MyPrefsFile";
@@ -48,6 +48,26 @@ public class levelMenuActivity extends AppCompatActivity {
     public static final String myPrefsKey10 = "MyPrefsFile";
     int level_four_starred;
 
+    public static final String myPrefsKey11 = "MyPrefsFile";
+    int level_five_completed;
+    public static final String myPrefsKey12 = "MyPrefsFile";
+    int level_five_starred;
+
+    public static final String myPrefsKey13 = "MyPrefsFile";
+    int level_six_completed;
+    public static final String myPrefsKey14 = "MyPrefsFile";
+    int level_six_starred;
+
+    public static final String myPrefsKey15 = "MyPrefsFile";
+    int level_seven_completed;
+    public static final String myPrefsKey16 = "MyPrefsFile";
+    int level_seven_starred;
+
+    public static final String myPrefsKey17 = "MyPrefsFile";
+    int level_eight_completed;
+    public static final String myPrefsKey18 = "MyPrefsFile";
+    int level_eight_starred;
+
 
     Intent intent = getIntent();
     //String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
@@ -56,6 +76,11 @@ public class levelMenuActivity extends AppCompatActivity {
     Button leveltwo_button;
     Button levelthree_button;
     Button levelfour_button;
+    Button levelfive_button;
+    Button levelsix_button;
+    Button levelseven_button;
+    Button leveleight_button;
+
 
 
     @Override
@@ -80,9 +105,29 @@ public class levelMenuActivity extends AppCompatActivity {
         level_three_starred = preferences8.getInt("LevelThreeStarred", 0);
 
         SharedPreferences preferences9 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_three_completed = preferences9.getInt("LevelFourCompleted", 0);
+        level_four_completed = preferences9.getInt("LevelFourCompleted", 0);
         SharedPreferences preferences10 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_three_starred = preferences10.getInt("LevelFourStarred", 0);
+        level_four_starred = preferences10.getInt("LevelFourStarred", 0);
+
+        SharedPreferences preferences11 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_five_completed = preferences11.getInt("LevelFiveCompleted", 0);
+        SharedPreferences preferences12 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_five_starred = preferences12.getInt("LevelFiveStarred", 0);
+
+        SharedPreferences preferences13 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_six_completed = preferences13.getInt("LevelSixCompleted", 0);
+        SharedPreferences preferences14 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_six_starred = preferences14.getInt("LevelSixStarred", 0);
+
+        SharedPreferences preferences15 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_seven_completed = preferences15.getInt("LevelSevenCompleted", 0);
+        SharedPreferences preferences16 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_seven_starred = preferences16.getInt("LevelSevenStarred", 0);
+
+        SharedPreferences preferences17 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_eight_completed = preferences17.getInt("LevelEightCompleted", 0);
+        SharedPreferences preferences18 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_eight_starred = preferences18.getInt("LevelEightStarred", 0);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_menu);
@@ -92,6 +137,11 @@ public class levelMenuActivity extends AppCompatActivity {
         leveltwo_button = (Button) findViewById(R.id.level2);
         levelthree_button = (Button) findViewById(R.id.level3);
         levelfour_button = (Button) findViewById(R.id.level4);
+        levelfive_button = (Button) findViewById(R.id.level5);
+        levelsix_button = (Button) findViewById(R.id.level6);
+        levelseven_button = (Button) findViewById(R.id.level7);
+        leveleight_button = (Button) findViewById(R.id.level8);
+
 
         //level1
         if(level_one_completed == 1 && level_one_starred == 0){
@@ -148,7 +198,7 @@ public class levelMenuActivity extends AppCompatActivity {
         if(level_four_completed == 1 && level_four_starred == 0){
             Resources res = getResources();
             Drawable drawable = res.getDrawable(R.drawable.completed);
-            levelthree_button.setBackground(drawable);
+            levelfour_button.setBackground(drawable);
         }
         else if(level_four_starred == 1 && level_four_completed == 1){
             Resources res = getResources();
@@ -160,6 +210,77 @@ public class levelMenuActivity extends AppCompatActivity {
             Drawable drawable = res.getDrawable(R.drawable.notcompleted);
             levelfour_button.setBackground(drawable);
         }
+
+        //level5
+        if(level_five_completed == 1 && level_five_starred == 0){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.completed);
+            levelfive_button.setBackground(drawable);
+        }
+        else if(level_five_starred == 1 && level_five_completed == 1){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.starred);
+            levelfive_button.setBackground(drawable);
+        }
+        else{
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            levelfive_button.setBackground(drawable);
+        }
+
+        //level6
+        if(level_six_completed == 1 && level_six_starred == 0){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.completed);
+            levelsix_button.setBackground(drawable);
+        }
+        else if(level_six_starred == 1 && level_six_completed == 1){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.starred);
+            levelsix_button.setBackground(drawable);
+        }
+        else{
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            levelsix_button.setBackground(drawable);
+        }
+
+        //level7
+        if(level_seven_completed == 1 && level_seven_starred == 0){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.completed);
+            levelseven_button.setBackground(drawable);
+        }
+        else if(level_seven_starred == 1 && level_seven_completed == 1){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.starred);
+            levelseven_button.setBackground(drawable);
+        }
+        else{
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            levelseven_button.setBackground(drawable);
+        }
+
+        //level8
+        if(level_eight_completed == 1 && level_eight_starred == 0){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.completed);
+            leveleight_button.setBackground(drawable);
+        }
+        else if(level_eight_starred == 1 && level_eight_completed == 1){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.starred);
+            leveleight_button.setBackground(drawable);
+        }
+        else{
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            leveleight_button.setBackground(drawable);
+        }
+
+
+
 
 
 
@@ -210,6 +331,46 @@ public class levelMenuActivity extends AppCompatActivity {
             }
         });
 
+        levelfive_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                if(sounds_toggle == 0){
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                    mp.start();
+                }
+                levelFive(view);
+            }
+        });
+
+        levelsix_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                if(sounds_toggle == 0){
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                    mp.start();
+                }
+                levelSix(view);
+            }
+        });
+
+        levelseven_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                if(sounds_toggle == 0){
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                    mp.start();
+                }
+                levelSeven(view);
+            }
+        });
+
+        leveleight_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                if(sounds_toggle == 0){
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                    mp.start();
+                }
+                levelEight(view);
+            }
+        });
+
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -239,6 +400,26 @@ public class levelMenuActivity extends AppCompatActivity {
         level_four_completed = preferences9.getInt("LevelFourCompleted", 0);
         SharedPreferences preferences10 = PreferenceManager.getDefaultSharedPreferences(this);
         level_four_starred = preferences10.getInt("LevelFourStarred", 0);
+
+        SharedPreferences preferences11 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_five_completed = preferences11.getInt("LevelFiveCompleted", 0);
+        SharedPreferences preferences12 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_five_starred = preferences12.getInt("LevelFiveStarred", 0);
+
+        SharedPreferences preferences13 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_six_completed = preferences13.getInt("LevelSixCompleted", 0);
+        SharedPreferences preferences14 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_six_starred = preferences14.getInt("LevelSixStarred", 0);
+
+        SharedPreferences preferences15 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_seven_completed = preferences15.getInt("LevelSevenCompleted", 0);
+        SharedPreferences preferences16 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_seven_starred = preferences16.getInt("LevelSevenStarred", 0);
+
+        SharedPreferences preferences17 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_eight_completed = preferences17.getInt("LevelEightCompleted", 0);
+        SharedPreferences preferences18 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_eight_starred = preferences18.getInt("LevelEightStarred", 0);
 
         if(level_one_completed == 1 && level_one_starred == 0){
             Resources res = getResources();
@@ -310,6 +491,78 @@ public class levelMenuActivity extends AppCompatActivity {
             Drawable drawable = res.getDrawable(R.drawable.notcompleted);
             levelfour_button.setBackground(drawable);
         }
+
+        // Level five completed?
+        levelfive_button = (Button) findViewById(R.id.level5);
+        if(level_five_completed == 1 && level_five_starred == 0){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.completed);
+            levelfive_button.setBackground(drawable);
+        }
+        else if(level_five_starred == 1 && level_five_completed == 1){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.starred);
+            levelfive_button.setBackground(drawable);
+        }
+        else{
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            levelfive_button.setBackground(drawable);
+        }
+
+        // Level six completed?
+        levelsix_button = (Button) findViewById(R.id.level6);
+        if(level_six_completed == 1 && level_six_starred == 0){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.completed);
+            levelsix_button.setBackground(drawable);
+        }
+        else if(level_six_starred == 1 && level_six_completed == 1){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.starred);
+            levelsix_button.setBackground(drawable);
+        }
+        else{
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            levelsix_button.setBackground(drawable);
+        }
+
+        // Level seven completed?
+        levelseven_button = (Button) findViewById(R.id.level7);
+        if(level_seven_completed == 1 && level_seven_starred == 0){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.completed);
+            levelseven_button.setBackground(drawable);
+        }
+        else if(level_seven_starred == 1 && level_seven_completed == 1){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.starred);
+            levelseven_button.setBackground(drawable);
+        }
+        else{
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            levelseven_button.setBackground(drawable);
+        }
+
+        // Level eight completed?
+        leveleight_button = (Button) findViewById(R.id.level8);
+        if(level_eight_completed == 1 && level_eight_starred == 0){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.completed);
+            leveleight_button.setBackground(drawable);
+        }
+        else if(level_eight_starred == 1 && level_eight_completed == 1){
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.starred);
+            leveleight_button.setBackground(drawable);
+        }
+        else{
+            Resources res = getResources();
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            leveleight_button.setBackground(drawable);
+        }
     }
 
     @Override
@@ -367,6 +620,26 @@ public class levelMenuActivity extends AppCompatActivity {
     public  void levelFour(View view){
         Intent intent4 = new Intent(this, levelFour.class);
         startActivity(intent4);
+    }
+
+    public  void levelFive(View view){
+        Intent intent5 = new Intent(this, levelFive.class);
+        startActivity(intent5);
+    }
+
+    public  void levelSix(View view){
+        Intent intent6 = new Intent(this, levelSix.class);
+        startActivity(intent6);
+    }
+
+    public  void levelSeven(View view){
+        Intent intent7 = new Intent(this, levelSeven.class);
+        startActivity(intent7);
+    }
+
+    public  void levelEight(View view){
+        Intent intent8 = new Intent(this, levelEight.class);
+        startActivity(intent8);
     }
 
 }

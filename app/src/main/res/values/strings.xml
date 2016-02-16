@@ -10,5 +10,9 @@
     <string name="title_activity_level_two">levelTwo</string>
     <string name="title_activity_level_three">levelThree</string>
     <string name="title_activity_level_four">levelFour</string>
+    <string name="title_activity_level_five">levelFive</string>
+    <string name="title_activity_level_six">levelSix</string>
+    <string name="title_activity_level_seven">levelSeven</string>
+    <string name="title_activity_level_eight">levelEight</string>
 
 </resources>
