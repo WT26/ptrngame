@@ -78,9 +78,9 @@
             android:textOff=""
             android:textOn=""
             android:checked="false"
-            android:layout_alignTop="@+id/chkState2"
-            android:layout_toRightOf="@+id/chkState2"
-            android:layout_toEndOf="@+id/chkState2"
+            android:layout_alignTop="@+id/button4"
+            android:layout_toRightOf="@+id/button4"
+            android:layout_toEndOf="@+id/button4"
             android:layout_row="0"
             android:layout_column="1" />
 
@@ -107,7 +107,7 @@
 
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/chkState2"
+            android:id="@+id/button4"
             android:background="@drawable/toggle_selector"
             android:textOff=""
             android:textOn=""
@@ -142,9 +142,9 @@
             android:background="@drawable/toggle_selector"
             android:textOff=""
             android:textOn=""
-            android:layout_below="@+id/chkState2"
-            android:layout_alignLeft="@+id/chkState2"
-            android:layout_alignStart="@+id/chkState2"
+            android:layout_below="@+id/button4"
+            android:layout_alignLeft="@+id/button4"
+            android:layout_alignStart="@+id/button4"
             android:layout_row="1"
             android:layout_column="4" />
 
@@ -155,9 +155,9 @@
             android:background="@drawable/toggle_selector"
             android:textOff=""
             android:textOn=""
-            android:layout_below="@+id/chkState2"
-            android:layout_alignLeft="@+id/chkState2"
-            android:layout_alignStart="@+id/chkState2"
+            android:layout_below="@+id/button4"
+            android:layout_alignLeft="@+id/button4"
+            android:layout_alignStart="@+id/button4"
             android:layout_row="3"
             android:layout_column="1" />
 
@@ -168,9 +168,9 @@
             android:background="@drawable/toggle_selector"
             android:textOff=""
             android:textOn=""
-            android:layout_below="@+id/chkState2"
-            android:layout_alignLeft="@+id/chkState2"
-            android:layout_alignStart="@+id/chkState2"
+            android:layout_below="@+id/button4"
+            android:layout_alignLeft="@+id/button4"
+            android:layout_alignStart="@+id/button4"
             android:layout_row="3"
             android:layout_column="3" />
     </GridLayout>

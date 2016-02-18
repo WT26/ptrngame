@@ -24,7 +24,7 @@ import com.google.android.gms.ads.AdView;
 
 
 
-public class levelMenuActivity extends AppCompatActivity {
+public class orangeworld_menu extends AppCompatActivity {
 
     public static final String mykeyorangelevel = "MyPrefsFile";
     int orangelevel_completed;
@@ -35,10 +35,14 @@ public class levelMenuActivity extends AppCompatActivity {
     public static final String myPrefsKey2 = "MyPrefsFile";
     int total_completed;
 
-    public static final String levelsaves = "MyPrefsFile";
+    public static final String myPrefsKey3 = "MyPrefsFile";
     int level_one_completed;
+    public static final String myPrefsKey4 = "MyPrefsFile";
     int level_one_starred;
+
+    public static final String myPrefsKey5 = "MyPrefsFile";
     int level_two_completed;
+    public static final String myPrefsKey6 = "MyPrefsFile";
     int level_two_starred;
 
     public static final String myPrefsKey7 = "MyPrefsFile";
@@ -96,10 +100,10 @@ public class levelMenuActivity extends AppCompatActivity {
     Button levelnine_button;
     Button levelten_button;
 
-    Button lock_button;
-    Button orangeworld_button;
+    //Button lock_button;
+    //Button orangeworld_button;
 
-    int lock_counter;
+    //int lock_counter;
 
 
 
@@ -116,11 +120,15 @@ public class levelMenuActivity extends AppCompatActivity {
         total_completed = preferences2.getInt("TotalCompleted", 0);
 
 
-        SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
-        level_one_completed = levelsaves.getInt("LevelOneCompleted", 0);
-        level_one_starred = levelsaves.getInt("LevelOneStarred", 0);
-        level_two_completed = levelsaves.getInt("LevelTwoCompleted", 0);
-        level_two_starred = levelsaves.getInt("LevelTwoStarred", 0);
+        SharedPreferences preferences3 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_one_completed = preferences3.getInt("LevelOneCompleted", 0);
+        SharedPreferences preferences4 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_one_starred = preferences4.getInt("LevelOneStarred", 0);
+
+        SharedPreferences preferences5 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_two_completed = preferences5.getInt("LevelTwoCompleted", 0);
+        SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_two_starred = preferences6.getInt("LevelTwoStarred", 0);
 
         SharedPreferences preferences7 = PreferenceManager.getDefaultSharedPreferences(this);
         level_three_completed = preferences7.getInt("LevelThreeCompleted", 0);
@@ -163,7 +171,7 @@ public class levelMenuActivity extends AppCompatActivity {
         level_ten_starred = preferences22.getInt("LevelTenStarred", 0);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level_menu);
+        setContentView(R.layout.activity_orangeworld_menu);
 
         back = (Button) findViewById(R.id.angry_btn);
         levelone_button = (Button) findViewById(R.id.level1);
@@ -177,196 +185,196 @@ public class levelMenuActivity extends AppCompatActivity {
         levelnine_button = (Button) findViewById(R.id.level9);
         levelten_button = (Button) findViewById(R.id.level10);
 
-        lock_button = (Button) findViewById(R.id.button6);
-        orangeworld_button = (Button) findViewById(R.id.button7);
+        //lock_button = (Button) findViewById(R.id.button6);
+        //orangeworld_button = (Button) findViewById(R.id.button7);
 
 
-        lock_counter = 0;
+        //lock_counter = 0;
 
         //level1
         if(level_one_completed == 1 && level_one_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelone_button.setBackground(drawable);
         }
         else if(level_one_starred == 1 && level_one_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelone_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelone_button.setBackground(drawable);
         }
 
         //level2
         if(level_two_completed == 1 && level_two_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             leveltwo_button.setBackground(drawable);
         }
         else if(level_two_starred == 1 && level_two_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             leveltwo_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             leveltwo_button.setBackground(drawable);
         }
 
         //level3
         if(level_three_completed == 1 && level_three_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelthree_button.setBackground(drawable);
         }
         else if(level_three_starred == 1 && level_three_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelthree_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelthree_button.setBackground(drawable);
         }
 
         //level4
         if(level_four_completed == 1 && level_four_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelfour_button.setBackground(drawable);
         }
         else if(level_four_starred == 1 && level_four_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelfour_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelfour_button.setBackground(drawable);
         }
 
         //level5
         if(level_five_completed == 1 && level_five_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelfive_button.setBackground(drawable);
         }
         else if(level_five_starred == 1 && level_five_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelfive_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelfive_button.setBackground(drawable);
         }
 
         //level6
         if(level_six_completed == 1 && level_six_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelsix_button.setBackground(drawable);
         }
         else if(level_six_starred == 1 && level_six_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelsix_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelsix_button.setBackground(drawable);
         }
 
         //level7
         if(level_seven_completed == 1 && level_seven_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelseven_button.setBackground(drawable);
         }
         else if(level_seven_starred == 1 && level_seven_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelseven_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelseven_button.setBackground(drawable);
         }
 
         //level8
         if(level_eight_completed == 1 && level_eight_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             leveleight_button.setBackground(drawable);
         }
         else if(level_eight_starred == 1 && level_eight_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             leveleight_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             leveleight_button.setBackground(drawable);
         }
 
         //level9
         if(level_nine_completed == 1 && level_nine_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelnine_button.setBackground(drawable);
         }
         else if(level_nine_starred == 1 && level_nine_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelnine_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelnine_button.setBackground(drawable);
         }
 
         //level10
         if(level_ten_completed == 1 && level_ten_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelten_button.setBackground(drawable);
         }
         else if(level_ten_starred == 1 && level_ten_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelten_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelten_button.setBackground(drawable);
         }
 
-        //10Completed->orangeButton
-        if(total_completed >= 10){
-            lock_button.setVisibility(View.VISIBLE);
-        }
-        else{
-            lock_button.setVisibility(View.GONE);
-        }
-
-        if(orangelevel_completed == 1){
-            orangeworld_button.setVisibility(View.VISIBLE);
-        }
-        else{
-            orangeworld_button.setVisibility(View.GONE);
-        }
+        ////10Completed->orangeButton
+        //if(total_completed >= 10){
+        //    lock_button.setVisibility(View.VISIBLE);
+        //}
+        //else{
+        //    lock_button.setVisibility(View.GONE);
+        //}
+//
+        //if(orangelevel_completed == 1){
+        //    orangeworld_button.setVisibility(View.VISIBLE);
+        //}
+        //else{
+        //    orangeworld_button.setVisibility(View.GONE);
+        //}
 
 
 
@@ -381,7 +389,7 @@ public class levelMenuActivity extends AppCompatActivity {
             }
         });
 
-       levelone_button.setOnClickListener(new View.OnClickListener() {
+        levelone_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if(sounds_toggle == 0){
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
@@ -479,32 +487,32 @@ public class levelMenuActivity extends AppCompatActivity {
         });
 
 
-        lock_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(final View view) {
-                if(sounds_toggle == 0){
-                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.clicklock);
-                    mp.start();
-                }
-               if(lock_counter > 5){
-                   Resources res = getResources();
-                   Drawable drawable = res.getDrawable(R.drawable.lockopenorange);
-                   lock_button.setBackground(drawable);
-                   lock_button.setClickable(false);
-
-                   if(sounds_toggle == 0){
-                       MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.clicklock);
-                       mp.start();
-                   }
-                   Handler handler = new Handler();
-                   handler.postDelayed(new Runnable() {
-                       public void run() {
-                           lockLevel(view);
-                       }
-                   }, 1500);
-               }
-                lock_counter += 1;
-            }
-        });
+        //lock_button.setOnClickListener(new View.OnClickListener() {
+        //    public void onClick(final View view) {
+        //        if(sounds_toggle == 0){
+        //            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.clicklock);
+        //            mp.start();
+        //        }
+        //        if(lock_counter > 5){
+        //            Resources res = getResources();
+        //            Drawable drawable = res.getDrawable(R.drawable.lockopenorange);
+        //            lock_button.setBackground(drawable);
+        //            lock_button.setClickable(false);
+//
+        //            if(sounds_toggle == 0){
+        //                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.clicklock);
+        //                mp.start();
+        //            }
+        //            Handler handler = new Handler();
+        //            handler.postDelayed(new Runnable() {
+        //                public void run() {
+        //                    lockLevel(view);
+        //                }
+        //            }, 1500);
+        //        }
+        //        lock_counter += 1;
+        //    }
+        //});
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -514,7 +522,7 @@ public class levelMenuActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        lock_counter = 0;
+        //lock_counter = 0;
 
 
         SharedPreferences preferences97 = PreferenceManager.getDefaultSharedPreferences(this);
@@ -579,17 +587,17 @@ public class levelMenuActivity extends AppCompatActivity {
 
         if(level_one_completed == 1 && level_one_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelone_button.setBackground(drawable);
         }
         else if(level_one_starred == 1 && level_one_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelone_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelone_button.setBackground(drawable);
         }
 
@@ -598,17 +606,17 @@ public class levelMenuActivity extends AppCompatActivity {
         leveltwo_button = (Button) findViewById(R.id.level2);
         if(level_two_completed == 1 && level_two_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             leveltwo_button.setBackground(drawable);
         }
         else if(level_two_starred == 1 && level_two_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             leveltwo_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             leveltwo_button.setBackground(drawable);
         }
 
@@ -616,17 +624,17 @@ public class levelMenuActivity extends AppCompatActivity {
         levelthree_button = (Button) findViewById(R.id.level3);
         if(level_three_completed == 1 && level_three_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelthree_button.setBackground(drawable);
         }
         else if(level_three_starred == 1 && level_three_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelthree_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelthree_button.setBackground(drawable);
         }
 
@@ -634,17 +642,17 @@ public class levelMenuActivity extends AppCompatActivity {
         levelfour_button = (Button) findViewById(R.id.level4);
         if(level_four_completed == 1 && level_four_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelfour_button.setBackground(drawable);
         }
         else if(level_four_starred == 1 && level_four_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelfour_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelfour_button.setBackground(drawable);
         }
 
@@ -652,17 +660,17 @@ public class levelMenuActivity extends AppCompatActivity {
         levelfive_button = (Button) findViewById(R.id.level5);
         if(level_five_completed == 1 && level_five_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelfive_button.setBackground(drawable);
         }
         else if(level_five_starred == 1 && level_five_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelfive_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelfive_button.setBackground(drawable);
         }
 
@@ -670,17 +678,17 @@ public class levelMenuActivity extends AppCompatActivity {
         levelsix_button = (Button) findViewById(R.id.level6);
         if(level_six_completed == 1 && level_six_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelsix_button.setBackground(drawable);
         }
         else if(level_six_starred == 1 && level_six_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelsix_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelsix_button.setBackground(drawable);
         }
 
@@ -688,17 +696,17 @@ public class levelMenuActivity extends AppCompatActivity {
         levelseven_button = (Button) findViewById(R.id.level7);
         if(level_seven_completed == 1 && level_seven_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelseven_button.setBackground(drawable);
         }
         else if(level_seven_starred == 1 && level_seven_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelseven_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelseven_button.setBackground(drawable);
         }
 
@@ -706,17 +714,17 @@ public class levelMenuActivity extends AppCompatActivity {
         leveleight_button = (Button) findViewById(R.id.level8);
         if(level_eight_completed == 1 && level_eight_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             leveleight_button.setBackground(drawable);
         }
         else if(level_eight_starred == 1 && level_eight_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             leveleight_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             leveleight_button.setBackground(drawable);
         }
 
@@ -724,17 +732,17 @@ public class levelMenuActivity extends AppCompatActivity {
         levelnine_button = (Button) findViewById(R.id.level9);
         if(level_nine_completed == 1 && level_nine_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelnine_button.setBackground(drawable);
         }
         else if(level_nine_starred == 1 && level_nine_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelnine_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelnine_button.setBackground(drawable);
         }
 
@@ -742,36 +750,36 @@ public class levelMenuActivity extends AppCompatActivity {
         levelten_button = (Button) findViewById(R.id.level10);
         if(level_ten_completed == 1 && level_ten_starred == 0){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completed);
+            Drawable drawable = res.getDrawable(R.drawable.completedorange);
             levelten_button.setBackground(drawable);
         }
         else if(level_ten_starred == 1 && level_ten_completed == 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starred);
+            Drawable drawable = res.getDrawable(R.drawable.starredorange);
             levelten_button.setBackground(drawable);
         }
         else{
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
+            Drawable drawable = res.getDrawable(R.drawable.notcompletedorange);
             levelten_button.setBackground(drawable);
         }
 
-        lock_button = (Button) findViewById(R.id.button6);
-        //10Completed->orangeButton
-        if(total_completed >= 10){
-            lock_button.setVisibility(View.VISIBLE);
-        }
-        else{
-            lock_button.setVisibility(View.GONE);
-        }
-
-        orangeworld_button = (Button) findViewById(R.id.button7);
-        if(orangelevel_completed == 1){
-            orangeworld_button.setVisibility(View.VISIBLE);
-        }
-        else{
-            orangeworld_button.setVisibility(View.GONE);
-        }
+        //lock_button = (Button) findViewById(R.id.button6);
+        ////10Completed->orangeButton
+        //if(total_completed >= 10){
+        //    lock_button.setVisibility(View.VISIBLE);
+        //}
+        //else{
+        //    lock_button.setVisibility(View.GONE);
+        //}
+//
+        //orangeworld_button = (Button) findViewById(R.id.button7);
+        //if(orangelevel_completed == 1){
+        //    orangeworld_button.setVisibility(View.VISIBLE);
+        //}
+        //else{
+        //    orangeworld_button.setVisibility(View.GONE);
+        //}
 
     }
 
@@ -805,10 +813,17 @@ public class levelMenuActivity extends AppCompatActivity {
     }
 
     public void MainMenu(View view){
-        //Intent intent = new Intent(this, MainActivity.class);
-        //startActivity(intent);
+
         finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
         //super.onBackPressed();
+    }
+
+    public void levelMenu(View view){
+        finish();
+        Intent intent = new Intent(this, levelMenuActivity.class);
+        startActivity(intent);
     }
 
 
@@ -862,14 +877,13 @@ public class levelMenuActivity extends AppCompatActivity {
         startActivity(intent10);
     }
 
-    public  void lockLevel(View view){
-        Intent intent11 = new Intent(this, lockLevel.class);
-        startActivity(intent11);
-    }
+    //public  void lockLevel(View view){
+    //    Intent intent11 = new Intent(this, lockLevel.class);
+    //    startActivity(intent11);
+    //}
 
-    public  void orangeWorld(View view){
-        finish();
-        Intent intent11 = new Intent(this, orangeworld_menu.class);
-        startActivity(intent11);
-    }
+    //public  void orangeWorld(View view){
+    //    Intent intent11 = new Intent(this, orangeworld_menu.class);
+    //    startActivity(intent11);
+    //}
 }

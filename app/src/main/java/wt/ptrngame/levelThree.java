@@ -76,7 +76,7 @@ public class levelThree extends AppCompatActivity {
         total_starred = preferences5.getInt("TotalStarred", 0);
 
         SharedPreferences preferences99 = PreferenceManager.getDefaultSharedPreferences(this);
-        sounds_toggle = preferences99.getInt("SoundsToggle", 1);
+        sounds_toggle = preferences99.getInt("SoundsToggle", 0);
 
         SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
         total_retrys = preferences6.getInt("TotalRetrys", 0);
@@ -87,7 +87,7 @@ public class levelThree extends AppCompatActivity {
 
         toggle = (ToggleButton) findViewById(R.id.chkState);
         toggle2 = (ToggleButton) findViewById(R.id.toggleButton2);
-        toggle3 = (ToggleButton) findViewById(R.id.chkState2);
+        toggle3 = (ToggleButton) findViewById(R.id.button4);
         toggle4 = (ToggleButton) findViewById(R.id.toggleButton);
         toggle5 = (ToggleButton) findViewById(R.id.toggleButton3);
 

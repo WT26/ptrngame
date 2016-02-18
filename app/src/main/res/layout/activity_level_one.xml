@@ -45,11 +45,11 @@
 
         android:layout_width="65dp"
         android:layout_height="65dp"
-        android:id="@+id/chkState2"
+        android:id="@+id/button4"
         android:background="@drawable/toggle_selector"
         android:textOff=""
         android:textOn=""
-        android:layout_alignTop="@+id/chkState"
+        android:layout_below="@+id/textView17"
         android:layout_toRightOf="@+id/textView14"
         android:layout_toEndOf="@+id/textView14" />
 
@@ -70,14 +70,6 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/chkState"
         android:layout_toEndOf="@+id/chkState" />
-
-    <TextView
-        android:layout_width="20dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView15"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/chkState2"
-        android:layout_toEndOf="@+id/chkState2" />
 
     <ToggleButton
         android:layout_width="65dp"
@@ -125,7 +117,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/retrybutton"
 
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -133,5 +125,13 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView15"
+        android:layout_above="@+id/textView16"
+        android:layout_toRightOf="@+id/button4"
+        android:layout_toEndOf="@+id/button4" />
 
 </RelativeLayout>

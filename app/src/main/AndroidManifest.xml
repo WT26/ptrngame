@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         <activity
             android:name=".levelMenuActivity"
             android:label="@string/title_activity_level_menu"
@@ -100,6 +100,30 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.levelMenuActivity" />
+        </activity>
+        <activity
+            android:name=".levelTen"
+            android:label="@string/title_activity_level_ten"
+            android:parentActivityName=".levelMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.levelMenuActivity" />
+        </activity>
+        <activity
+            android:name=".lockLevel"
+            android:label="@string/title_activity_lock_level"
+            android:parentActivityName=".levelMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.levelMenuActivity" />
+        </activity>
+        <activity
+            android:name=".orangeworld_menu"
+            android:label="@string/title_activity_orangeworld_menu"
+            android:parentActivityName=".levelMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.MainActivity" />
         </activity>
     </application>
 

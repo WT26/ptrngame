@@ -6,7 +6,6 @@ import android.media.MediaPlayer;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,9 +14,11 @@ import android.widget.Button;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class levelOne extends AppCompatActivity {
-    public static final String myPrefsKey13 = "MyPrefsFile";
-    int sounds_toggle;
+
 
     Intent intent = getIntent();
     ToggleButton toggle;
@@ -26,23 +27,18 @@ public class levelOne extends AppCompatActivity {
     Button back;
     Button restart;
 
-    public static final String myPrefsKey = "MyPrefsFile";
+    public static final String totalstatics = "MyPrefsFile";
+    int total_starred;
+    int total_retrys;
     int total_toggles;
-
-    public static final String myPrefsKey2 = "MyPrefsFile";
     int total_completed;
+    int sounds_toggle;
 
-    public static final String myPrefsKey3 = "MyPrefsFile";
+    public static final String levelsaves = "MyPrefsFile";
     int level_one_completed;
-
-    public static final String myPrefsKey4 = "MyPrefsFile";
     int level_one_starred;
 
-    public static final String myPrefsKey5 = "MyPrefsFile";
-    int total_starred;
 
-    public static final String myPrefsKey6 = "MyPrefsFile";
-    int total_retrys;
 
     int current_toggles;
     int toggles_for_star;
@@ -60,33 +56,25 @@ public class levelOne extends AppCompatActivity {
         toggles_for_star = 2;
 
         // Getting information
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        total_toggles = preferences.getInt("TotalToggles", 0);
+        SharedPreferences totalstatics = PreferenceManager.getDefaultSharedPreferences(this);
+        total_toggles = totalstatics.getInt("TotalToggles", 0);
+        total_completed = totalstatics.getInt("TotalCompleted", 0);
+        total_starred = totalstatics.getInt("TotalStarred", 0);
+        total_retrys = totalstatics.getInt("TotalRetrys", 0);
+        sounds_toggle = totalstatics.getInt("SoundsToggle", 0);
 
-        SharedPreferences preferences3 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_one_completed = preferences3.getInt("LevelOneCompleted", 0);
+        SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
+        level_one_completed = levelsaves.getInt("LevelOneCompleted", 0);
+        level_one_starred = levelsaves.getInt("LevelOneStarred", 0);
 
-        SharedPreferences preferences2 = PreferenceManager.getDefaultSharedPreferences(this);
-        total_completed = preferences2.getInt("TotalCompleted", 0);
 
-        SharedPreferences preferences4 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_one_starred = preferences4.getInt("LevelOneStarred", 0);
-
-        SharedPreferences preferences5 = PreferenceManager.getDefaultSharedPreferences(this);
-        total_starred = preferences5.getInt("TotalStarred", 0);
-
-        SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
-        total_retrys = preferences6.getInt("TotalRetrys", 0);
-
-        SharedPreferences preferences99 = PreferenceManager.getDefaultSharedPreferences(this);
-        sounds_toggle = preferences99.getInt("SoundsToggle", 1);
 
 
         back = (Button) findViewById(R.id.angry_btn);
-        restart = (Button) findViewById(R.id.button4);
+        restart = (Button) findViewById(R.id.retrybutton);
 
         toggle = (ToggleButton) findViewById(R.id.chkState);
-        toggle2 = (ToggleButton) findViewById(R.id.chkState2);
+        toggle2 = (ToggleButton) findViewById(R.id.button4);
         toggle3 = (ToggleButton) findViewById(R.id.toggleButton);
 
         toggle.setOnClickListener(new View.OnClickListener() {
@@ -155,6 +143,7 @@ public class levelOne extends AppCompatActivity {
             }
         });
 
+
     }
 
     public void BackButton(View view){
@@ -174,12 +163,6 @@ public class levelOne extends AppCompatActivity {
     }
 
     public void levelWon(){
-
-        // Commit current TotalToggles to save
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putInt("TotalToggles", total_toggles);
-        editor.apply();
 
         if(level_one_completed == 0){
             level_one_completed = 1;
@@ -204,30 +187,26 @@ public class levelOne extends AppCompatActivity {
             }
         }
 
-        SharedPreferences preferences2 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor2 = preferences2.edit();
+        SharedPreferences totalstatics = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = totalstatics.edit();
+        editor.putInt("TotalToggles", total_toggles);
+        editor.apply();
+        editor.putInt("TotalCompleted", total_completed);
+        editor.apply();
+        editor.putInt("TotalStarred", total_starred);
+        editor.apply();
+        editor.putInt("TotalRetrys", total_retrys);
+        editor.apply();
+
+
+
+        SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor2 = levelsaves.edit();
         editor2.putInt("LevelOneCompleted", level_one_completed);
         editor2.apply();
+        editor2.putInt("LevelOneStarred", level_one_starred);
+        editor2.apply();
 
-        SharedPreferences preferences3 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor3 = preferences3.edit();
-        editor3.putInt("TotalCompleted", total_completed);
-        editor3.apply();
-
-        SharedPreferences preferences4 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor4 = preferences4.edit();
-        editor4.putInt("TotalStarred", total_starred);
-        editor4.apply();
-
-        SharedPreferences preferences5 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor5 = preferences5.edit();
-        editor5.putInt("LevelOneStarred", level_one_starred);
-        editor5.apply();
-
-        SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor6 = preferences6.edit();
-        editor6.putInt("TotalRetrys", total_retrys);
-        editor6.apply();
 
         LayoutInflater inflater = getLayoutInflater();
 

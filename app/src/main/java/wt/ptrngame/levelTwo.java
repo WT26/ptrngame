@@ -27,23 +27,15 @@ public class levelTwo extends AppCompatActivity {
     Button back;
     Button restart;
 
-    public static final String myPrefsKey = "MyPrefsFile";
+    public static final String totalstatics = "MyPrefsFile";
     int total_toggles;
-
-    public static final String myPrefsKey2 = "MyPrefsFile";
     int total_completed;
-
-    public static final String myPrefsKey3 = "MyPrefsFile";
-    int level_two_completed;
-
-    public static final String myPrefsKey4 = "MyPrefsFile";
-    int level_two_starred;
-
-    public static final String myPrefsKey5 = "MyPrefsFile";
     int total_starred;
-
-    public static final String myPrefsKey6 = "MyPrefsFile";
     int total_retrys;
+
+    public static final String levelsaves = "MyPrefsFile";
+    int level_two_completed;
+    int level_two_starred;
 
     int current_toggles;
     int toggles_for_star;
@@ -58,23 +50,18 @@ public class levelTwo extends AppCompatActivity {
         toggles_for_star = 3;
 
         // Getting information
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        total_toggles = preferences.getInt("TotalToggles", 0);
+        SharedPreferences totalstatics = PreferenceManager.getDefaultSharedPreferences(this);
+        total_toggles = totalstatics.getInt("TotalToggles", 0);
+        total_completed = totalstatics.getInt("TotalCompleted", 0);
+        total_starred = totalstatics.getInt("TotalStarred", 0);
+        sounds_toggle = totalstatics.getInt("SoundsToggle", 0);
 
-        SharedPreferences preferences3 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_two_completed = preferences3.getInt("LevelTwoCompleted", 0);
+        SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
+        level_two_completed = levelsaves.getInt("LevelTwoCompleted", 0);
+        level_two_starred = levelsaves.getInt("LevelTwoStarred", 0);
 
-        SharedPreferences preferences2 = PreferenceManager.getDefaultSharedPreferences(this);
-        total_completed = preferences2.getInt("TotalCompleted", 0);
 
-        SharedPreferences preferences4 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_two_starred = preferences4.getInt("LevelTwoStarred", 0);
 
-        SharedPreferences preferences5 = PreferenceManager.getDefaultSharedPreferences(this);
-        total_starred = preferences5.getInt("TotalStarred", 0);
-
-        SharedPreferences preferences99 = PreferenceManager.getDefaultSharedPreferences(this);
-        sounds_toggle = preferences99.getInt("SoundsToggle", 1);
 
 
         back = (Button) findViewById(R.id.angry_btn);
@@ -82,7 +69,7 @@ public class levelTwo extends AppCompatActivity {
 
         toggle = (ToggleButton) findViewById(R.id.chkState);
         toggle2 = (ToggleButton) findViewById(R.id.toggleButton2);
-        toggle3 = (ToggleButton) findViewById(R.id.chkState2);
+        toggle3 = (ToggleButton) findViewById(R.id.button4);
         toggle4 = (ToggleButton) findViewById(R.id.toggleButton);
 
         toggle.setOnClickListener(new View.OnClickListener() {
@@ -209,14 +196,8 @@ public class levelTwo extends AppCompatActivity {
 
     public void levelWon(){
 
-        SharedPreferences preferences99 = PreferenceManager.getDefaultSharedPreferences(this);
-        sounds_toggle = preferences99.getInt("SoundsToggle", 1);
-
-        // Commit current TotalToggles to save
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putInt("TotalToggles", total_toggles);
-        editor.apply();
+        SharedPreferences totalstatics = PreferenceManager.getDefaultSharedPreferences(this);
+        sounds_toggle = totalstatics.getInt("SoundsToggle", 1);
 
         if(level_two_completed == 0){
             level_two_completed = 1;
@@ -225,9 +206,6 @@ public class levelTwo extends AppCompatActivity {
         else{
             level_two_completed = 1;
         }
-
-        Log.d("current toggles", Integer.toString(current_toggles));
-        Log.d("ster toggles", Integer.toString(toggles_for_star));
 
         if(current_toggles <= toggles_for_star){
             if(level_two_starred == 0){
@@ -243,30 +221,25 @@ public class levelTwo extends AppCompatActivity {
             }
         }
 
-        SharedPreferences preferences2 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor2 = preferences2.edit();
+        SharedPreferences.Editor editor = totalstatics.edit();
+        editor.putInt("TotalToggles", total_toggles);
+        editor.apply();
+        editor.putInt("TotalCompleted", total_completed);
+        editor.apply();
+        editor.putInt("TotalStarred", total_starred);
+        editor.apply();
+        editor.putInt("TotalRetrys", total_retrys);
+        editor.apply();
+
+
+        SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor2 = levelsaves.edit();
         editor2.putInt("LevelTwoCompleted", level_two_completed);
         editor2.apply();
+        editor2.putInt("LevelTwoStarred", level_two_starred);
+        editor2.apply();
 
-        SharedPreferences preferences3 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor3 = preferences3.edit();
-        editor3.putInt("TotalCompleted", total_completed);
-        editor3.apply();
 
-        SharedPreferences preferences4 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor4 = preferences4.edit();
-        editor4.putInt("TotalStarred", total_starred);
-        editor4.apply();
-
-        SharedPreferences preferences5 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor5 = preferences5.edit();
-        editor5.putInt("LevelTwoStarred", level_two_starred);
-        editor5.apply();
-
-        SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor6 = preferences6.edit();
-        editor6.putInt("TotalRetrys", total_retrys);
-        editor6.apply();
 
         LayoutInflater inflater = getLayoutInflater();
 

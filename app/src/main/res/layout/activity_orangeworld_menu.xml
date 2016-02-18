@@ -6,24 +6,24 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:id="@+id/content"
-    android:background="#dcfdff"
-    tools:context="wt.ptrngame.levelMenuActivity">
+    android:background="#ffcfa5"
+    tools:context="wt.ptrngame.orangeworld_menu">
 
 
     <Button
-    android:id="@+id/angry_btn"
+        android:id="@+id/angry_btn"
 
-    android:text="Back"
-    android:textColor="#116d73"
-    android:textSize="18sp"
+        android:text="Back"
+        android:textColor="#be6c22"
+        android:textSize="18sp"
 
-    android:layout_width="80dp"
-    android:layout_height="40dp"
-    android:background="@drawable/backbutton"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:onClick="MainMenu"/>
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/backbuttonorange"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="MainMenu"/>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -47,12 +47,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Level Menu"
+        android:text="Second World"
         android:id="@+id/textView10"
-        android:textColor="#116d73"
-        android:textColorHighlight="#116d73"
+        android:textColor="#be6c22"
+        android:textColorHighlight="#be6c22"
         android:textIsSelectable="false"
-        android:textSize="60dp"
+        android:textSize="50dp"
         android:textStyle="bold"
         android:elevation="0dp"
         android:layout_below="@+id/textView11"
@@ -92,6 +92,7 @@
 
                 <Button
                     android:id="@+id/level1"
+                    android:background="@drawable/notcompletedorange"
 
                     android:layout_width="126dp"
                     android:layout_height="126dp"
@@ -106,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:text="GAP"
                 android:id="@+id/textView6"
-                android:textColor="#dcfdff" />
+                android:textColor="#ffcfa5" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -122,7 +123,7 @@
 
                 <Button
                     android:id="@+id/level2"
-                    android:background="@drawable/notcompleted"
+                    android:background="@drawable/notcompletedorange"
                     android:layout_width="126dp"
                     android:layout_height="126dp"
                     android:onClick="levelTwo"
@@ -135,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:text="GAP"
                 android:id="@+id/textView7"
-                android:textColor="#dcfdff" />
+                android:textColor="#ffcfa5" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -153,7 +154,7 @@
                     android:id="@+id/level3"
                     android:layout_width="126dp"
                     android:layout_height="126dp"
-                    android:background="@drawable/notcompleted"
+                    android:background="@drawable/notcompletedorange"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
 
@@ -164,7 +165,7 @@
                 android:layout_height="wrap_content"
                 android:text="GAP"
                 android:id="@+id/textView8"
-                android:textColor="#dcfdff" />
+                android:textColor="#ffcfa5" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -183,7 +184,7 @@
 
                     android:layout_width="126dp"
                     android:layout_height="126dp"
-                    android:background="@drawable/notcompleted"
+                    android:background="@drawable/notcompletedorange"
                     android:onClick="levelFour"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
@@ -194,7 +195,7 @@
                 android:layout_height="wrap_content"
                 android:text="GAP"
                 android:id="@+id/textView9"
-                android:textColor="#dcfdff" />
+                android:textColor="#ffcfa5" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -213,7 +214,7 @@
 
                     android:layout_width="126dp"
                     android:layout_height="126dp"
-                    android:background="@drawable/notcompleted"
+                    android:background="@drawable/notcompletedorange"
                     android:onClick="levelFive"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
@@ -224,7 +225,7 @@
                 android:layout_height="wrap_content"
                 android:text="GAP"
                 android:id="@+id/textView99"
-                android:textColor="#dcfdff" />
+                android:textColor="#ffcfa5" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -242,7 +243,7 @@
                     android:id="@+id/level6"
                     android:layout_width="126dp"
                     android:layout_height="126dp"
-                    android:background="@drawable/notcompleted"
+                    android:background="@drawable/notcompletedorange"
                     android:onClick="levelSix"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
@@ -254,7 +255,7 @@
                 android:layout_height="wrap_content"
                 android:text="GAP"
                 android:id="@+id/textView98"
-                android:textColor="#dcfdff" />
+                android:textColor="#ffcfa5" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -272,7 +273,7 @@
                     android:id="@+id/level7"
                     android:layout_width="126dp"
                     android:layout_height="126dp"
-                    android:background="@drawable/notcompleted"
+                    android:background="@drawable/notcompletedorange"
                     android:onClick="levelSeven"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
@@ -283,7 +284,7 @@
                 android:layout_height="wrap_content"
                 android:text="GAP"
                 android:id="@+id/textView33"
-                android:textColor="#dcfdff" />
+                android:textColor="#ffcfa5" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -301,7 +302,7 @@
                     android:id="@+id/level8"
                     android:layout_width="126dp"
                     android:layout_height="126dp"
-                    android:background="@drawable/notcompleted"
+                    android:background="@drawable/notcompletedorange"
                     android:onClick="levelEight"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
@@ -312,7 +313,7 @@
                 android:layout_height="wrap_content"
                 android:text="GAP"
                 android:id="@+id/textView29"
-                android:textColor="#dcfdff" />
+                android:textColor="#ffcfa5" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -330,7 +331,7 @@
                     android:id="@+id/level9"
                     android:layout_width="126dp"
                     android:layout_height="126dp"
-                    android:background="@drawable/notcompleted"
+                    android:background="@drawable/notcompletedorange"
                     android:onClick="levelNine"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
@@ -341,7 +342,7 @@
                 android:layout_height="wrap_content"
                 android:text="GAP"
                 android:id="@+id/textView30"
-                android:textColor="#dcfdff" />
+                android:textColor="#ffcfa5" />
 
             <LinearLayout
                 android:orientation="vertical"
@@ -359,7 +360,7 @@
                     android:id="@+id/level10"
                     android:layout_width="126dp"
                     android:layout_height="126dp"
-                    android:background="@drawable/notcompleted"
+                    android:background="@drawable/notcompletedorange"
                     android:onClick="levelTen"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
@@ -370,33 +371,24 @@
                 android:layout_height="wrap_content"
                 android:text="GAP"
                 android:id="@+id/textView31"
-                android:textColor="#dcfdff" />
+                android:textColor="#ffcfa5" />
 
         </LinearLayout>
     </HorizontalScrollView>
 
     <Button
-        android:layout_width="45dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/button6"
-        android:layout_above="@+id/adView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="56dp"
-        android:background="@drawable/lockedorange"
-        android:visibility="gone" />
-
-    <Button
         android:id="@+id/button7"
-        android:text="NEXT"
+        android:text="PREV"
         android:textColor="#be6c22"
         android:textSize="18sp"
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:background="@drawable/backbuttonorange"
-        android:onClick="orangeWorld"
-        android:visibility="gone"
-        android:layout_alignBottom="@+id/button6"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:onClick="levelMenu"
+        android:visibility="visible"
+        android:layout_below="@+id/horizontalScrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="51dp" />
 
 </RelativeLayout>

@@ -3,6 +3,7 @@ package wt.ptrngame;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.preference.PreferenceManager;
@@ -40,6 +41,9 @@ public class infopage extends AppCompatActivity {
 
     public static final String mySounds = "MyPrefsFile";
     int sounds_toggle;
+
+    public static final String mykeyorangelevel = "MyPrefsFile";
+    int orangelevel_completed;
 
 
     // Levels
@@ -88,13 +92,18 @@ public class infopage extends AppCompatActivity {
     public static final String myPrefsKey22 = "MyPrefsFile";
     int level_nine_starred;
 
+    public static final String myPrefsKey23 = "MyPrefsFile";
+    int level_ten_completed;
+    public static final String myPrefsKey24 = "MyPrefsFile";
+    int level_ten_starred;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infopage);
 
         SharedPreferences preferences99 = PreferenceManager.getDefaultSharedPreferences(this);
-        sounds_toggle = preferences99.getInt("SoundsToggle", 1);
+        sounds_toggle = preferences99.getInt("SoundsToggle", 0);
 
         SharedPreferences preferences2 = PreferenceManager.getDefaultSharedPreferences(this);
         total_completed = preferences2.getInt("TotalCompleted", 0);
@@ -107,6 +116,9 @@ public class infopage extends AppCompatActivity {
 
         SharedPreferences preferences8 = PreferenceManager.getDefaultSharedPreferences(this);
         total_retrys = preferences8.getInt("TotalRetrys", 0);
+
+        SharedPreferences preferences0 = PreferenceManager.getDefaultSharedPreferences(this);
+        orangelevel_completed = preferences3.getInt("OrangeLevelCompleted", 0);
 
 
         // Levels
@@ -154,6 +166,11 @@ public class infopage extends AppCompatActivity {
         level_nine_completed = preferences21.getInt("LevelNineCompleted", 0);
         SharedPreferences preferences22 = PreferenceManager.getDefaultSharedPreferences(this);
         level_nine_starred = preferences22.getInt("LevelNineStarred", 0);
+
+        SharedPreferences preferences23 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_ten_completed = preferences23.getInt("LevelTenCompleted", 0);
+        SharedPreferences preferences24 = PreferenceManager.getDefaultSharedPreferences(this);
+        level_ten_starred = preferences24.getInt("LevelTenStarred", 0);
 
 
 
@@ -250,6 +267,8 @@ public class infopage extends AppCompatActivity {
         //Intent intent = new Intent(this, MainActivity.class);
         //startActivity(intent);
         finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
         //super.onBackPressed();
     }
 
@@ -277,6 +296,12 @@ public class infopage extends AppCompatActivity {
         SharedPreferences.Editor editor8 = preferences8.edit();
         editor8.putInt("TotalRetrys", total_retrys);
         editor8.apply();
+
+        orangelevel_completed = 0;
+        SharedPreferences preferences0 = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor0 = preferences0.edit();
+        editor0.putInt("OrangeLevelCompleted", orangelevel_completed);
+        editor0.apply();
 
 
         // Levels
@@ -378,6 +403,17 @@ public class infopage extends AppCompatActivity {
         SharedPreferences.Editor editor25 = preferences25.edit();
         editor25.putInt("LevelNineStarred", level_nine_starred);
         editor25.apply();
+
+        level_ten_completed = 0;
+        SharedPreferences preferences26 = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor26 = preferences26.edit();
+        editor26.putInt("LevelTenCompleted", level_ten_completed);
+        editor26.apply();
+        level_ten_starred = 0;
+        SharedPreferences preferences27 = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor27 = preferences27.edit();
+        editor27.putInt("LevelTenStarred", level_ten_starred);
+        editor27.apply();
 
     }
 }
