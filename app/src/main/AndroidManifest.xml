@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
         <activity
             android:name=".levelMenuActivity"
             android:label="@string/title_activity_level_menu"
@@ -124,6 +124,10 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.MainActivity" />
+        </activity>
+        <activity
+            android:name=".levelEleven"
+            android:label="@string/title_activity_level_eleven" >
         </activity>
     </application>
 

@@ -18,5 +18,6 @@
     <string name="title_activity_level_ten">levelTen</string>
     <string name="title_activity_lock_level">lockLevel</string>
     <string name="title_activity_orangeworld_menu">orangeworld_menu</string>
+    <string name="title_activity_level_eleven">levelEleven</string>
 
 </resources>

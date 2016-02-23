@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     mp.start();
                 }
 
-                if(orangelevel_completed != 1){
+                if(orangelevel_completed != 0){
                     levelMenu(view);
                 }
                 else {

@@ -27,150 +27,128 @@ public class infopage extends AppCompatActivity {
 
     String text_to_set;
 
-    public static final String myPrefsKey = "MyPrefsFile";
+    public static final String totalstatics = "MyPrefsFile";
     int total_toggles;
-
-    public static final String myPrefsKey2 = "MyPrefsFile";
     int total_completed;
-
-    public static final String myPrefsKey3 = "MyPrefsFile";
     int total_starred;
-
-    public static final String myPrefsKey8 = "MyPrefsFile";
     int total_retrys;
+    int total_ptrns;
 
-    public static final String mySounds = "MyPrefsFile";
     int sounds_toggle;
-
-    public static final String mykeyorangelevel = "MyPrefsFile";
     int orangelevel_completed;
 
 
     // Levels
-    public static final String myPrefsKey4 = "MyPrefsFile";
+    public static final String levelsaves = "MyPrefsFile";
     int level_one_completed;
-    public static final String myPrefsKey5 = "MyPrefsFile";
     int level_one_starred;
 
-    public static final String myPrefsKey6 = "MyPrefsFile";
     int level_two_completed;
-    public static final String myPrefsKey7 = "MyPrefsFile";
     int level_two_starred;
 
-    public static final String myPrefsKey9 = "MyPrefsFile";
     int level_three_completed;
-    public static final String myPrefsKey10 = "MyPrefsFile";
     int level_three_starred;
 
-    public static final String myPrefsKey11 = "MyPrefsFile";
     int level_four_completed;
-    public static final String myPrefsKey12 = "MyPrefsFile";
     int level_four_starred;
 
-    public static final String myPrefsKey13 = "MyPrefsFile";
     int level_five_completed;
-    public static final String myPrefsKey14 = "MyPrefsFile";
     int level_five_starred;
 
-    public static final String myPrefsKey15 = "MyPrefsFile";
     int level_six_completed;
-    public static final String myPrefsKey16 = "MyPrefsFile";
     int level_six_starred;
 
-    public static final String myPrefsKey17 = "MyPrefsFile";
     int level_seven_completed;
-    public static final String myPrefsKey18 = "MyPrefsFile";
     int level_seven_starred;
 
-    public static final String myPrefsKey19 = "MyPrefsFile";
     int level_eight_completed;
-    public static final String myPrefsKey20 = "MyPrefsFile";
     int level_eight_starred;
 
-    public static final String myPrefsKey21 = "MyPrefsFile";
     int level_nine_completed;
-    public static final String myPrefsKey22 = "MyPrefsFile";
     int level_nine_starred;
 
-    public static final String myPrefsKey23 = "MyPrefsFile";
     int level_ten_completed;
-    public static final String myPrefsKey24 = "MyPrefsFile";
     int level_ten_starred;
 
+    int level_eleven_completed;
+    int level_eleven_starred;
+
+    int level_twelve_completed;
+    int level_twelve_starred;
+
+    int level_thirteen_completed;
+    int level_thirteen_starred;
+
+    int level_fourteen_completed;
+    int level_fourteen_starred;
+
+    int level_fifteen_completed;
+    int level_fifteen_starred;
+
+    int level_sixteen_completed;
+    int level_sixteen_starred;
+
+    int level_seventeen_completed;
+    int level_seventeen_starred;
+
+    int level_eighteen_completed;
+    int level_eighteen_starred;
+
+    int level_nineteen_completed;
+    int level_nineteen_starred;
+
+    int level_twenty_completed;
+    int level_twenty_starred;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infopage);
 
-        SharedPreferences preferences99 = PreferenceManager.getDefaultSharedPreferences(this);
-        sounds_toggle = preferences99.getInt("SoundsToggle", 0);
-
-        SharedPreferences preferences2 = PreferenceManager.getDefaultSharedPreferences(this);
-        total_completed = preferences2.getInt("TotalCompleted", 0);
-
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        total_toggles = preferences.getInt("TotalToggles", 0);
-
-        SharedPreferences preferences3 = PreferenceManager.getDefaultSharedPreferences(this);
-        total_starred = preferences3.getInt("TotalStarred", 0);
-
-        SharedPreferences preferences8 = PreferenceManager.getDefaultSharedPreferences(this);
-        total_retrys = preferences8.getInt("TotalRetrys", 0);
-
-        SharedPreferences preferences0 = PreferenceManager.getDefaultSharedPreferences(this);
-        orangelevel_completed = preferences3.getInt("OrangeLevelCompleted", 0);
+        SharedPreferences totalstatics = PreferenceManager.getDefaultSharedPreferences(this);
+        sounds_toggle = totalstatics.getInt("SoundsToggle", 0);
+        total_completed = totalstatics.getInt("TotalCompleted", 0);
+        total_toggles = totalstatics.getInt("TotalToggles", 0);
+        total_starred = totalstatics.getInt("TotalStarred", 0);
+        total_retrys = totalstatics.getInt("TotalRetrys", 0);
+        total_ptrns = totalstatics.getInt("TotalPtrns", 0);
+        orangelevel_completed = totalstatics.getInt("OrangeLevelCompleted", 0);
 
 
         // Levels
-        SharedPreferences preferences4 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_one_completed = preferences4.getInt("LevelOneCompleted", 0);
-        SharedPreferences preferences5 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_one_starred = preferences5.getInt("LevelOneStarred", 0);
+        SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
+        level_one_completed = levelsaves.getInt("LevelOneCompleted", 0);
+        level_one_starred = levelsaves.getInt("LevelOneStarred", 0);
 
-        SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_two_completed = preferences6.getInt("LevelTwoCompleted", 0);
-        SharedPreferences preferences7 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_two_starred = preferences7.getInt("LevelTwoStarred", 0);
+        level_two_completed = levelsaves.getInt("LevelTwoCompleted", 0);
+        level_two_starred = levelsaves.getInt("LevelTwoStarred", 0);
 
-        SharedPreferences preferences9 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_three_completed = preferences9.getInt("LevelThreeCompleted", 0);
-        SharedPreferences preferences10 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_three_starred = preferences10.getInt("LevelThreeStarred", 0);
+        level_three_completed = levelsaves.getInt("LevelThreeCompleted", 0);
+        level_three_starred = levelsaves.getInt("LevelThreeStarred", 0);
 
-        SharedPreferences preferences11 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_four_completed = preferences11.getInt("LevelFourCompleted", 0);
-        SharedPreferences preferences12 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_four_starred = preferences12.getInt("LevelFourStarred", 0);
+        level_four_completed = levelsaves.getInt("LevelFourCompleted", 0);
+        level_four_starred = levelsaves.getInt("LevelFourStarred", 0);
 
-        SharedPreferences preferences13 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_five_completed = preferences13.getInt("LevelFiveCompleted", 0);
-        SharedPreferences preferences14 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_five_starred = preferences14.getInt("LevelFiveStarred", 0);
+        level_five_completed = levelsaves.getInt("LevelFiveCompleted", 0);
+        level_five_starred = levelsaves.getInt("LevelFiveStarred", 0);
 
-        SharedPreferences preferences15 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_six_completed = preferences15.getInt("LevelSixCompleted", 0);
-        SharedPreferences preferences16 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_six_starred = preferences16.getInt("LevelSixStarred", 0);
+        level_six_completed = levelsaves.getInt("LevelSixCompleted", 0);
+        level_six_starred = levelsaves.getInt("LevelSixStarred", 0);
 
-        SharedPreferences preferences17 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_seven_completed = preferences17.getInt("LevelSevenCompleted", 0);
-        SharedPreferences preferences18 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_seven_starred = preferences18.getInt("LevelSevenStarred", 0);
+        level_seven_completed = levelsaves.getInt("LevelSevenCompleted", 0);
+        level_seven_starred = levelsaves.getInt("LevelSevenStarred", 0);
 
-        SharedPreferences preferences19 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_eight_completed = preferences19.getInt("LevelEightCompleted", 0);
-        SharedPreferences preferences20 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_eight_starred = preferences20.getInt("LevelEightStarred", 0);
+        level_eight_completed = levelsaves.getInt("LevelEightCompleted", 0);
+        level_eight_starred = levelsaves.getInt("LevelEightStarred", 0);
 
-        SharedPreferences preferences21 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_nine_completed = preferences21.getInt("LevelNineCompleted", 0);
-        SharedPreferences preferences22 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_nine_starred = preferences22.getInt("LevelNineStarred", 0);
+        level_nine_completed = levelsaves.getInt("LevelNineCompleted", 0);
+        level_nine_starred = levelsaves.getInt("LevelNineStarred", 0);
 
-        SharedPreferences preferences23 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_ten_completed = preferences23.getInt("LevelTenCompleted", 0);
-        SharedPreferences preferences24 = PreferenceManager.getDefaultSharedPreferences(this);
-        level_ten_starred = preferences24.getInt("LevelTenStarred", 0);
+        level_ten_completed = levelsaves.getInt("LevelTenCompleted", 0);
+        level_ten_starred = levelsaves.getInt("LevelTenStarred", 0);
+
+        level_eleven_completed = levelsaves.getInt("LevelElevenCompleted", 0);
+        level_eleven_starred = levelsaves.getInt("LevelElevenStarred", 0);
+
 
 
 
@@ -178,6 +156,7 @@ public class infopage extends AppCompatActivity {
 
         text_to_set = "Thank you for downloading!" +
                 "\n\n\nStats:\nTotal Toggles: " + total_toggles +
+                "\nTotal PTRNs Made: " + total_ptrns +
                 "\nTotal Levels Completed: " + total_completed +
                 "\nTotal Levels Starred: "+ total_starred +
                 "\nTotal Retrys: " + total_retrys;
@@ -220,6 +199,7 @@ public class infopage extends AppCompatActivity {
 
                                 text_to_set = "Thank you for downloading!" +
                                         "\n\n\nStats:\nTotal Toggles: " + total_toggles +
+                                        "\nTotal PTRNs Made: " + total_ptrns +
                                         "\nTotal Levels Completed: " + total_completed +
                                         "\nTotal Levels Starred: "+ total_starred +
                                         "\nTotal Retrys: " + total_retrys;
@@ -274,146 +254,113 @@ public class infopage extends AppCompatActivity {
 
     public void ResetGame(){
         total_toggles = 0;
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = preferences.edit();
+        SharedPreferences totalstatics = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = totalstatics.edit();
         editor.putInt("TotalToggles", total_toggles);
         editor.apply();
 
         total_completed = 0;
-        SharedPreferences preferences3 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor3 = preferences3.edit();
-        editor3.putInt("TotalCompleted", total_completed);
-        editor3.apply();
+        editor.putInt("TotalCompleted", total_completed);
+        editor.apply();
 
         total_starred = 0;
-        SharedPreferences preferences4 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor4 = preferences4.edit();
-        editor4.putInt("TotalStarred", total_starred);
-        editor4.apply();
+        editor.putInt("TotalStarred", total_starred);
+        editor.apply();
 
         total_retrys = 0;
-        SharedPreferences preferences8 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor8 = preferences8.edit();
-        editor8.putInt("TotalRetrys", total_retrys);
-        editor8.apply();
+        editor.putInt("TotalRetrys", total_retrys);
+        editor.apply();
+
+        total_ptrns = 0;
+        editor.putInt("TotalPtrns", total_ptrns);
+        editor.apply();
 
         orangelevel_completed = 0;
-        SharedPreferences preferences0 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor0 = preferences0.edit();
-        editor0.putInt("OrangeLevelCompleted", orangelevel_completed);
-        editor0.apply();
+        editor.putInt("OrangeLevelCompleted", orangelevel_completed);
+        editor.apply();
 
 
         // Levels
+        SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor2 = levelsaves.edit();
+
         level_one_completed = 0;
-        SharedPreferences preferences2 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor2 = preferences2.edit();
         editor2.putInt("LevelOneCompleted", level_one_completed);
         editor2.apply();
+
         level_one_starred = 0;
-        SharedPreferences preferences5 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor5 = preferences5.edit();
-        editor5.putInt("LevelOneStarred", level_one_starred);
-        editor5.apply();
+        editor2.putInt("LevelOneStarred", level_one_starred);
+        editor2.apply();
 
         level_two_completed = 0;
-        SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor6 = preferences6.edit();
-        editor6.putInt("LevelTwoCompleted", level_two_completed);
-        editor6.apply();
+        editor2.putInt("LevelTwoCompleted", level_two_completed);
+        editor2.apply();
         level_two_starred = 0;
-        SharedPreferences preferences7 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor7 = preferences7.edit();
-        editor7.putInt("LevelTwoStarred", level_two_starred);
-        editor7.apply();
+        editor2.putInt("LevelTwoStarred", level_two_starred);
+        editor2.apply();
 
         level_three_completed = 0;
-        SharedPreferences preferences12 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor12 = preferences12.edit();
-        editor12.putInt("LevelThreeCompleted", level_three_completed);
-        editor12.apply();
+        editor2.putInt("LevelThreeCompleted", level_three_completed);
+        editor2.apply();
         level_three_starred = 0;
-        SharedPreferences preferences13 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor13 = preferences13.edit();
-        editor13.putInt("LevelThreeStarred", level_three_starred);
-        editor13.apply();
+        editor2.putInt("LevelThreeStarred", level_three_starred);
+        editor2.apply();
 
         level_four_completed = 0;
-        SharedPreferences preferences14 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor14 = preferences14.edit();
-        editor14.putInt("LevelFourCompleted", level_four_completed);
-        editor14.apply();
+        editor2.putInt("LevelFourCompleted", level_four_completed);
+        editor2.apply();
         level_four_starred = 0;
-        SharedPreferences preferences15 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor15 = preferences15.edit();
-        editor15.putInt("LevelFourStarred", level_four_starred);
-        editor15.apply();
+        editor2.putInt("LevelFourStarred", level_four_starred);
+        editor2.apply();
 
         level_five_completed = 0;
-        SharedPreferences preferences16 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor16 = preferences16.edit();
-        editor16.putInt("LevelFiveCompleted", level_five_completed);
-        editor16.apply();
+        editor2.putInt("LevelFiveCompleted", level_five_completed);
+        editor2.apply();
         level_five_starred = 0;
-        SharedPreferences preferences17 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor17 = preferences17.edit();
-        editor17.putInt("LevelFiveStarred", level_five_starred);
-        editor17.apply();
+        editor2.putInt("LevelFiveStarred", level_five_starred);
+        editor2.apply();
 
         level_six_completed = 0;
-        SharedPreferences preferences18 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor18 = preferences18.edit();
-        editor18.putInt("LevelSixCompleted", level_six_completed);
-        editor18.apply();
+        editor2.putInt("LevelSixCompleted", level_six_completed);
+        editor2.apply();
         level_six_starred = 0;
-        SharedPreferences preferences19 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor19 = preferences19.edit();
-        editor19.putInt("LevelSixStarred", level_six_starred);
-        editor19.apply();
+        editor2.putInt("LevelSixStarred", level_six_starred);
+        editor2.apply();
 
         level_seven_completed = 0;
-        SharedPreferences preferences20 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor20 = preferences20.edit();
-        editor20.putInt("LevelSevenCompleted", level_seven_completed);
-        editor20.apply();
+        editor2.putInt("LevelSevenCompleted", level_seven_completed);
+        editor2.apply();
         level_seven_starred = 0;
-        SharedPreferences preferences21 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor21 = preferences21.edit();
-        editor21.putInt("LevelSevenStarred", level_seven_starred);
-        editor21.apply();
+        editor2.putInt("LevelSevenStarred", level_seven_starred);
+        editor2.apply();
 
         level_eight_completed = 0;
-        SharedPreferences preferences22 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor22 = preferences22.edit();
-        editor22.putInt("LevelEightCompleted", level_eight_completed);
-        editor22.apply();
+        editor2.putInt("LevelEightCompleted", level_eight_completed);
+        editor2.apply();
         level_eight_starred = 0;
-        SharedPreferences preferences23 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor23 = preferences23.edit();
-        editor23.putInt("LevelEightStarred", level_eight_starred);
-        editor23.apply();
+        editor2.putInt("LevelEightStarred", level_eight_starred);
+        editor2.apply();
 
         level_nine_completed = 0;
-        SharedPreferences preferences24 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor24 = preferences24.edit();
-        editor24.putInt("LevelNineCompleted", level_nine_completed);
-        editor24.apply();
+        editor2.putInt("LevelNineCompleted", level_nine_completed);
+        editor2.apply();
         level_nine_starred = 0;
-        SharedPreferences preferences25 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor25 = preferences25.edit();
-        editor25.putInt("LevelNineStarred", level_nine_starred);
-        editor25.apply();
+        editor2.putInt("LevelNineStarred", level_nine_starred);
+        editor2.apply();
 
         level_ten_completed = 0;
-        SharedPreferences preferences26 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor26 = preferences26.edit();
-        editor26.putInt("LevelTenCompleted", level_ten_completed);
-        editor26.apply();
+        editor2.putInt("LevelTenCompleted", level_ten_completed);
+        editor2.apply();
         level_ten_starred = 0;
-        SharedPreferences preferences27 = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor27 = preferences27.edit();
-        editor27.putInt("LevelTenStarred", level_ten_starred);
-        editor27.apply();
+        editor2.putInt("LevelTenStarred", level_ten_starred);
+        editor2.apply();
+
+        level_eleven_completed = 0;
+        editor2.putInt("LevelElevenCompleted", level_eleven_completed);
+        editor2.apply();
+        level_eleven_starred = 0;
+        editor2.putInt("LevelElevenStarred", level_eleven_starred);
+        editor2.apply();
 
     }
 }
