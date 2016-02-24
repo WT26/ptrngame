@@ -2,10 +2,6 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:interpolator="@android:anim/linear_interpolator">
     <rotate
-        android:fromXScale="1.0"
-        android:toXScale="1.05"
-        android:fromYScale="1.0"
-        android:toYScale="1.05"
         android:fromDegrees="-20"
         android:toDegrees="20"
         android:pivotX="50%"

@@ -11,7 +11,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,111 +25,145 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
         <activity
             android:name=".levelMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_level_menu"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.MainActivity" />
         </activity>
         <activity
             android:name=".levelOne"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_level_one"
-            android:parentActivityName=".levelMenuActivity" >
+            android:parentActivityName=".levelMenuActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.levelMenuActivity" />
         </activity>
         <activity
             android:name=".infopage"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_infopage"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.MainActivity" />
         </activity>
         <activity
             android:name=".levelTwo"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_level_two"
-            android:parentActivityName=".levelMenuActivity" >
+            android:parentActivityName=".levelMenuActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.levelMenuActivity" />
         </activity>
         <activity
             android:name=".levelThree"
-            android:label="@string/title_activity_level_three" >
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_level_three"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".levelFour"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_level_four"
-            android:parentActivityName=".levelMenuActivity" >
+            android:parentActivityName=".levelMenuActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.levelMenuActivity" />
         </activity>
         <activity
             android:name=".levelFive"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_level_five"
-            android:parentActivityName=".levelMenuActivity" >
+            android:parentActivityName=".levelMenuActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.levelMenuActivity" />
         </activity>
         <activity
             android:name=".levelSix"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_level_six"
-            android:parentActivityName=".levelMenuActivity" >
+            android:parentActivityName=".levelMenuActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.levelMenuActivity" />
         </activity>
         <activity
             android:name=".levelSeven"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_level_seven"
-            android:parentActivityName=".levelMenuActivity" >
+            android:parentActivityName=".levelMenuActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.levelMenuActivity" />
         </activity>
         <activity
             android:name=".levelEight"
-            android:label="@string/title_activity_level_eight" >
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_level_eight"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".levelNine"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_level_nine"
-            android:parentActivityName=".levelMenuActivity" >
+            android:parentActivityName=".levelMenuActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.levelMenuActivity" />
         </activity>
         <activity
             android:name=".levelTen"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_level_ten"
-            android:parentActivityName=".levelMenuActivity" >
+            android:parentActivityName=".levelMenuActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.levelMenuActivity" />
         </activity>
         <activity
             android:name=".lockLevel"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_lock_level"
-            android:parentActivityName=".levelMenuActivity" >
+            android:parentActivityName=".levelMenuActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.levelMenuActivity" />
         </activity>
         <activity
             android:name=".orangeworld_menu"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_orangeworld_menu"
-            android:parentActivityName=".levelMenuActivity" >
+            android:parentActivityName=".levelMenuActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.MainActivity" />
         </activity>
         <activity
             android:name=".levelEleven"
-            android:label="@string/title_activity_level_eleven" >
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_level_eleven"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".levelTwelve"
+            android:label="@string/title_activity_level_twelve" >
         </activity>
     </application>
 
