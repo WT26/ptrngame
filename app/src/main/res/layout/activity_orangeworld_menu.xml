@@ -155,6 +155,7 @@
                     android:id="@+id/level3"
                     android:layout_width="126dp"
                     android:layout_height="126dp"
+                    android:onClick="levelThirteen"
                     android:background="@drawable/notcompletedorange"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />

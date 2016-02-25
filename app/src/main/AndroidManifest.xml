@@ -160,10 +160,26 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_level_eleven"
             android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.orangeworld_menu" />
         </activity>
         <activity
             android:name=".levelTwelve"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_level_twelve" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.orangeworld_menu" />
+        </activity>
+        <activity
+            android:name=".levelThirteen"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_level_thirteen"
+            android:parentActivityName=".orangeworld_menu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.orangeworld_menu" />
         </activity>
     </application>
 

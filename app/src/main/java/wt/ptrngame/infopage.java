@@ -149,6 +149,12 @@ public class infopage extends AppCompatActivity {
         level_eleven_completed = levelsaves.getInt("LevelElevenCompleted", 0);
         level_eleven_starred = levelsaves.getInt("LevelElevenStarred", 0);
 
+        level_twelve_completed = levelsaves.getInt("LevelTwelveCompleted", 0);
+        level_twelve_starred = levelsaves.getInt("LevelTwelveStarred", 0);
+
+        level_thirteen_completed = levelsaves.getInt("LevelThirteenCompleted", 0);
+        level_thirteen_starred = levelsaves.getInt("LevelThirteenStarred", 0);
+
 
 
 
@@ -360,6 +366,20 @@ public class infopage extends AppCompatActivity {
         editor2.apply();
         level_eleven_starred = 0;
         editor2.putInt("LevelElevenStarred", level_eleven_starred);
+        editor2.apply();
+
+        level_twelve_completed = 0;
+        editor2.putInt("LevelTwelveCompleted", level_twelve_completed);
+        editor2.apply();
+        level_twelve_starred = 0;
+        editor2.putInt("LevelTwelveStarred", level_twelve_starred);
+        editor2.apply();
+
+        level_thirteen_completed = 0;
+        editor2.putInt("LevelThirteenCompleted", level_thirteen_completed);
+        editor2.apply();
+        level_thirteen_starred = 0;
+        editor2.putInt("LevelThirteenStarred", level_thirteen_starred);
         editor2.apply();
 
     }

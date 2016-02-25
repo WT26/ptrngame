@@ -18,7 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-public class levelTwelve extends AppCompatActivity {
+public class levelThirteen extends AppCompatActivity {
     public static final String myPrefsKey13 = "MyPrefsFile";
     int sounds_toggle;
 
@@ -27,6 +27,7 @@ public class levelTwelve extends AppCompatActivity {
     ToggleButton toggle2;
     ToggleButton toggle3;
     ToggleButton toggle4;
+    ToggleButton toggle5;
 
     Button back;
     Button restart;
@@ -42,8 +43,8 @@ public class levelTwelve extends AppCompatActivity {
     int total_ptrns;
 
     public static final String myPrefsKey3 = "MyPrefsFile";
-    int level_twelve_completed;
-    int level_twelve_starred;
+    int level_thirteen_completed;
+    int level_thirteen_starred;
 
     int current_toggles;
     int toggles_for_star;
@@ -55,7 +56,7 @@ public class levelTwelve extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level_twelve);
+        setContentView(R.layout.activity_level_thirteen);
 
         current_toggles = 0;
         toggles_for_star = 3;
@@ -71,8 +72,8 @@ public class levelTwelve extends AppCompatActivity {
 
 
         SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
-        level_twelve_completed = levelsaves.getInt("LevelTwelveCompleted", 0);
-        level_twelve_starred = levelsaves.getInt("LevelTwelveStarred", 0);
+        level_thirteen_completed = levelsaves.getInt("LevelThirteenCompleted", 0);
+        level_thirteen_starred = levelsaves.getInt("LevelThirteenStarred", 0);
 
         back = (Button) findViewById(R.id.angry_btn);
         restart = (Button) findViewById(R.id.button5);
@@ -85,6 +86,8 @@ public class levelTwelve extends AppCompatActivity {
         toggle3.toggle();
         toggle4 = (ToggleButton) findViewById(R.id.toggleButton9);
         toggle4.toggle();
+        toggle5 = (ToggleButton) findViewById(R.id.toggleButton10);
+        toggle5.toggle();
 
 
         infotext = (TextView) findViewById(R.id.textView32);
@@ -111,6 +114,7 @@ public class levelTwelve extends AppCompatActivity {
                     }
 
                     toggle4.toggle();
+                    toggle5.toggle();
 
                     if(CheckWinningCondition()){
                         levelWon();
@@ -161,6 +165,21 @@ public class levelTwelve extends AppCompatActivity {
                         //infotext.setText("Now its connected.");
                         makeptrn.setText("MAKE PTRN");
                         toggle4.clearAnimation();
+                        toggle.startAnimation(animSelect);
+                        makeptrn.setVisibility(view.GONE);
+                        total_ptrns += 1;
+                    }
+                    else if(ptrn == 5){
+                        if(sounds_toggle == 0){
+                            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                            mp.start();
+                        }
+                        toggle.toggle();
+                        programmed = 1;
+                        pattern_state = 3;
+                        //infotext.setText("Now its connected.");
+                        makeptrn.setText("MAKE PTRN");
+                        toggle5.clearAnimation();
                         toggle.startAnimation(animSelect);
                         makeptrn.setVisibility(view.GONE);
                         total_ptrns += 1;
@@ -228,6 +247,22 @@ public class levelTwelve extends AppCompatActivity {
                                 levelWon();
                             }
                         }
+                        else if(programmed == 5){
+                            total_toggles += 1;
+                            current_toggles += 1;
+                            if(sounds_toggle == 0){
+                                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                                mp.start();
+                            }
+
+                            toggle5.toggle();
+
+                            if(CheckWinningCondition()){
+                                levelWon();
+                            }
+                        }
+
+
                     }
                     else{
                         // NORMAL LOGIC
@@ -239,6 +274,7 @@ public class levelTwelve extends AppCompatActivity {
                         }
 
                         toggle4.toggle();
+                        toggle5.toggle();
 
                         if(CheckWinningCondition()){
                             levelWon();
@@ -262,6 +298,9 @@ public class levelTwelve extends AppCompatActivity {
                     }
 
                     toggle.toggle();
+                    toggle3.toggle();
+                    toggle4.toggle();
+                    toggle5.toggle();
 
                     if(CheckWinningCondition()){
                         levelWon();
@@ -312,6 +351,21 @@ public class levelTwelve extends AppCompatActivity {
                         //infotext.setText("Now its connected.");
                         makeptrn.setText("MAKE PTRN");
                         toggle4.clearAnimation();
+                        toggle2.startAnimation(animSelect);
+                        makeptrn.setVisibility(view.GONE);
+                        total_ptrns += 1;
+                    }
+                    else if(ptrn == 5){
+                        if(sounds_toggle == 0){
+                            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                            mp.start();
+                        }
+                        toggle.toggle();
+                        programmed = 2;
+                        pattern_state = 3;
+                        //infotext.setText("Now its connected.");
+                        makeptrn.setText("MAKE PTRN");
+                        toggle5.clearAnimation();
                         toggle2.startAnimation(animSelect);
                         makeptrn.setVisibility(view.GONE);
                         total_ptrns += 1;
@@ -379,6 +433,20 @@ public class levelTwelve extends AppCompatActivity {
                                 levelWon();
                             }
                         }
+                        else if(programmed == 5){
+                            total_toggles += 1;
+                            current_toggles += 1;
+                            if(sounds_toggle == 0){
+                                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                                mp.start();
+                            }
+
+                            toggle5.toggle();
+
+                            if(CheckWinningCondition()){
+                                levelWon();
+                            }
+                        }
                     }
                     else{
                         // NORMAL LOGIC
@@ -390,6 +458,9 @@ public class levelTwelve extends AppCompatActivity {
                         }
 
                         toggle.toggle();
+                        toggle3.toggle();
+                        toggle4.toggle();
+                        toggle5.toggle();
 
                         if(CheckWinningCondition()){
                             levelWon();
@@ -468,6 +539,21 @@ public class levelTwelve extends AppCompatActivity {
                         makeptrn.setVisibility(view.GONE);
                         total_ptrns += 1;
                     }
+                    else if(ptrn == 5){
+                        if(sounds_toggle == 0){
+                            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                            mp.start();
+                        }
+                        toggle3.toggle();
+                        programmed = 3;
+                        pattern_state = 3;
+                        //infotext.setText("Now its connected.");
+                        makeptrn.setText("MAKE PTRN");
+                        toggle5.clearAnimation();
+                        toggle3.startAnimation(animSelect);
+                        makeptrn.setVisibility(view.GONE);
+                        total_ptrns += 1;
+                    }
                     else{
                         if(sounds_toggle == 0){
                             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
@@ -530,6 +616,20 @@ public class levelTwelve extends AppCompatActivity {
                                 levelWon();
                             }
                         }
+                        else if(programmed == 5){
+                            total_toggles += 1;
+                            current_toggles += 1;
+                            if(sounds_toggle == 0){
+                                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                                mp.start();
+                            }
+
+                            toggle5.toggle();
+
+                            if(CheckWinningCondition()){
+                                levelWon();
+                            }
+                        }
                     }
                     else{
                         // NORMAL LOGIC
@@ -564,9 +664,8 @@ public class levelTwelve extends AppCompatActivity {
                         mp.start();
                     }
 
-                    toggle2.toggle();
                     toggle3.toggle();
-
+                    toggle5.toggle();
 
                     if(CheckWinningCondition()){
                         levelWon();
@@ -617,6 +716,21 @@ public class levelTwelve extends AppCompatActivity {
                         //infotext.setText("Now its connected.");
                         makeptrn.setText("MAKE PTRN");
                         toggle.clearAnimation();
+                        toggle4.startAnimation(animSelect);
+                        makeptrn.setVisibility(view.GONE);
+                        total_ptrns += 1;
+                    }
+                    else if(ptrn == 5){
+                        if(sounds_toggle == 0){
+                            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                            mp.start();
+                        }
+                        toggle4.toggle();
+                        programmed = 4;
+                        pattern_state = 3;
+                        //infotext.setText("Now its connected.");
+                        makeptrn.setText("MAKE PTRN");
+                        toggle5.clearAnimation();
                         toggle4.startAnimation(animSelect);
                         makeptrn.setVisibility(view.GONE);
                         total_ptrns += 1;
@@ -683,6 +797,20 @@ public class levelTwelve extends AppCompatActivity {
                                 levelWon();
                             }
                         }
+                        else if(programmed == 5){
+                            total_toggles += 1;
+                            current_toggles += 1;
+                            if(sounds_toggle == 0){
+                                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                                mp.start();
+                            }
+
+                            toggle5.toggle();
+
+                            if(CheckWinningCondition()){
+                                levelWon();
+                            }
+                        }
                     }
                     else{
                         // NORMAL LOGIC
@@ -693,8 +821,189 @@ public class levelTwelve extends AppCompatActivity {
                             mp.start();
                         }
 
-                        toggle2.toggle();
                         toggle3.toggle();
+                        toggle5.toggle();
+
+                        if(CheckWinningCondition()){
+                            levelWon();
+                        }
+                        // NORMAL LOGIC
+                    }
+                }
+            }
+        });
+
+        toggle5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                if (pattern_state == 0){
+
+                    // NORMAL LOGIC
+                    total_toggles += 1;
+                    current_toggles += 1;
+                    if(sounds_toggle == 0){
+                        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                        mp.start();
+                    }
+
+                    toggle3.toggle();
+                    toggle.toggle();
+
+                    if(CheckWinningCondition()){
+                        levelWon();
+                    }
+                    // NORMAL LOGIC
+                }
+
+                // ###PROGRAMMING THE BUTTON
+                else if(pattern_state == 1){
+                    if(sounds_toggle == 0){
+                        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                        mp.start();
+                    }
+                    toggle5.toggle();
+                    ptrn = 4;
+                    pattern_state = 2;
+                    //infotext.setText("Connect it.");
+                    toggle5.startAnimation(animRotate);
+                }
+                else if(pattern_state == 2){
+                    if(ptrn == 4){
+                        toggle5.toggle();
+                    }
+                    else if(ptrn == 2){
+                        if(sounds_toggle == 0){
+                            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                            mp.start();
+                        }
+                        toggle5.toggle();
+                        programmed = 4;
+                        pattern_state = 3;
+                        //infotext.setText("Now its connected.");
+                        makeptrn.setText("MAKE PTRN");
+                        toggle2.clearAnimation();
+                        toggle5.startAnimation(animSelect);
+                        makeptrn.setVisibility(view.GONE);
+                        total_ptrns += 1;
+
+                    }
+                    else if(ptrn == 1){
+                        if(sounds_toggle == 0){
+                            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                            mp.start();
+                        }
+                        toggle5.toggle();
+                        programmed = 4;
+                        pattern_state = 3;
+                        //infotext.setText("Now its connected.");
+                        makeptrn.setText("MAKE PTRN");
+                        toggle.clearAnimation();
+                        toggle5.startAnimation(animSelect);
+                        makeptrn.setVisibility(view.GONE);
+                        total_ptrns += 1;
+                    }
+                    else if(ptrn == 4){
+                        if(sounds_toggle == 0){
+                            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                            mp.start();
+                        }
+                        toggle5.toggle();
+                        programmed = 4;
+                        pattern_state = 3;
+                        //infotext.setText("Now its connected.");
+                        makeptrn.setText("MAKE PTRN");
+                        toggle4.clearAnimation();
+                        toggle5.startAnimation(animSelect);
+                        makeptrn.setVisibility(view.GONE);
+                        total_ptrns += 1;
+                    }
+                    else{
+                        if(sounds_toggle == 0){
+                            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                            mp.start();
+                        }
+                        toggle5.toggle();
+                        programmed = 4;
+                        pattern_state = 3;
+                        //infotext.setText("Now its connected.");
+                        makeptrn.setText("MAKE PTRN");
+                        toggle3.clearAnimation();
+                        toggle5.startAnimation(animSelect);
+                        makeptrn.setVisibility(view.GONE);
+                        total_ptrns += 1;
+                    }
+                }
+                // #########################
+
+                else {
+                    if(ptrn == 4){
+                        if(programmed == 1){
+                            total_toggles += 1;
+                            current_toggles += 1;
+                            if(sounds_toggle == 0){
+                                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                                mp.start();
+                            }
+
+                            toggle.toggle();
+
+                            if(CheckWinningCondition()){
+                                levelWon();
+                            }
+                        }
+                        else if(programmed == 2){
+                            total_toggles += 1;
+                            current_toggles += 1;
+                            if(sounds_toggle == 0){
+                                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                                mp.start();
+                            }
+
+                            toggle2.toggle();
+
+                            if(CheckWinningCondition()){
+                                levelWon();
+                            }
+                        }
+                        else if(programmed == 3){
+                            total_toggles += 1;
+                            current_toggles += 1;
+                            if(sounds_toggle == 0){
+                                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                                mp.start();
+                            }
+
+                            toggle3.toggle();
+
+                            if(CheckWinningCondition()){
+                                levelWon();
+                            }
+                        }
+                        else if(programmed == 4){
+                            total_toggles += 1;
+                            current_toggles += 1;
+                            if(sounds_toggle == 0){
+                                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                                mp.start();
+                            }
+
+                            toggle4.toggle();
+
+                            if(CheckWinningCondition()){
+                                levelWon();
+                            }
+                        }
+                    }
+                    else{
+                        // NORMAL LOGIC
+                        total_toggles += 1;
+                        current_toggles += 1;
+                        if(sounds_toggle == 0){
+                            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                            mp.start();
+                        }
+
+                        toggle3.toggle();
+                        toggle.toggle();
 
                         if(CheckWinningCondition()){
                             levelWon();
@@ -734,6 +1043,7 @@ public class levelTwelve extends AppCompatActivity {
                     toggle2.clearAnimation();
                     toggle3.clearAnimation();
                     toggle4.clearAnimation();
+                    toggle5.clearAnimation();
 
                 }
                 else if(pattern_state == 2){
@@ -748,6 +1058,9 @@ public class levelTwelve extends AppCompatActivity {
                     toggle2.clearAnimation();
                     toggle3.clearAnimation();
                     toggle4.clearAnimation();
+                    toggle5.clearAnimation();
+
+
                 }
                 else if(pattern_state == 3){
                 }
@@ -779,7 +1092,7 @@ public class levelTwelve extends AppCompatActivity {
 
     public boolean CheckWinningCondition(){
         if(toggle.isChecked() && toggle2.isChecked() && toggle3.isChecked()
-                && toggle4.isChecked()){
+                && toggle4.isChecked() && toggle5.isChecked()){
             return true;
         }
         else{
@@ -794,17 +1107,17 @@ public class levelTwelve extends AppCompatActivity {
 
 
 
-        if(level_twelve_completed == 0){
-            level_twelve_completed = 1;
+        if(level_thirteen_completed == 0){
+            level_thirteen_completed = 1;
             total_completed += 1;
         }
         else{
-            level_twelve_completed = 1;
+            level_thirteen_completed = 1;
         }
 
         if(current_toggles <= toggles_for_star){
-            if(level_twelve_starred == 0){
-                level_twelve_starred = 1;
+            if(level_thirteen_starred == 0){
+                level_thirteen_starred = 1;
                 total_starred += 1;
                 if(sounds_toggle == 0){
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.levelcompletedsfx);
@@ -812,7 +1125,7 @@ public class levelTwelve extends AppCompatActivity {
                 }
             }
             else{
-                level_twelve_starred = 1;
+                level_thirteen_starred = 1;
             }
         }
 
@@ -831,8 +1144,8 @@ public class levelTwelve extends AppCompatActivity {
         editor.putInt("TotalPtrns", total_ptrns);
         editor.apply();
 
-        editor.putInt("LevelTwelveCompleted", level_twelve_completed);
-        editor.putInt("LevelTwelveStarred", level_twelve_starred);
+        editor.putInt("LevelThirteenCompleted", level_thirteen_completed);
+        editor.putInt("LevelThirteenStarred", level_thirteen_starred);
         editor.apply();
 
 
@@ -875,13 +1188,18 @@ public class levelTwelve extends AppCompatActivity {
             toggle4.setChecked(true);
         } else {
             toggle4.setChecked(true);
-
+        }
+        if(toggle5.isChecked()){
+            toggle5.setChecked(true);
+        } else {
+            toggle5.setChecked(true);
         }
 
         toggle.clearAnimation();
         toggle2.clearAnimation();
         toggle3.clearAnimation();
         toggle4.clearAnimation();
+        toggle5.clearAnimation();
 
 
         infotext.setText("");
