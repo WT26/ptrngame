@@ -13,6 +13,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -82,6 +84,7 @@ public class levelMenuActivity extends AppCompatActivity {
     int level_ten_starred;
 
 
+
     Intent intent = getIntent();
     //String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
     Button back;
@@ -105,6 +108,9 @@ public class levelMenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        final Animation animSelect = AnimationUtils.loadAnimation(this, R.anim.anim_select);
+
 
         SharedPreferences preferences97 = PreferenceManager.getDefaultSharedPreferences(this);
         orangelevel_completed = preferences97.getInt("OrangeLevelCompleted", 0);
@@ -485,7 +491,9 @@ public class levelMenuActivity extends AppCompatActivity {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.clicklock);
                     mp.start();
                 }
-               if(lock_counter > 5){
+                lock_button.setAnimation(animSelect);
+                if(lock_counter > 5){
+
                    Resources res = getResources();
                    Drawable drawable = res.getDrawable(R.drawable.lockopenorange);
                    lock_button.setBackground(drawable);
@@ -501,7 +509,7 @@ public class levelMenuActivity extends AppCompatActivity {
                            lockLevel(view);
                        }
                    }, 1500);
-               }
+                }
                 lock_counter += 1;
             }
         });

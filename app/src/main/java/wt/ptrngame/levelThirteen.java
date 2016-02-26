@@ -83,9 +83,7 @@ public class levelThirteen extends AppCompatActivity {
         toggle.toggle();
         toggle2 = (ToggleButton) findViewById(R.id.button1);
         toggle3 = (ToggleButton) findViewById(R.id.button3);
-        toggle3.toggle();
         toggle4 = (ToggleButton) findViewById(R.id.toggleButton9);
-        toggle4.toggle();
         toggle5 = (ToggleButton) findViewById(R.id.toggleButton10);
         toggle5.toggle();
 
@@ -113,8 +111,7 @@ public class levelThirteen extends AppCompatActivity {
                         mp.start();
                     }
 
-                    toggle4.toggle();
-                    toggle5.toggle();
+                    toggle3.toggle();
 
                     if(CheckWinningCondition()){
                         levelWon();
@@ -273,8 +270,7 @@ public class levelThirteen extends AppCompatActivity {
                             mp.start();
                         }
 
-                        toggle4.toggle();
-                        toggle5.toggle();
+                        toggle3.toggle();
 
                         if(CheckWinningCondition()){
                             levelWon();
@@ -296,11 +292,8 @@ public class levelThirteen extends AppCompatActivity {
                         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                         mp.start();
                     }
-
-                    toggle.toggle();
-                    toggle3.toggle();
-                    toggle4.toggle();
                     toggle5.toggle();
+
 
                     if(CheckWinningCondition()){
                         levelWon();
@@ -457,9 +450,7 @@ public class levelThirteen extends AppCompatActivity {
                             mp.start();
                         }
 
-                        toggle.toggle();
-                        toggle3.toggle();
-                        toggle4.toggle();
+
                         toggle5.toggle();
 
                         if(CheckWinningCondition()){
@@ -483,8 +474,7 @@ public class levelThirteen extends AppCompatActivity {
                         mp.start();
                     }
 
-                    toggle.toggle();
-                    toggle4.toggle();
+                    toggle5.toggle();
 
                     if(CheckWinningCondition()){
                         levelWon();
@@ -640,8 +630,7 @@ public class levelThirteen extends AppCompatActivity {
                             mp.start();
                         }
 
-                        toggle.toggle();
-                        toggle4.toggle();
+                        toggle5.toggle();
 
                         if(CheckWinningCondition()){
                             levelWon();
@@ -664,7 +653,7 @@ public class levelThirteen extends AppCompatActivity {
                         mp.start();
                     }
 
-                    toggle3.toggle();
+                    toggle.toggle();
                     toggle5.toggle();
 
                     if(CheckWinningCondition()){
@@ -821,7 +810,7 @@ public class levelThirteen extends AppCompatActivity {
                             mp.start();
                         }
 
-                        toggle3.toggle();
+                        toggle.toggle();
                         toggle5.toggle();
 
                         if(CheckWinningCondition()){
@@ -845,8 +834,7 @@ public class levelThirteen extends AppCompatActivity {
                         mp.start();
                     }
 
-                    toggle3.toggle();
-                    toggle.toggle();
+                    toggle2.toggle();
 
                     if(CheckWinningCondition()){
                         levelWon();
@@ -861,13 +849,13 @@ public class levelThirteen extends AppCompatActivity {
                         mp.start();
                     }
                     toggle5.toggle();
-                    ptrn = 4;
+                    ptrn = 5;
                     pattern_state = 2;
                     //infotext.setText("Connect it.");
                     toggle5.startAnimation(animRotate);
                 }
                 else if(pattern_state == 2){
-                    if(ptrn == 4){
+                    if(ptrn == 5){
                         toggle5.toggle();
                     }
                     else if(ptrn == 2){
@@ -876,7 +864,7 @@ public class levelThirteen extends AppCompatActivity {
                             mp.start();
                         }
                         toggle5.toggle();
-                        programmed = 4;
+                        programmed = 5;
                         pattern_state = 3;
                         //infotext.setText("Now its connected.");
                         makeptrn.setText("MAKE PTRN");
@@ -892,7 +880,7 @@ public class levelThirteen extends AppCompatActivity {
                             mp.start();
                         }
                         toggle5.toggle();
-                        programmed = 4;
+                        programmed = 5;
                         pattern_state = 3;
                         //infotext.setText("Now its connected.");
                         makeptrn.setText("MAKE PTRN");
@@ -907,7 +895,7 @@ public class levelThirteen extends AppCompatActivity {
                             mp.start();
                         }
                         toggle5.toggle();
-                        programmed = 4;
+                        programmed = 5;
                         pattern_state = 3;
                         //infotext.setText("Now its connected.");
                         makeptrn.setText("MAKE PTRN");
@@ -922,7 +910,7 @@ public class levelThirteen extends AppCompatActivity {
                             mp.start();
                         }
                         toggle5.toggle();
-                        programmed = 4;
+                        programmed = 5;
                         pattern_state = 3;
                         //infotext.setText("Now its connected.");
                         makeptrn.setText("MAKE PTRN");
@@ -935,7 +923,7 @@ public class levelThirteen extends AppCompatActivity {
                 // #########################
 
                 else {
-                    if(ptrn == 4){
+                    if(ptrn == 5){
                         if(programmed == 1){
                             total_toggles += 1;
                             current_toggles += 1;
@@ -1002,8 +990,8 @@ public class levelThirteen extends AppCompatActivity {
                             mp.start();
                         }
 
-                        toggle3.toggle();
-                        toggle.toggle();
+                        toggle2.toggle();
+
 
                         if(CheckWinningCondition()){
                             levelWon();
@@ -1178,16 +1166,11 @@ public class levelThirteen extends AppCompatActivity {
         }
 
         if(toggle3.isChecked()){
-            toggle3.setChecked(true);
+            toggle3.setChecked(false);
         }
-        else{
-            toggle3.setChecked(true);
 
-        }
         if(toggle4.isChecked()){
-            toggle4.setChecked(true);
-        } else {
-            toggle4.setChecked(true);
+            toggle4.setChecked(false);
         }
         if(toggle5.isChecked()){
             toggle5.setChecked(true);
