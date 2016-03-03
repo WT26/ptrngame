@@ -755,12 +755,12 @@ public class orangeworld_menu extends AppCompatActivity {
     }
 
     public  void levelFourteen(View view){
-        Intent intent4 = new Intent(this, levelFour.class);
+        Intent intent4 = new Intent(this, levelFourteen.class);
         startActivity(intent4);
     }
 
     public  void levelFifteen(View view){
-        Intent intent5 = new Intent(this, levelFive.class);
+        Intent intent5 = new Intent(this, levelFifteen.class);
         startActivity(intent5);
     }
 

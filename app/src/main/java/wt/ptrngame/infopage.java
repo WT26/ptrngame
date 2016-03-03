@@ -155,6 +155,8 @@ public class infopage extends AppCompatActivity {
         level_thirteen_completed = levelsaves.getInt("LevelThirteenCompleted", 0);
         level_thirteen_starred = levelsaves.getInt("LevelThirteenStarred", 0);
 
+        level_fourteen_completed = levelsaves.getInt("LevelFourteenCompleted", 0);
+        level_fourteen_starred = levelsaves.getInt("LevelFourteenStarred", 0);
 
 
 
@@ -225,28 +227,6 @@ public class infopage extends AppCompatActivity {
                 alertDialog.show();
             }
         });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_infopage, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     public void MainMenu(View view){
@@ -380,6 +360,13 @@ public class infopage extends AppCompatActivity {
         editor2.apply();
         level_thirteen_starred = 0;
         editor2.putInt("LevelThirteenStarred", level_thirteen_starred);
+        editor2.apply();
+
+        level_fourteen_completed = 0;
+        editor2.putInt("LevelFourteenCompleted", level_fourteen_completed);
+        editor2.apply();
+        level_fourteen_starred = 0;
+        editor2.putInt("LevelFourteenStarred", level_fourteen_starred);
         editor2.apply();
 
     }

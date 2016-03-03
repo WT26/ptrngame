@@ -181,6 +181,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.orangeworld_menu" />
         </activity>
+        <activity
+            android:name=".levelFourteen"
+            android:label="@string/title_activity_level_fourteen" >
+        </activity>
+        <activity
+            android:name=".levelFifteen"
+            android:label="@string/title_activity_level_fifteen"
+            android:parentActivityName=".orangeworld_menu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.orangeworld_menu" />
+        </activity>
     </application>
 
 </manifest>
