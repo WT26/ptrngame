@@ -765,27 +765,27 @@ public class orangeworld_menu extends AppCompatActivity {
     }
 
     public  void levelSixteen(View view){
-        Intent intent6 = new Intent(this, levelSix.class);
+        Intent intent6 = new Intent(this, levelSixteen.class);
         startActivity(intent6);
     }
 
     public  void levelSeventeen(View view){
-        Intent intent7 = new Intent(this, levelSeven.class);
+        Intent intent7 = new Intent(this, levelSeventeen.class);
         startActivity(intent7);
     }
 
     public  void levelEighteen(View view){
-        Intent intent8 = new Intent(this, levelEight.class);
+        Intent intent8 = new Intent(this, levelEighteen.class);
         startActivity(intent8);
     }
 
     public  void levelNineteen(View view){
-        Intent intent9 = new Intent(this, levelNine.class);
+        Intent intent9 = new Intent(this, levelNineteen.class);
         startActivity(intent9);
     }
 
     public  void levelTwenty(View view){
-        Intent intent10 = new Intent(this, levelTen.class);
+        Intent intent10 = new Intent(this, levelTwenty.class);
         startActivity(intent10);
     }
 

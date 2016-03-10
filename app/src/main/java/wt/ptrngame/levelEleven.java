@@ -472,6 +472,7 @@ public class levelEleven extends AppCompatActivity {
                         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.backsound);
                         mp.start();
                     }
+                    ptrn = 0;
                     pattern_state = 0;
                     makeptrn.setText("MAKE PTRN");
                     infotext.setText("");
@@ -485,6 +486,7 @@ public class levelEleven extends AppCompatActivity {
                         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.backsound);
                         mp.start();
                     }
+                    ptrn = 0;
                     pattern_state = 0;
                     makeptrn.setText("MAKE PTRN");
                     infotext.setText("");

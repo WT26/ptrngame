@@ -23,5 +23,10 @@
     <string name="title_activity_level_thirteen">levelThirteen</string>
     <string name="title_activity_level_fourteen">levelFourteen</string>
     <string name="title_activity_level_fifteen">levelFifteen</string>
+    <string name="title_activity_level_sixteen">levelSixteen</string>
+    <string name="title_activity_level_seventeen">levelSeventeen</string>
+    <string name="title_activity_level_eighteen">levelEighteen</string>
+    <string name="title_activity_level_nineteen">levelNineteen</string>
+    <string name="title_activity_level_twenty">levelTwenty</string>
 
 </resources>

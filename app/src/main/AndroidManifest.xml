@@ -193,6 +193,46 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.orangeworld_menu" />
         </activity>
+        <activity
+            android:name=".levelSixteen"
+            android:label="@string/title_activity_level_sixteen"
+            android:parentActivityName=".orangeworld_menu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.orangeworld_menu" />
+        </activity>
+        <activity
+            android:name=".levelSeventeen"
+            android:label="@string/title_activity_level_seventeen"
+            android:parentActivityName=".orangeworld_menu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.orangeworld_menu" />
+        </activity>
+        <activity
+            android:name=".levelEighteen"
+            android:label="@string/title_activity_level_eighteen"
+            android:parentActivityName=".orangeworld_menu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.orangeworld_menu" />
+        </activity>
+        <activity
+            android:name=".levelNineteen"
+            android:label="@string/title_activity_level_nineteen"
+            android:parentActivityName=".orangeworld_menu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.orangeworld_menu" />
+        </activity>
+        <activity
+            android:name=".levelTwenty"
+            android:label="@string/title_activity_level_twenty"
+            android:parentActivityName=".orangeworld_menu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.orangeworld_menu" />
+        </activity>
     </application>
 
 </manifest>
