@@ -2924,7 +2924,7 @@ public class levelSeventeen extends AppCompatActivity {
         if(toggle.isChecked() && toggle2.isChecked() && toggle3.isChecked()
                 && toggle4.isChecked() && toggle5.isChecked()
                 && toggle6.isChecked() && toggle7.isChecked()
-                && toggle8.isChecked()){
+                && toggle8.isChecked() && toggle9.isChecked()){
             return true;
         }
         else{
