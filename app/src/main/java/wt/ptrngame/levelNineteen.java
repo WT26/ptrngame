@@ -4061,7 +4061,7 @@ public class levelNineteen extends AppCompatActivity {
                                 levelWon();
                             }
                         }
-                        else if(programmed == 11){
+                        else if(programmed == 10){
                             total_toggles += 1;
                             current_toggles += 1;
                             if(sounds_toggle == 0){
@@ -4069,7 +4069,7 @@ public class levelNineteen extends AppCompatActivity {
                                 mp.start();
                             }
 
-                            toggle11.toggle();
+                            toggle10.toggle();
 
                             if(CheckWinningCondition()){
                                 levelWon();
