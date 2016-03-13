@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -72,6 +73,7 @@ public class orangeworld_menu extends AppCompatActivity {
     Button levelnineteen_button;
     Button leveltwenty_button;
 
+    ImageView note;
     //Button lock_button;
     //Button orangeworld_button;
 
@@ -134,6 +136,7 @@ public class orangeworld_menu extends AppCompatActivity {
         levelnineteen_button = (Button) findViewById(R.id.level9);
         leveltwenty_button = (Button) findViewById(R.id.level10);
 
+        note = (ImageView) findViewById(R.id.imageView5);
         //lock_button = (Button) findViewById(R.id.button6);
         //orangeworld_button = (Button) findViewById(R.id.button7);
 
@@ -311,12 +314,12 @@ public class orangeworld_menu extends AppCompatActivity {
         }
 
         ////10Completed->orangeButton
-        //if(total_completed >= 10){
-        //    lock_button.setVisibility(View.VISIBLE);
-        //}
-        //else{
-        //    lock_button.setVisibility(View.GONE);
-        //}
+        if(total_completed >= 20){
+            note.setVisibility(View.VISIBLE);
+        }
+        else{
+            note.setVisibility(View.GONE);
+        }
 //
         //if(orangelevel_completed == 1){
         //    orangeworld_button.setVisibility(View.VISIBLE);
@@ -432,6 +435,16 @@ public class orangeworld_menu extends AppCompatActivity {
                     mp.start();
                 }
                 levelTwenty(view);
+            }
+        });
+
+        note.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                if (sounds_toggle == 0) {
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                    mp.start();
+                }
+                lookNote(view);
             }
         });
 
@@ -691,6 +704,14 @@ public class orangeworld_menu extends AppCompatActivity {
             leveltwenty_button.setBackground(drawable);
         }
 
+        if(total_completed >= 20){
+            note.setVisibility(View.VISIBLE);
+        }
+        else{
+            note.setVisibility(View.GONE);
+        }
+
+
         //lock_button = (Button) findViewById(R.id.button6);
         ////10Completed->orangeButton
         //if(total_completed >= 10){
@@ -787,6 +808,11 @@ public class orangeworld_menu extends AppCompatActivity {
     public  void levelTwenty(View view){
         Intent intent10 = new Intent(this, levelTwenty.class);
         startActivity(intent10);
+    }
+
+    public void lookNote(View view) {
+        Intent intent11 = new Intent(this, note.class);
+        startActivity(intent11);
     }
 
     //public  void lockLevel(View view){

@@ -28,5 +28,6 @@
     <string name="title_activity_level_eighteen">levelEighteen</string>
     <string name="title_activity_level_nineteen">levelNineteen</string>
     <string name="title_activity_level_twenty">levelTwenty</string>
+    <string name="title_activity_note">note</string>
 
 </resources>
