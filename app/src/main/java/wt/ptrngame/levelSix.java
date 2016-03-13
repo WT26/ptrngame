@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,7 +41,8 @@ public class levelSix extends AppCompatActivity {
 
     public static final String myPrefsKey6 = "MyPrefsFile";
     int total_retrys;
-
+    int note_combination;
+    int note_solved;
 
     public static final String myPrefsKey3 = "MyPrefsFile";
     int level_six_completed;
@@ -67,6 +69,8 @@ public class levelSix extends AppCompatActivity {
 
         SharedPreferences preferences2 = PreferenceManager.getDefaultSharedPreferences(this);
         total_completed = preferences2.getInt("TotalCompleted", 0);
+        note_combination = preferences2.getInt("NoteCombination", 0);
+        note_solved = preferences2.getInt("NoteSolved", 0);
 
         SharedPreferences preferences4 = PreferenceManager.getDefaultSharedPreferences(this);
         level_six_starred = preferences4.getInt("LevelSixStarred", 0);
@@ -311,6 +315,16 @@ public class levelSix extends AppCompatActivity {
             }
         }
 
+        if(note_combination == 2){
+            note_solved = 1;
+            note_combination = 0;
+        }
+        else {
+            note_combination = 0;
+        }
+        Log.d("moi", Integer.toString(note_combination));
+        Log.d("solved", Integer.toString(note_solved));
+
         SharedPreferences preferences2 = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor2 = preferences2.edit();
         editor2.putInt("LevelSixCompleted", level_six_completed);
@@ -335,6 +349,11 @@ public class levelSix extends AppCompatActivity {
         SharedPreferences.Editor editor6 = preferences6.edit();
         editor6.putInt("TotalRetrys", total_retrys);
         editor6.apply();
+
+        editor6.putInt("NoteCombination", note_combination);
+        editor6.apply();
+        editor.putInt("NoteSolved", note_solved);
+        editor.apply();
 
         LayoutInflater inflater = getLayoutInflater();
 

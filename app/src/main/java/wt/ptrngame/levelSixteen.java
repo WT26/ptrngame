@@ -123,10 +123,11 @@ public class levelSixteen extends AppCompatActivity {
                         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                         mp.start();
                     }
-
                     toggle5.toggle();
                     toggle6.toggle();
                     toggle7.toggle();
+                    toggle4.toggle();
+
 
                     if(CheckWinningCondition()){
                         levelWon();
@@ -373,10 +374,9 @@ public class levelSixteen extends AppCompatActivity {
                             mp.start();
                         }
 
-                        toggle5.toggle();
                         toggle6.toggle();
                         toggle7.toggle();
-
+                        toggle5.toggle();
                         if(CheckWinningCondition()){
                             levelWon();
                         }
@@ -679,7 +679,6 @@ public class levelSixteen extends AppCompatActivity {
                     toggle.toggle();
                     toggle4.toggle();
                     toggle6.toggle();
-                    toggle5.toggle();
 
                     if(CheckWinningCondition()){
                         levelWon();
@@ -925,7 +924,6 @@ public class levelSixteen extends AppCompatActivity {
                         toggle.toggle();
                         toggle4.toggle();
                         toggle6.toggle();
-                        toggle5.toggle();
 
                         if(CheckWinningCondition()){
                             levelWon();
@@ -1228,6 +1226,8 @@ public class levelSixteen extends AppCompatActivity {
                     toggle.toggle();
                     toggle4.toggle();
                     toggle7.toggle();
+                    toggle8.toggle();
+                    toggle2.toggle();
 
                     if(CheckWinningCondition()){
                         levelWon();
@@ -1473,6 +1473,8 @@ public class levelSixteen extends AppCompatActivity {
                         toggle.toggle();
                         toggle4.toggle();
                         toggle7.toggle();
+                        toggle8.toggle();
+                        toggle2.toggle();
 
                         if(CheckWinningCondition()){
                             levelWon();
@@ -2044,9 +2046,8 @@ public class levelSixteen extends AppCompatActivity {
                         mp.start();
                     }
 
-                    toggle4.toggle();
                     toggle5.toggle();
-                    toggle6.toggle();
+
 
                     if(CheckWinningCondition()){
                         levelWon();
@@ -2289,9 +2290,7 @@ public class levelSixteen extends AppCompatActivity {
                             mp.start();
                         }
 
-                        toggle4.toggle();
                         toggle5.toggle();
-                        toggle6.toggle();
 
                         if(CheckWinningCondition()){
                             levelWon();

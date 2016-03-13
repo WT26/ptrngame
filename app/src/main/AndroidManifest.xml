@@ -241,6 +241,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.orangeworld_menu" />
         </activity>
+        <activity
+            android:name=".bulbLevel"
+            android:label="@string/title_activity_bulb_level"
+            android:parentActivityName=".orangeworld_menu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.orangeworld_menu" />
+        </activity>
     </application>
 
 </manifest>

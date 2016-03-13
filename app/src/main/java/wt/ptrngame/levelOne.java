@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,11 +34,12 @@ public class levelOne extends AppCompatActivity {
     int total_toggles;
     int total_completed;
     int sounds_toggle;
+    int note_combination;
+
 
     public static final String levelsaves = "MyPrefsFile";
     int level_one_completed;
     int level_one_starred;
-
 
 
     int current_toggles;
@@ -62,6 +64,7 @@ public class levelOne extends AppCompatActivity {
         total_starred = totalstatics.getInt("TotalStarred", 0);
         total_retrys = totalstatics.getInt("TotalRetrys", 0);
         sounds_toggle = totalstatics.getInt("SoundsToggle", 0);
+        note_combination = totalstatics.getInt("NoteCombination", 0);
 
         SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
         level_one_completed = levelsaves.getInt("LevelOneCompleted", 0);
@@ -187,6 +190,10 @@ public class levelOne extends AppCompatActivity {
             }
         }
 
+
+
+        note_combination = 1;
+        Log.d("moi", Integer.toString(note_combination));
         SharedPreferences totalstatics = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = totalstatics.edit();
         editor.putInt("TotalToggles", total_toggles);
@@ -196,6 +203,8 @@ public class levelOne extends AppCompatActivity {
         editor.putInt("TotalStarred", total_starred);
         editor.apply();
         editor.putInt("TotalRetrys", total_retrys);
+        editor.apply();
+        editor.putInt("NoteCombination", note_combination);
         editor.apply();
 
 

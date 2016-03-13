@@ -50,6 +50,7 @@ public class levelTen extends AppCompatActivity {
 
     int current_toggles;
     int toggles_for_star;
+    int note_combination;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +78,7 @@ public class levelTen extends AppCompatActivity {
 
         SharedPreferences preferences99 = PreferenceManager.getDefaultSharedPreferences(this);
         sounds_toggle = preferences99.getInt("SoundsToggle", 0);
+        note_combination = preferences99.getInt("NoteCombination", 0);
 
         SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
         total_retrys = preferences6.getInt("TotalRetrys", 0);
@@ -382,6 +384,9 @@ public class levelTen extends AppCompatActivity {
         SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor6 = preferences6.edit();
         editor6.putInt("TotalRetrys", total_retrys);
+        editor6.apply();
+        note_combination = 0;
+        editor6.putInt("NoteCombination", note_combination);
         editor6.apply();
 
         LayoutInflater inflater = getLayoutInflater();

@@ -41,6 +41,7 @@ public class levelThirteen extends AppCompatActivity {
     int total_starred;
     int total_retrys;
     int total_ptrns;
+    int note_combination;
 
     public static final String myPrefsKey3 = "MyPrefsFile";
     int level_thirteen_completed;
@@ -69,6 +70,7 @@ public class levelThirteen extends AppCompatActivity {
         total_retrys = totalstatics.getInt("TotalRetrys", 0);
         total_completed = totalstatics.getInt("TotalCompleted", 0);
         total_ptrns = totalstatics.getInt("TotalPtrns", 0);
+        note_combination = totalstatics.getInt("NoteCombination", 0);
 
 
         SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
@@ -1138,6 +1140,9 @@ public class levelThirteen extends AppCompatActivity {
         editor.putInt("LevelThirteenStarred", level_thirteen_starred);
         editor.apply();
 
+        note_combination = 0;
+        editor.putInt("NoteCombination", note_combination);
+        editor.apply();
 
 
         LayoutInflater inflater = getLayoutInflater();

@@ -402,4 +402,27 @@
         android:layout_alignEnd="@+id/adView"
         android:background="@drawable/noteimage" />
 
+    <Button
+        android:id="@+id/button11"
+        android:text="NEXT"
+        android:textColor="#be6c22"
+        android:textSize="18sp"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/backbuttonorange"
+        android:onClick="levelMenu"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/button7"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView6"
+        android:layout_alignTop="@+id/button7"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/retrybutton"
+        android:visibility="gone" />
+
 </RelativeLayout>

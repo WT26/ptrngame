@@ -40,6 +40,8 @@ public class levelThree extends AppCompatActivity {
     public static final String myPrefsKey6 = "MyPrefsFile";
     int total_retrys;
 
+    int note_combination;
+
 
     public static final String myPrefsKey3 = "MyPrefsFile";
     int level_three_completed;
@@ -77,6 +79,7 @@ public class levelThree extends AppCompatActivity {
 
         SharedPreferences preferences99 = PreferenceManager.getDefaultSharedPreferences(this);
         sounds_toggle = preferences99.getInt("SoundsToggle", 0);
+        note_combination = preferences99.getInt("NoteCombination", 0);
 
         SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
         total_retrys = preferences6.getInt("TotalRetrys", 0);
@@ -300,6 +303,10 @@ public class levelThree extends AppCompatActivity {
         SharedPreferences preferences6 = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor6 = preferences6.edit();
         editor6.putInt("TotalRetrys", total_retrys);
+        editor6.apply();
+
+        note_combination = 0;
+        editor6.putInt("NoteCombination", note_combination);
         editor6.apply();
 
         LayoutInflater inflater = getLayoutInflater();

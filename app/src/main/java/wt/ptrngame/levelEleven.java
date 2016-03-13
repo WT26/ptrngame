@@ -39,6 +39,7 @@ public class levelEleven extends AppCompatActivity {
     int total_starred;
     int total_retrys;
     int total_ptrns;
+    int note_combination;
 
     public static final String myPrefsKey3 = "MyPrefsFile";
     int level_eleven_completed;
@@ -50,6 +51,7 @@ public class levelEleven extends AppCompatActivity {
     int pattern_state;
     int ptrn;
     int programmed;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,7 @@ public class levelEleven extends AppCompatActivity {
         total_retrys = totalstatics.getInt("TotalRetrys", 0);
         total_completed = totalstatics.getInt("TotalCompleted", 0);
         total_ptrns = totalstatics.getInt("TotalPtrns", 0);
+        note_combination = totalstatics.getInt("NoteCombination", 0);
 
 
         SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
@@ -577,6 +580,10 @@ public class levelEleven extends AppCompatActivity {
 
         editor.putInt("LevelElevenCompleted", level_eleven_completed);
         editor.putInt("LevelElevenStarred", level_eleven_starred);
+        editor.apply();
+
+        note_combination = 0;
+        editor.putInt("NoteCombination", note_combination);
         editor.apply();
 
 

@@ -32,6 +32,7 @@ public class levelTwo extends AppCompatActivity {
     int total_completed;
     int total_starred;
     int total_retrys;
+    int note_combination;
 
     public static final String levelsaves = "MyPrefsFile";
     int level_two_completed;
@@ -55,6 +56,7 @@ public class levelTwo extends AppCompatActivity {
         total_completed = totalstatics.getInt("TotalCompleted", 0);
         total_starred = totalstatics.getInt("TotalStarred", 0);
         sounds_toggle = totalstatics.getInt("SoundsToggle", 0);
+        note_combination = totalstatics.getInt("NoteCombination", 0);
 
         SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
         level_two_completed = levelsaves.getInt("LevelTwoCompleted", 0);
@@ -221,6 +223,13 @@ public class levelTwo extends AppCompatActivity {
             }
         }
 
+        if(note_combination == 1){
+            note_combination = 2;
+        }
+        else {
+            note_combination = 0;
+        }
+        Log.d("moi", Integer.toString(note_combination));
         SharedPreferences.Editor editor = totalstatics.edit();
         editor.putInt("TotalToggles", total_toggles);
         editor.apply();
@@ -229,6 +238,8 @@ public class levelTwo extends AppCompatActivity {
         editor.putInt("TotalStarred", total_starred);
         editor.apply();
         editor.putInt("TotalRetrys", total_retrys);
+        editor.apply();
+        editor.putInt("NoteCombination", note_combination);
         editor.apply();
 
 

@@ -26,6 +26,8 @@ public class orangeworld_menu extends AppCompatActivity {
     //int orangelevel_completed;
     int sounds_toggle;
     int total_completed;
+    int note_combination;
+    int note_solved;
 
     public static final String levelsaves = "MyPrefsFile";
     int level_eleven_completed;
@@ -74,6 +76,7 @@ public class orangeworld_menu extends AppCompatActivity {
     Button leveltwenty_button;
 
     ImageView note;
+    ImageView lightbulb;
     //Button lock_button;
     //Button orangeworld_button;
 
@@ -88,6 +91,8 @@ public class orangeworld_menu extends AppCompatActivity {
         //orangelevel_completed = totalstatics.getInt("OrangeLevelCompleted", 0);
         sounds_toggle = totalstatics.getInt("SoundsToggle", 0);
         total_completed = totalstatics.getInt("TotalCompleted", 0);
+        note_combination = totalstatics.getInt("NoteCombination", 0);
+        note_solved = totalstatics.getInt("NoteSolved", 0);
 
 
         SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
@@ -137,6 +142,7 @@ public class orangeworld_menu extends AppCompatActivity {
         leveltwenty_button = (Button) findViewById(R.id.level10);
 
         note = (ImageView) findViewById(R.id.imageView5);
+        lightbulb = (ImageView) findViewById(R.id.imageView6);
         //lock_button = (Button) findViewById(R.id.button6);
         //orangeworld_button = (Button) findViewById(R.id.button7);
 
@@ -320,13 +326,13 @@ public class orangeworld_menu extends AppCompatActivity {
         else{
             note.setVisibility(View.GONE);
         }
-//
-        //if(orangelevel_completed == 1){
-        //    orangeworld_button.setVisibility(View.VISIBLE);
-        //}
-        //else{
-        //    orangeworld_button.setVisibility(View.GONE);
-        //}
+
+        if(note_solved == 1){
+            lightbulb.setVisibility(View.VISIBLE);
+        }
+        else{
+            lightbulb.setVisibility(View.GONE);
+        }
 
 
 
@@ -448,6 +454,15 @@ public class orangeworld_menu extends AppCompatActivity {
             }
         });
 
+        lightbulb.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                if (sounds_toggle == 0) {
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                    mp.start();
+                }
+                bulbLevel(view);
+            }
+        });
 
         //lock_button.setOnClickListener(new View.OnClickListener() {
         //    public void onClick(final View view) {
@@ -710,6 +725,12 @@ public class orangeworld_menu extends AppCompatActivity {
         else{
             note.setVisibility(View.GONE);
         }
+        if(note_solved == 1){
+            lightbulb.setVisibility(View.VISIBLE);
+        }
+        else{
+            lightbulb.setVisibility(View.GONE);
+        }
 
 
         //lock_button = (Button) findViewById(R.id.button6);
@@ -812,6 +833,11 @@ public class orangeworld_menu extends AppCompatActivity {
 
     public void lookNote(View view) {
         Intent intent11 = new Intent(this, note.class);
+        startActivity(intent11);
+    }
+
+    public void bulbLevel(View view) {
+        Intent intent11 = new Intent(this, bulbLevel.class);
         startActivity(intent11);
     }
 

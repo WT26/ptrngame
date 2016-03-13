@@ -57,6 +57,7 @@ public class levelFourteen extends AppCompatActivity {
     int pattern_state;
     int ptrn;
     int programmed;
+    int note_combination;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +75,7 @@ public class levelFourteen extends AppCompatActivity {
         total_retrys = totalstatics.getInt("TotalRetrys", 0);
         total_completed = totalstatics.getInt("TotalCompleted", 0);
         total_ptrns = totalstatics.getInt("TotalPtrns", 0);
+        note_combination = totalstatics.getInt("NoteCombination", 0);
 
 
         SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
@@ -1513,7 +1515,9 @@ public class levelFourteen extends AppCompatActivity {
         editor.putInt("LevelFourteenCompleted", level_fourteen_completed);
         editor.putInt("LevelFourteenStarred", level_fourteen_starred);
         editor.apply();
-
+        note_combination = 0;
+        editor.putInt("NoteCombination", note_combination);
+        editor.apply();
 
 
         LayoutInflater inflater = getLayoutInflater();
