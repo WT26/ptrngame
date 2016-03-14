@@ -100,6 +100,11 @@ public class bulbLevel extends AppCompatActivity {
                     mp.start();
                 }
 
+                toggle2.toggle();
+                toggle3.toggle();
+                toggle7.toggle();
+                toggle6.toggle();
+                toggle10.toggle();
 
                 if(CheckWinningCondition()){
                     levelWon();
@@ -115,6 +120,13 @@ public class bulbLevel extends AppCompatActivity {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                     mp.start();
                 }
+
+                toggle.toggle();
+                toggle3.toggle();
+                toggle5.toggle();
+                toggle7.toggle();
+                toggle14.toggle();
+                toggle2.toggle();
 
 
                 if(CheckWinningCondition()){
@@ -132,6 +144,12 @@ public class bulbLevel extends AppCompatActivity {
                     mp.start();
                 }
 
+                toggle.toggle();
+                toggle5.toggle();
+                toggle7.toggle();
+                toggle14.toggle();
+                toggle2.toggle();
+
 
                 if(CheckWinningCondition()){
                     levelWon();
@@ -147,6 +165,12 @@ public class bulbLevel extends AppCompatActivity {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                     mp.start();
                 }
+
+                toggle8.toggle();
+                toggle2.toggle();
+                toggle9.toggle();
+                toggle11.toggle();
+                toggle13.toggle();
 
 
                 if(CheckWinningCondition()){
@@ -164,6 +188,10 @@ public class bulbLevel extends AppCompatActivity {
                     mp.start();
                 }
 
+                toggle3.toggle();
+                toggle14.toggle();
+                toggle7.toggle();
+                toggle11.toggle();
 
 
                 if(CheckWinningCondition()){
@@ -181,7 +209,11 @@ public class bulbLevel extends AppCompatActivity {
                     mp.start();
                 }
 
-
+                toggle5.toggle();
+                toggle7.toggle();
+                toggle14.toggle();
+                toggle4.toggle();
+                toggle9.toggle();
 
                 if(CheckWinningCondition()){
                     levelWon();
@@ -197,6 +229,11 @@ public class bulbLevel extends AppCompatActivity {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                     mp.start();
                 }
+
+                toggle.toggle();
+                toggle10.toggle();
+                toggle15.toggle();
+                toggle12.toggle();
 
 
                 if(CheckWinningCondition()){
@@ -214,6 +251,11 @@ public class bulbLevel extends AppCompatActivity {
                     mp.start();
                 }
 
+                toggle2.toggle();
+                toggle3.toggle();
+                toggle5.toggle();
+                toggle6.toggle();
+                toggle14.toggle();
 
 
                 if(CheckWinningCondition()){
@@ -231,6 +273,11 @@ public class bulbLevel extends AppCompatActivity {
                     mp.start();
                 }
 
+                toggle4.toggle();
+                toggle10.toggle();
+                toggle12.toggle();
+                toggle14.toggle();
+                toggle15.toggle();
 
 
                 if(CheckWinningCondition()){
@@ -247,6 +294,12 @@ public class bulbLevel extends AppCompatActivity {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                     mp.start();
                 }
+
+                toggle5.toggle();
+                toggle6.toggle();
+                toggle7.toggle();
+                toggle9.toggle();
+                toggle14.toggle();
 
 
                 if(CheckWinningCondition()){
@@ -265,6 +318,11 @@ public class bulbLevel extends AppCompatActivity {
                 }
 
 
+                toggle.toggle();
+                toggle4.toggle();
+                toggle8.toggle();
+                toggle12.toggle();
+                toggle13.toggle();
 
 
                 if(CheckWinningCondition()){
@@ -282,6 +340,11 @@ public class bulbLevel extends AppCompatActivity {
                     mp.start();
                 }
 
+                toggle.toggle();
+                toggle3.toggle();
+                toggle5.toggle();
+                toggle6.toggle();
+                toggle10.toggle();
 
 
                 if(CheckWinningCondition()){
@@ -299,6 +362,10 @@ public class bulbLevel extends AppCompatActivity {
                     mp.start();
                 }
 
+                toggle5.toggle();
+                toggle6.toggle();
+                toggle9.toggle();
+                toggle15.toggle();
 
 
                 if(CheckWinningCondition()){
@@ -316,6 +383,11 @@ public class bulbLevel extends AppCompatActivity {
                     mp.start();
                 }
 
+                toggle3.toggle();
+                toggle5.toggle();
+                toggle6.toggle();
+                toggle7.toggle();
+                toggle8.toggle();
 
 
                 if(CheckWinningCondition()){
@@ -333,6 +405,12 @@ public class bulbLevel extends AppCompatActivity {
                     mp.start();
                 }
 
+                toggle.toggle();
+                toggle6.toggle();
+                toggle7.toggle();
+                toggle10.toggle();
+                toggle13.toggle();
+                toggle14.toggle();
 
 
                 if(CheckWinningCondition()){

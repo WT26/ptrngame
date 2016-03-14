@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#1f9213"
-        android:text="            {LIGHTBULB}"
+        android:text="          {LIGHTBULB}"
         android:id="@+id/textView17"
         android:textSize="20dp"
         android:layout_alignBottom="@+id/textView32"
