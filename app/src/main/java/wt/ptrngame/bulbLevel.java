@@ -10,7 +10,10 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -47,6 +50,9 @@ public class bulbLevel extends AppCompatActivity {
     public static final String myPrefsKey6 = "MyPrefsFile";
     int total_retrys;
 
+    ImageView flower;
+    ImageView flower2;
+    ImageView flower3;
 
 
 
@@ -88,7 +94,17 @@ public class bulbLevel extends AppCompatActivity {
         toggle14 = (ToggleButton) findViewById(R.id.toggleButton4);
         toggle15 = (ToggleButton) findViewById(R.id.toggleButton3);
 
+        flower = (ImageView) findViewById(R.id.imageView8);
+        flower2 = (ImageView) findViewById(R.id.imageView10);
+        flower3 = (ImageView) findViewById(R.id.imageView12);
 
+        final Animation animFlower = AnimationUtils.loadAnimation(this, R.anim.anim_flower_rot1);
+        final Animation animFlower2 = AnimationUtils.loadAnimation(this, R.anim.anim_flower_rot2);
+        final Animation animFlower3 = AnimationUtils.loadAnimation(this, R.anim.anim_flower_rot2);
+
+        flower.startAnimation(animFlower);
+        flower2.startAnimation(animFlower2);
+        flower3.startAnimation(animFlower3);
 
 
         toggle.setOnClickListener(new View.OnClickListener() {

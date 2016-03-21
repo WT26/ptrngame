@@ -55,7 +55,8 @@
         android:id="@+id/gridLayout"
         android:layout_toRightOf="@+id/textView16"
         android:layout_toEndOf="@+id/textView16"
-        android:layout_below="@+id/space9">
+        android:layout_below="@+id/space9"
+        android:layout_above="@+id/space11">
 
         <ToggleButton
             android:layout_width="30dp"
@@ -311,7 +312,7 @@
         android:id="@+id/button5"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:background="@drawable/retrybuttonorange"
+        android:background="@drawable/retrybuttongreen"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -332,5 +333,101 @@
         android:layout_alignLeft="@+id/textView32"
         android:layout_alignStart="@+id/textView32"
         android:id="@+id/space9" />
+
+    <Space
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/space10" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView7"
+        android:background="@drawable/arm4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/imageView8"
+        android:layout_alignEnd="@+id/imageView8" />
+
+    <Space
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/space11"
+        android:layout_above="@+id/space10"
+        android:layout_toLeftOf="@+id/imageView7"
+        android:layout_toStartOf="@+id/imageView7"
+        android:layout_marginRight="28dp"
+        android:layout_marginEnd="28dp" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="15dp"
+        android:id="@+id/imageView8"
+        android:background="@drawable/flower5"
+        android:layout_toLeftOf="@+id/gridLayout"
+        android:layout_toStartOf="@+id/gridLayout"
+        android:layout_alignBottom="@+id/space11" />
+
+    <Space
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/space12"
+        android:layout_alignBottom="@+id/imageView7"
+        android:layout_toRightOf="@+id/textView24"
+        android:layout_toEndOf="@+id/textView24"
+        android:layout_alignTop="@+id/imageView12" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView9"
+        android:background="@drawable/arm5"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/space12"
+        android:layout_toEndOf="@+id/space12" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/imageView10"
+        android:background="@drawable/flower2"
+        android:layout_alignTop="@+id/space14"
+        android:layout_toRightOf="@+id/space14"
+        android:layout_toEndOf="@+id/space14" />
+
+    <Space
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:id="@+id/space13"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/imageView9"
+        android:layout_toEndOf="@+id/imageView9" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageView11"
+        android:background="@drawable/arm3"
+        android:layout_alignBottom="@+id/imageView7"
+        android:layout_toRightOf="@+id/space13"
+        android:layout_toEndOf="@+id/space13" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/imageView12"
+        android:background="@drawable/flower1"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/space13"
+        android:layout_toEndOf="@+id/space13" />
+
+    <Space
+        android:layout_width="55dp"
+        android:layout_height="10dp"
+        android:layout_toRightOf="@+id/textView24"
+        android:layout_above="@+id/imageView11"
+        android:id="@+id/space14" />
 
 </RelativeLayout>

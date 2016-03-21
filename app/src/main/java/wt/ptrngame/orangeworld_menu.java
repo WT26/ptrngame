@@ -28,6 +28,7 @@ public class orangeworld_menu extends AppCompatActivity {
     int total_completed;
     int note_combination;
     int note_solved;
+    int bulb_completed;
 
     public static final String levelsaves = "MyPrefsFile";
     int level_eleven_completed;
@@ -75,6 +76,8 @@ public class orangeworld_menu extends AppCompatActivity {
     Button levelnineteen_button;
     Button leveltwenty_button;
 
+    Button next;
+
     ImageView note;
     ImageView lightbulb;
     //Button lock_button;
@@ -93,6 +96,7 @@ public class orangeworld_menu extends AppCompatActivity {
         total_completed = totalstatics.getInt("TotalCompleted", 0);
         note_combination = totalstatics.getInt("NoteCombination", 0);
         note_solved = totalstatics.getInt("NoteSolved", 0);
+        bulb_completed = totalstatics.getInt("BulbCompleted", 0);
 
 
         SharedPreferences levelsaves = PreferenceManager.getDefaultSharedPreferences(this);
@@ -140,6 +144,8 @@ public class orangeworld_menu extends AppCompatActivity {
         leveleighteen_button = (Button) findViewById(R.id.level8);
         levelnineteen_button = (Button) findViewById(R.id.level9);
         leveltwenty_button = (Button) findViewById(R.id.level10);
+
+        next = (Button) findViewById(R.id.button12);
 
         note = (ImageView) findViewById(R.id.imageView5);
         lightbulb = (ImageView) findViewById(R.id.imageView6);
@@ -333,6 +339,13 @@ public class orangeworld_menu extends AppCompatActivity {
         else{
             lightbulb.setVisibility(View.GONE);
         }
+        Log.d("VV", Integer.toString(bulb_completed));
+        if(bulb_completed == 1){
+            next.setVisibility(View.VISIBLE);
+        }
+        else{
+            next.setVisibility(View.GONE);
+        }
 
 
 
@@ -464,6 +477,16 @@ public class orangeworld_menu extends AppCompatActivity {
             }
         });
 
+        next.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                if (sounds_toggle == 0) {
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
+                    mp.start();
+                }
+                thirdWorld(view);
+            }
+        });
+
         //lock_button.setOnClickListener(new View.OnClickListener() {
         //    public void onClick(final View view) {
         //        if(sounds_toggle == 0){
@@ -505,6 +528,7 @@ public class orangeworld_menu extends AppCompatActivity {
         SharedPreferences totalstatics = PreferenceManager.getDefaultSharedPreferences(this);
         //orangelevel_completed = preferences97.getInt("OrangeLevelCompleted", 0);
         total_completed = totalstatics.getInt("TotalCompleted", 0);
+        bulb_completed = totalstatics.getInt("BulbCompleted", 0);
 
 
         // Level one completed?
@@ -732,6 +756,12 @@ public class orangeworld_menu extends AppCompatActivity {
             lightbulb.setVisibility(View.GONE);
         }
 
+        if(bulb_completed == 1){
+            next.setVisibility(View.VISIBLE);
+        }
+        else{
+            next.setVisibility(View.GONE);
+        }
 
         //lock_button = (Button) findViewById(R.id.button6);
         ////10Completed->orangeButton
@@ -840,6 +870,12 @@ public class orangeworld_menu extends AppCompatActivity {
         Intent intent11 = new Intent(this, bulbLevel.class);
         startActivity(intent11);
     }
+
+    public void thirdWorld(View view) {
+        Intent intent11 = new Intent(this, thirdWorld.class);
+        startActivity(intent11);
+    }
+
 
     //public  void lockLevel(View view){
     //    Intent intent11 = new Intent(this, lockLevel.class);

@@ -249,6 +249,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="wt.ptrngame.orangeworld_menu" />
         </activity>
+        <activity
+            android:name=".thirdWorld"
+            android:label="@string/title_activity_third_world"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

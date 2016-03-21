@@ -36,7 +36,8 @@ public class infopage extends AppCompatActivity {
 
     int sounds_toggle;
     int orangelevel_completed;
-
+    int note_solved;
+    int bulb_completed;
 
     // Levels
     public static final String levelsaves = "MyPrefsFile";
@@ -112,6 +113,8 @@ public class infopage extends AppCompatActivity {
         total_retrys = totalstatics.getInt("TotalRetrys", 0);
         total_ptrns = totalstatics.getInt("TotalPtrns", 0);
         orangelevel_completed = totalstatics.getInt("OrangeLevelCompleted", 0);
+        note_solved = totalstatics.getInt("NoteSolved", 0);
+        bulb_completed = totalstatics.getInt("BulbCompleted", 0);
 
 
         // Levels
@@ -280,6 +283,14 @@ public class infopage extends AppCompatActivity {
 
         orangelevel_completed = 0;
         editor.putInt("OrangeLevelCompleted", orangelevel_completed);
+        editor.apply();
+
+        bulb_completed = 0;
+        editor.putInt("BulbCompleted", bulb_completed);
+        editor.apply();
+
+        note_solved = 0;
+        editor.putInt("NoteSolved", note_solved);
         editor.apply();
 
 
