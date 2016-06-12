@@ -495,7 +495,7 @@ public class bulbLevel extends AppCompatActivity {
 
         LayoutInflater inflater = getLayoutInflater();
 
-        View layout = inflater.inflate(R.layout.completedmessage,
+        View layout = inflater.inflate(R.layout.completedmessageorange,
                 (ViewGroup) findViewById(R.id.custom_toast_layout_id));
 
         // Toast...

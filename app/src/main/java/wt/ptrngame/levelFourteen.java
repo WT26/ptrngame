@@ -376,7 +376,7 @@ public class levelFourteen extends AppCompatActivity {
                             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                             mp.start();
                         }
-                        toggle.toggle();
+                        toggle2.toggle();
                         programmed = 2;
                         pattern_state = 3;
                         //infotext.setText("Now its connected.");
@@ -391,7 +391,7 @@ public class levelFourteen extends AppCompatActivity {
                             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                             mp.start();
                         }
-                        toggle.toggle();
+                        toggle2.toggle();
                         programmed = 2;
                         pattern_state = 3;
                         //infotext.setText("Now its connected.");
@@ -406,7 +406,7 @@ public class levelFourteen extends AppCompatActivity {
                             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                             mp.start();
                         }
-                        toggle.toggle();
+                        toggle2.toggle();
                         programmed = 2;
                         pattern_state = 3;
                         //infotext.setText("Now its connected.");
