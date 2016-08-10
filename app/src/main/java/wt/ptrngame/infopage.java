@@ -100,6 +100,9 @@ public class infopage extends AppCompatActivity {
 
     int level_twenty_completed;
     int level_twenty_starred;
+
+    int level_twentyone_completed;
+    int level_twentyone_starred;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -178,6 +181,9 @@ public class infopage extends AppCompatActivity {
 
         level_twenty_completed = levelsaves.getInt("LevelTwentyCompleted", 0);
         level_twenty_starred = levelsaves.getInt("LevelTwentyStarred", 0);
+
+        level_twentyone_completed = levelsaves.getInt("LevelTwentyoneCompleted", 0);
+        level_twentyone_starred = levelsaves.getInt("LevelTwentyoneStarred", 0);
 
 
         infotext = (TextView) findViewById(R.id.textView23);
@@ -437,6 +443,13 @@ public class infopage extends AppCompatActivity {
         editor2.apply();
         level_twenty_starred = 0;
         editor2.putInt("LevelTwentyStarred", level_twenty_starred);
+        editor2.apply();
+
+        level_twentyone_completed = 0;
+        editor2.putInt("LevelTwentyoneCompleted", level_twentyone_completed);
+        editor2.apply();
+        level_twentyone_starred = 0;
+        editor2.putInt("LevelTwentyoneStarred", level_twentyone_starred);
         editor2.apply();
 
     }

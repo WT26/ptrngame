@@ -212,7 +212,6 @@ public class levelTwentyOne extends AppCompatActivity {
 
 
 
-
         LayoutInflater inflater = getLayoutInflater();
 
         View layout = inflater.inflate(R.layout.completedmessageorange,
@@ -232,11 +231,11 @@ public class levelTwentyOne extends AppCompatActivity {
         if(togglecirc1.isChecked()){
             togglecirc1.setChecked(false);
         }
-        if (!toggle2.isChecked()){
-            toggle2.setChecked(true);
+        if (!togglecirc2.isChecked()){
+            togglecirc2.setChecked(true);
         }
-        if(!toggle3.isChecked()){
-            toggle3.setChecked(true);
+        if(!togglecirc3.isChecked()){
+            togglecirc3.setChecked(true);
         }
         if(togglecirc4.isChecked()){
             togglecirc4.setChecked(false);
