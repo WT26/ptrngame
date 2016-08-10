@@ -362,7 +362,7 @@ public class thirdWorld extends AppCompatActivity {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                     mp.start();
                 }
-                levelEleven(view);
+                levelTwentyOne(view);
             }
         });
         leveltwentytwo_button.setOnClickListener(new View.OnClickListener() {
@@ -807,8 +807,8 @@ public class thirdWorld extends AppCompatActivity {
     }
 
 
-    public  void levelEleven(View view){
-        Intent intent = new Intent(this, levelEleven.class);
+    public  void levelTwentyOne(View view){
+        Intent intent = new Intent(this, levelTwentyOne.class);
         startActivity(intent);
     }
 
