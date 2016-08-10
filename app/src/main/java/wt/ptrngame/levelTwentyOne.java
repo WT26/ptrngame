@@ -28,6 +28,11 @@ public class levelTwentyOne extends AppCompatActivity {
     ToggleButton toggle3;
     ToggleButton toggle4;
 
+    ToggleButton togglecirc1;
+    ToggleButton togglecirc2;
+    ToggleButton togglecirc3;
+    ToggleButton togglecirc4;
+
 
     Button back;
     Button restart;
@@ -55,7 +60,7 @@ public class levelTwentyOne extends AppCompatActivity {
         setContentView(R.layout.activity_level_twenty_one);
 
         current_toggles = 0;
-        toggles_for_star = 1;
+        toggles_for_star = 2;
 
         // Getting information
         SharedPreferences totalstatics = PreferenceManager.getDefaultSharedPreferences(this);
@@ -71,23 +76,58 @@ public class levelTwentyOne extends AppCompatActivity {
         restart = (Button) findViewById(R.id.button5);
         makeptrn = (Button) findViewById(R.id.button8);
 
-
         toggle = (ToggleButton) findViewById(R.id.b1);
         toggle2 = (ToggleButton) findViewById(R.id.b2);
         toggle3 = (ToggleButton) findViewById(R.id.b3);
         toggle4 = (ToggleButton) findViewById(R.id.b4);
 
-        infotext = (TextView) findViewById(R.id.textView32);
+        togglecirc1 = (ToggleButton) findViewById(R.id.circle1);
+        togglecirc2 = (ToggleButton) findViewById(R.id.circle2);
+        togglecirc3 = (ToggleButton) findViewById(R.id.circle3);
+        togglecirc4 = (ToggleButton) findViewById(R.id.circle4);
 
+        infotext = (TextView) findViewById(R.id.textView32);
 
         final Animation animRotate = AnimationUtils.loadAnimation(this, R.anim.anim_rotate);
         final Animation animSelect = AnimationUtils.loadAnimation(this, R.anim.anim_select);
 
+        levelStartToggles();
 
         toggle.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                toggle2.toggle();
+                togglecirc1.toggle();
+                togglecirc2.toggle();
+
+                clickked();
+            }
+        });
+
+        toggle2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+                togglecirc3.toggle();
+                togglecirc4.toggle();
+
+                clickked();
+            }
+        });
+
+        toggle3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+                togglecirc1.toggle();
+                togglecirc3.toggle();
+
+                clickked();
+            }
+        });
+
+        toggle4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+                togglecirc2.toggle();
+                togglecirc4.toggle();
 
                 clickked();
             }
@@ -115,7 +155,8 @@ public class levelTwentyOne extends AppCompatActivity {
     }
 
     public boolean CheckWinningCondition(){
-        if(toggle.isChecked() && toggle2.isChecked() && toggle3.isChecked()){
+        if(togglecirc1.isChecked() && togglecirc2.isChecked()
+                && togglecirc3.isChecked() && togglecirc4.isChecked()){
             return true;
         }
         else{
@@ -188,18 +229,17 @@ public class levelTwentyOne extends AppCompatActivity {
     }
 
     public void restart_level(){
-        if(toggle.isChecked()){
-            toggle.setChecked(false);
+        if(togglecirc1.isChecked()){
+            togglecirc1.setChecked(false);
         }
-        if(toggle2.isChecked()){
+        if (!toggle2.isChecked()){
             toggle2.setChecked(true);
         }
-        else{
-            toggle2.setChecked(true);
-
+        if(!toggle3.isChecked()){
+            toggle3.setChecked(true);
         }
-        if(toggle3.isChecked()){
-            toggle3.setChecked(false);
+        if(togglecirc4.isChecked()){
+            togglecirc4.setChecked(false);
         }
 
         toggle.clearAnimation();
@@ -222,4 +262,10 @@ public class levelTwentyOne extends AppCompatActivity {
             levelWon();
         }
     }
+
+    public void levelStartToggles(){
+        togglecirc2.toggle();
+        togglecirc3.toggle();
+    }
+
 }
