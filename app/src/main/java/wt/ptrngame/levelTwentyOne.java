@@ -88,7 +88,7 @@ public class levelTwentyOne extends AppCompatActivity {
 
         infotext = (TextView) findViewById(R.id.textView32);
 
-        final Animation animRotate = AnimationUtils.loadAnimation(this, R.anim.anim_rotate);
+        final Animation animCircChange = AnimationUtils.loadAnimation(this, R.anim.anim_circle_change);
         final Animation animSelect = AnimationUtils.loadAnimation(this, R.anim.anim_select);
 
         levelStartToggles();
@@ -98,6 +98,8 @@ public class levelTwentyOne extends AppCompatActivity {
 
                 togglecirc1.toggle();
                 togglecirc2.toggle();
+                togglecirc1.startAnimation(animCircChange);
+                togglecirc2.startAnimation(animCircChange);
 
                 clickked();
             }
@@ -108,6 +110,9 @@ public class levelTwentyOne extends AppCompatActivity {
 
                 togglecirc3.toggle();
                 togglecirc4.toggle();
+                togglecirc3.startAnimation(animCircChange);
+                togglecirc4.startAnimation(animCircChange);
+
 
                 clickked();
             }
@@ -118,6 +123,9 @@ public class levelTwentyOne extends AppCompatActivity {
 
                 togglecirc1.toggle();
                 togglecirc3.toggle();
+                togglecirc1.startAnimation(animCircChange);
+                togglecirc3.startAnimation(animCircChange);
+
 
                 clickked();
             }
@@ -128,6 +136,8 @@ public class levelTwentyOne extends AppCompatActivity {
 
                 togglecirc2.toggle();
                 togglecirc4.toggle();
+                togglecirc2.startAnimation(animCircChange);
+                togglecirc4.startAnimation(animCircChange);
 
                 clickked();
             }
