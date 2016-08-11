@@ -65,7 +65,8 @@ public class MainActivity extends AppCompatActivity {
                     levelMenu(view);
                 }
                 else {
-                    orangeWorld(view);
+                    //orangeWorld(view);
+                    thirdWorld(view);
                 }
             }
         });
@@ -119,6 +120,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void orangeWorld(View view){
         Intent intent11 = new Intent(this, orangeworld_menu.class);
+        startActivity(intent11);
+    }
+
+    public void thirdWorld(View view){
+        Intent intent11 = new Intent(this, thirdWorld.class);
         startActivity(intent11);
     }
 

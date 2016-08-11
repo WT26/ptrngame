@@ -160,157 +160,260 @@ public class thirdWorld extends AppCompatActivity {
             leveltwentyone_button.setBackground(drawable);
         }
 
-        //level2
-        if(level_twentytwo_completed == 1 && level_twentytwo_starred == 0){
+        leveltwentytwo_button = (Button) findViewById(R.id.level2);
+        if(level_twentyone_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
             leveltwentytwo_button.setBackground(drawable);
+            leveltwentytwo_button.setClickable(false);
         }
-        else if(level_twentytwo_starred == 1 && level_twentytwo_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentytwo_button.setBackground(drawable);
-        }
-        else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentytwo_button.setBackground(drawable);
+        else {
+            leveltwentytwo_button.setClickable(true);
+            if(level_twentytwo_completed == 1 && level_twentytwo_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentytwo_button.setBackground(drawable);
+            }
+            else if(level_twentytwo_starred == 1 && level_twentytwo_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentytwo_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentytwo_button.setBackground(drawable);
+            }
         }
 
-        //level3
-        if(level_twentythree_completed == 1 && level_twentythree_starred == 0){
+        // Level three completed?
+        leveltwentythree_button = (Button) findViewById(R.id.level3);
+
+        if(level_twentytwo_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentythree_button.setBackground(drawable);
-        }
-        else if(level_twentythree_starred == 1 && level_twentythree_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentythree_button.setBackground(drawable);
+            leveltwentythree_button.setClickable(false);
         }
         else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentythree_button.setBackground(drawable);
+            leveltwentythree_button.setClickable(true);
+            if(level_twentythree_completed == 1 && level_twentythree_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentythree_button.setBackground(drawable);
+            }
+            else if(level_twentythree_starred == 1 && level_twentythree_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentythree_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentythree_button.setBackground(drawable);
+            }
         }
 
-        //level4
-        if(level_twentyfour_completed == 1 && level_twentyfour_starred == 0){
+
+        // Level four completed?
+        leveltwentyfour_button = (Button) findViewById(R.id.level4);
+
+        if(level_twentythree_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentyfour_button.setBackground(drawable);
+            leveltwentyfour_button.setClickable(false);
         }
-        else if(level_twentyfour_starred == 1 && level_twentyfour_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentyfour_button.setBackground(drawable);
-        }
-        else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentyfour_button.setBackground(drawable);
+        else {
+            leveltwentyfour_button.setClickable(true);
+            if(level_twentyfour_completed == 1 && level_twentyfour_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentyfour_button.setBackground(drawable);
+            }
+            else if(level_twentyfour_starred == 1 && level_twentyfour_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentyfour_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentyfour_button.setBackground(drawable);
+            }
         }
 
-        //level5
-        if(level_twentyfive_completed == 1 && level_twentyfive_starred == 0){
+
+        // Level five completed?
+        leveltwentyfive_button = (Button) findViewById(R.id.level5);
+
+        if(level_twentyfour_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentyfive_button.setBackground(drawable);
+            leveltwentyfive_button.setClickable(false);
         }
-        else if(level_twentyfive_starred == 1 && level_twentyfive_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentyfive_button.setBackground(drawable);
-        }
-        else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentyfive_button.setBackground(drawable);
+        else {
+            leveltwentyfive_button.setClickable(true);
+            if(level_twentyfive_completed == 1 && level_twentyfive_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentyfive_button.setBackground(drawable);
+            }
+            else if(level_twentyfive_starred == 1 && level_twentyfive_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentyfive_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentyfive_button.setBackground(drawable);
+            }
         }
 
-        //level6
-        if(level_twentysix_completed == 1 && level_twentysix_starred == 0){
+
+        // Level six completed?
+        leveltwentysix_button = (Button) findViewById(R.id.level6);
+
+        if(level_twentyfive_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentysix_button.setBackground(drawable);
+            leveltwentysix_button.setClickable(false);
         }
-        else if(level_twentysix_starred == 1 && level_twentysix_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentysix_button.setBackground(drawable);
-        }
-        else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentysix_button.setBackground(drawable);
+        else {
+            leveltwentysix_button.setClickable(true);
+            if(level_twentysix_completed == 1 && level_twentysix_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentysix_button.setBackground(drawable);
+            }
+            else if(level_twentysix_starred == 1 && level_twentysix_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentysix_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentysix_button.setBackground(drawable);
+            }
         }
 
-        //level7
-        if(level_twentyseven_completed == 1 && level_twentyseven_starred == 0){
+        // Level seven completed?
+        leveltwentyseven_button = (Button) findViewById(R.id.level7);
+
+        if(level_twentysix_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentyseven_button.setBackground(drawable);
-        }
-        else if(level_twentyseven_starred == 1 && level_twentyseven_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentyseven_button.setBackground(drawable);
+            leveltwentyseven_button.setClickable(false);
         }
         else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentyseven_button.setBackground(drawable);
+            leveltwentyseven_button.setClickable(true);
+            if(level_twentyseven_completed == 1 && level_twentyseven_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentyseven_button.setBackground(drawable);
+            }
+            else if(level_twentyseven_starred == 1 && level_twentyseven_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentyseven_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentyseven_button.setBackground(drawable);
+            }
         }
 
-        //level8
-        if(level_twentyeight_completed == 1 && level_twentyeight_starred == 0){
+
+        // Level eight completed?
+        leveltwentyeight_button = (Button) findViewById(R.id.level8);
+
+        if(level_twentyseven_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentyeight_button.setBackground(drawable);
+            leveltwentyeight_button.setClickable(false);
         }
-        else if(level_twentyeight_starred == 1 && level_twentyeight_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentyeight_button.setBackground(drawable);
-        }
-        else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentyeight_button.setBackground(drawable);
+        else {
+            leveltwentyeight_button.setClickable(true);
+            if(level_twentyeight_completed == 1 && level_twentyeight_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentyeight_button.setBackground(drawable);
+            }
+            else if(level_twentyeight_starred == 1 && level_twentyeight_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentyeight_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentyeight_button.setBackground(drawable);
+            }
         }
 
-        //level9
-        if(level_twentynine_completed == 1 && level_twnetynine_starred == 0){
+
+        // Level nine completed?
+        leveltwentynine_button = (Button) findViewById(R.id.level9);
+
+        if(level_twentyeight_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentynine_button.setBackground(drawable);
-        }
-        else if(level_twnetynine_starred == 1 && level_twentynine_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentynine_button.setBackground(drawable);
+            leveltwentynine_button.setClickable(false);
         }
         else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentynine_button.setBackground(drawable);
+            leveltwentynine_button.setClickable(true);
+            if(level_twentynine_completed == 1 && level_twnetynine_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentynine_button.setBackground(drawable);
+            }
+            else if(level_twnetynine_starred == 1 && level_twentynine_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentynine_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentynine_button.setBackground(drawable);
+            }
         }
 
-        //level10
-        if(level_thirty_completed == 1 && level_thirty_starred == 0){
+
+        // Level ten completed?
+        levelthirty_button = (Button) findViewById(R.id.level10);
+
+        if(level_twentynine_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             levelthirty_button.setBackground(drawable);
+            levelthirty_button.setClickable(false);
         }
-        else if(level_thirty_starred == 1 && level_thirty_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            levelthirty_button.setBackground(drawable);
-        }
-        else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            levelthirty_button.setBackground(drawable);
+        else {
+            levelthirty_button.setClickable(true);
+            if(level_thirty_completed == 1 && level_thirty_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                levelthirty_button.setBackground(drawable);
+            }
+            else if(level_thirty_starred == 1 && level_thirty_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                levelthirty_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                levelthirty_button.setBackground(drawable);
+            }
         }
 
         ////10Completed->orangeButton
@@ -571,165 +674,261 @@ public class thirdWorld extends AppCompatActivity {
 
         // Level two completed?
         leveltwentytwo_button = (Button) findViewById(R.id.level2);
-        if(level_twentytwo_completed == 1 && level_twentytwo_starred == 0){
+        if(level_twentyone_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted);
             leveltwentytwo_button.setBackground(drawable);
+            leveltwentytwo_button.setClickable(false);
         }
-        else if(level_twentytwo_starred == 1 && level_twentytwo_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentytwo_button.setBackground(drawable);
-        }
-        else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentytwo_button.setBackground(drawable);
+        else {
+            leveltwentytwo_button.setClickable(true);
+            if(level_twentytwo_completed == 1 && level_twentytwo_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentytwo_button.setBackground(drawable);
+            }
+            else if(level_twentytwo_starred == 1 && level_twentytwo_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentytwo_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentytwo_button.setBackground(drawable);
+            }
         }
 
         // Level three completed?
         leveltwentythree_button = (Button) findViewById(R.id.level3);
-        if(level_twentythree_completed == 1 && level_twentythree_starred == 0){
+
+        if(level_twentytwo_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentythree_button.setBackground(drawable);
-        }
-        else if(level_twentythree_starred == 1 && level_twentythree_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentythree_button.setBackground(drawable);
+            leveltwentythree_button.setClickable(false);
         }
         else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentythree_button.setBackground(drawable);
+            leveltwentythree_button.setClickable(true);
+            if(level_twentythree_completed == 1 && level_twentythree_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentythree_button.setBackground(drawable);
+            }
+            else if(level_twentythree_starred == 1 && level_twentythree_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentythree_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentythree_button.setBackground(drawable);
+            }
         }
+
 
         // Level four completed?
         leveltwentyfour_button = (Button) findViewById(R.id.level4);
-        if(level_twentyfour_completed == 1 && level_twentyfour_starred == 0){
+
+        if(level_twentythree_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentyfour_button.setBackground(drawable);
+            leveltwentyfour_button.setClickable(false);
         }
-        else if(level_twentyfour_starred == 1 && level_twentyfour_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentyfour_button.setBackground(drawable);
+        else {
+            leveltwentyfour_button.setClickable(true);
+            if(level_twentyfour_completed == 1 && level_twentyfour_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentyfour_button.setBackground(drawable);
+            }
+            else if(level_twentyfour_starred == 1 && level_twentyfour_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentyfour_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentyfour_button.setBackground(drawable);
+            }
         }
-        else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentyfour_button.setBackground(drawable);
-        }
+
 
         // Level five completed?
         leveltwentyfive_button = (Button) findViewById(R.id.level5);
-        if(level_twentyfive_completed == 1 && level_twentyfive_starred == 0){
+
+        if(level_twentyfour_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentyfive_button.setBackground(drawable);
+            leveltwentyfive_button.setClickable(false);
         }
-        else if(level_twentyfive_starred == 1 && level_twentyfive_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentyfive_button.setBackground(drawable);
+        else {
+            leveltwentyfive_button.setClickable(true);
+            if(level_twentyfive_completed == 1 && level_twentyfive_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentyfive_button.setBackground(drawable);
+            }
+            else if(level_twentyfive_starred == 1 && level_twentyfive_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentyfive_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentyfive_button.setBackground(drawable);
+            }
         }
-        else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentyfive_button.setBackground(drawable);
-        }
+
 
         // Level six completed?
         leveltwentysix_button = (Button) findViewById(R.id.level6);
-        if(level_twentysix_completed == 1 && level_twentysix_starred == 0){
+
+        if(level_twentyfive_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentysix_button.setBackground(drawable);
+            leveltwentysix_button.setClickable(false);
         }
-        else if(level_twentysix_starred == 1 && level_twentysix_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentysix_button.setBackground(drawable);
-        }
-        else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentysix_button.setBackground(drawable);
+        else {
+            leveltwentysix_button.setClickable(true);
+            if(level_twentysix_completed == 1 && level_twentysix_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentysix_button.setBackground(drawable);
+            }
+            else if(level_twentysix_starred == 1 && level_twentysix_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentysix_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentysix_button.setBackground(drawable);
+            }
         }
 
         // Level seven completed?
         leveltwentyseven_button = (Button) findViewById(R.id.level7);
-        if(level_twentyseven_completed == 1 && level_twentyseven_starred == 0){
+
+        if(level_twentysix_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentyseven_button.setBackground(drawable);
-        }
-        else if(level_twentyseven_starred == 1 && level_twentyseven_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentyseven_button.setBackground(drawable);
+            leveltwentyseven_button.setClickable(false);
         }
         else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentyseven_button.setBackground(drawable);
+            leveltwentyseven_button.setClickable(true);
+            if(level_twentyseven_completed == 1 && level_twentyseven_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentyseven_button.setBackground(drawable);
+            }
+            else if(level_twentyseven_starred == 1 && level_twentyseven_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentyseven_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentyseven_button.setBackground(drawable);
+            }
         }
+
 
         // Level eight completed?
         leveltwentyeight_button = (Button) findViewById(R.id.level8);
-        if(level_twentyeight_completed == 1 && level_twentyeight_starred == 0){
+
+        if(level_twentyseven_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentyeight_button.setBackground(drawable);
+            leveltwentyeight_button.setClickable(false);
         }
-        else if(level_twentyeight_starred == 1 && level_twentyeight_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentyeight_button.setBackground(drawable);
+        else {
+            leveltwentyeight_button.setClickable(true);
+            if(level_twentyeight_completed == 1 && level_twentyeight_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentyeight_button.setBackground(drawable);
+            }
+            else if(level_twentyeight_starred == 1 && level_twentyeight_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentyeight_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentyeight_button.setBackground(drawable);
+            }
         }
-        else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentyeight_button.setBackground(drawable);
-        }
+
 
         // Level nine completed?
         leveltwentynine_button = (Button) findViewById(R.id.level9);
-        if(level_twentynine_completed == 1 && level_twnetynine_starred == 0){
+
+        if(level_twentyeight_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             leveltwentynine_button.setBackground(drawable);
-        }
-        else if(level_twnetynine_starred == 1 && level_twentynine_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            leveltwentynine_button.setBackground(drawable);
+            leveltwentynine_button.setClickable(false);
         }
         else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            leveltwentynine_button.setBackground(drawable);
+            leveltwentynine_button.setClickable(true);
+            if(level_twentynine_completed == 1 && level_twnetynine_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                leveltwentynine_button.setBackground(drawable);
+            }
+            else if(level_twnetynine_starred == 1 && level_twentynine_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                leveltwentynine_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                leveltwentynine_button.setBackground(drawable);
+            }
         }
+
 
         // Level ten completed?
         levelthirty_button = (Button) findViewById(R.id.level10);
-        if(level_thirty_completed == 1 && level_thirty_starred == 0){
+
+        if(level_twentynine_completed != 1){
             Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+            Drawable drawable = res.getDrawable(R.drawable.notcompleted); //TODO notcompleted-> locked thirdworld
             levelthirty_button.setBackground(drawable);
+            levelthirty_button.setClickable(false);
         }
-        else if(level_thirty_starred == 1 && level_thirty_completed == 1){
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.starredgreen);
-            levelthirty_button.setBackground(drawable);
+        else {
+            levelthirty_button.setClickable(true);
+            if(level_thirty_completed == 1 && level_thirty_starred == 0){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.completedgreen);
+                levelthirty_button.setBackground(drawable);
+            }
+            else if(level_thirty_starred == 1 && level_thirty_completed == 1){
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.starredgreen);
+                levelthirty_button.setBackground(drawable);
+            }
+            else{
+                Resources res = getResources();
+                Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
+                levelthirty_button.setBackground(drawable);
+            }
         }
-        else{
-            Resources res = getResources();
-            Drawable drawable = res.getDrawable(R.drawable.notcompletedgreen);
-            levelthirty_button.setBackground(drawable);
-        }
+
 
         //if(total_completed >= 20){
         //    note.setVisibility(View.VISIBLE);
