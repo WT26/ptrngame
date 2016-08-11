@@ -127,7 +127,7 @@
                     android:background="@drawable/notcompletedgreen"
                     android:layout_width="126dp"
                     android:layout_height="126dp"
-                    android:onClick="levelTwelve"
+                    android:onClick="levelTwentyTwo"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
             </LinearLayout>
@@ -155,7 +155,7 @@
                     android:id="@+id/level3"
                     android:layout_width="126dp"
                     android:layout_height="126dp"
-                    android:onClick="levelThirteen"
+                    android:onClick="levelTwentyThree"
                     android:background="@drawable/notcompletedgreen"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
@@ -187,7 +187,7 @@
                     android:layout_width="126dp"
                     android:layout_height="126dp"
                     android:background="@drawable/notcompletedgreen"
-                    android:onClick="levelFour"
+                    android:onClick="levelTwentyFour"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
             </LinearLayout>
@@ -217,7 +217,7 @@
                     android:layout_width="126dp"
                     android:layout_height="126dp"
                     android:background="@drawable/notcompletedgreen"
-                    android:onClick="levelFive"
+                    android:onClick="levelTwentyFive"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
             </LinearLayout>
@@ -386,7 +386,7 @@
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:background="@drawable/backbuttongreen"
-        android:onClick="levelMenu"
+        android:onClick="orangeWorldMenu"
         android:visibility="visible"
         android:layout_below="@+id/horizontalScrollView"
         android:layout_alignParentLeft="true"

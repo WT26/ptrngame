@@ -18,7 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-public class levelTwentyOne extends AppCompatActivity {
+public class levelTwentyThree extends AppCompatActivity {
     public static final String myPrefsKey13 = "MyPrefsFile";
     int sounds_toggle;
 
@@ -27,11 +27,18 @@ public class levelTwentyOne extends AppCompatActivity {
     ToggleButton toggle2;
     ToggleButton toggle3;
     ToggleButton toggle4;
+    ToggleButton toggle5;
+    ToggleButton toggle6;
 
     ToggleButton togglecirc1;
     ToggleButton togglecirc2;
     ToggleButton togglecirc3;
     ToggleButton togglecirc4;
+    ToggleButton togglecirc5;
+    ToggleButton togglecirc6;
+    ToggleButton togglecirc7;
+    ToggleButton togglecirc8;
+    ToggleButton togglecirc9;
 
 
     Button back;
@@ -47,8 +54,8 @@ public class levelTwentyOne extends AppCompatActivity {
     int total_retrys;
 
     public static final String myPrefsKey3 = "MyPrefsFile";
-    int level_twentyone_completed;
-    int level_twentyone_starred;
+    int level_twentythree_completed;
+    int level_twentythree_starred;
 
     int current_toggles;
     int toggles_for_star;
@@ -57,10 +64,10 @@ public class levelTwentyOne extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level_twenty_one);
+        setContentView(R.layout.activity_level_twenty_three);
 
         current_toggles = 0;
-        toggles_for_star = 2;
+        toggles_for_star = 3;
 
         // Getting information
         SharedPreferences totalstatics = PreferenceManager.getDefaultSharedPreferences(this);
@@ -80,11 +87,20 @@ public class levelTwentyOne extends AppCompatActivity {
         toggle2 = (ToggleButton) findViewById(R.id.b2);
         toggle3 = (ToggleButton) findViewById(R.id.b3);
         toggle4 = (ToggleButton) findViewById(R.id.b4);
+        toggle5 = (ToggleButton) findViewById(R.id.b5);
+        toggle6 = (ToggleButton) findViewById(R.id.b6);
+
 
         togglecirc1 = (ToggleButton) findViewById(R.id.circle1);
         togglecirc2 = (ToggleButton) findViewById(R.id.circle2);
         togglecirc3 = (ToggleButton) findViewById(R.id.circle3);
         togglecirc4 = (ToggleButton) findViewById(R.id.circle4);
+        togglecirc5 = (ToggleButton) findViewById(R.id.circle5);
+        togglecirc6 = (ToggleButton) findViewById(R.id.circle6);
+        togglecirc7 = (ToggleButton) findViewById(R.id.circle7);
+        togglecirc8 = (ToggleButton) findViewById(R.id.circle8);
+        togglecirc9 = (ToggleButton) findViewById(R.id.circle9);
+
 
         infotext = (TextView) findViewById(R.id.textView32);
 
@@ -97,8 +113,10 @@ public class levelTwentyOne extends AppCompatActivity {
 
                 togglecirc1.toggle();
                 togglecirc2.toggle();
+                togglecirc3.toggle();
                 togglecirc1.startAnimation(animCircChange);
                 togglecirc2.startAnimation(animCircChange);
+                togglecirc3.startAnimation(animCircChange);
 
                 clickked();
             }
@@ -107,10 +125,13 @@ public class levelTwentyOne extends AppCompatActivity {
         toggle2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                togglecirc3.toggle();
                 togglecirc4.toggle();
-                togglecirc3.startAnimation(animCircChange);
+                togglecirc5.toggle();
+                togglecirc6.toggle();
+
                 togglecirc4.startAnimation(animCircChange);
+                togglecirc5.startAnimation(animCircChange);
+                togglecirc6.startAnimation(animCircChange);
 
                 clickked();
             }
@@ -119,10 +140,13 @@ public class levelTwentyOne extends AppCompatActivity {
         toggle3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                togglecirc1.toggle();
-                togglecirc3.toggle();
-                togglecirc1.startAnimation(animCircChange);
-                togglecirc3.startAnimation(animCircChange);
+                togglecirc7.toggle();
+                togglecirc8.toggle();
+                togglecirc9.toggle();
+
+                togglecirc7.startAnimation(animCircChange);
+                togglecirc8.startAnimation(animCircChange);
+                togglecirc9.startAnimation(animCircChange);
 
                 clickked();
             }
@@ -131,10 +155,43 @@ public class levelTwentyOne extends AppCompatActivity {
         toggle4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                togglecirc2.toggle();
+                togglecirc1.toggle();
                 togglecirc4.toggle();
-                togglecirc2.startAnimation(animCircChange);
+                togglecirc7.toggle();
+
+                togglecirc1.startAnimation(animCircChange);
                 togglecirc4.startAnimation(animCircChange);
+                togglecirc7.startAnimation(animCircChange);
+
+                clickked();
+            }
+        });
+
+        toggle5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+                togglecirc2.toggle();
+                togglecirc5.toggle();
+                togglecirc8.toggle();
+
+                togglecirc2.startAnimation(animCircChange);
+                togglecirc5.startAnimation(animCircChange);
+                togglecirc8.startAnimation(animCircChange);
+
+                clickked();
+            }
+        });
+
+        toggle6.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+                togglecirc3.toggle();
+                togglecirc6.toggle();
+                togglecirc9.toggle();
+
+                togglecirc3.startAnimation(animCircChange);
+                togglecirc6.startAnimation(animCircChange);
+                togglecirc9.startAnimation(animCircChange);
 
                 clickked();
             }
@@ -163,7 +220,10 @@ public class levelTwentyOne extends AppCompatActivity {
 
     public boolean CheckWinningCondition(){
         if(togglecirc1.isChecked() && togglecirc2.isChecked()
-                && togglecirc3.isChecked() && togglecirc4.isChecked()){
+                && togglecirc3.isChecked() && togglecirc4.isChecked()
+                && togglecirc5.isChecked() && togglecirc6.isChecked()
+                && togglecirc7.isChecked() && togglecirc8.isChecked()
+                && togglecirc9.isChecked() ){
             return true;
         }
         else{
@@ -178,17 +238,17 @@ public class levelTwentyOne extends AppCompatActivity {
 
 
 
-        if(level_twentyone_completed == 0){
-            level_twentyone_completed = 1;
+        if(level_twentythree_completed == 0){
+            level_twentythree_completed = 1;
             total_completed += 1;
         }
         else{
-            level_twentyone_completed = 1;
+            level_twentythree_completed = 1;
         }
 
         if(current_toggles <= toggles_for_star){
-            if(level_twentyone_starred == 0){
-                level_twentyone_starred = 1;
+            if(level_twentythree_starred == 0){
+                level_twentythree_starred = 1;
                 total_starred += 1;
                 if(sounds_toggle == 0){
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.levelcompletedsfx);
@@ -196,7 +256,7 @@ public class levelTwentyOne extends AppCompatActivity {
                 }
             }
             else{
-                level_twentyone_starred = 1;
+                level_twentythree_starred = 1;
             }
         }
 
@@ -213,8 +273,8 @@ public class levelTwentyOne extends AppCompatActivity {
         editor.putInt("TotalRetrys", total_retrys);
         editor.apply();
 
-        editor.putInt("LevelTwentyoneCompleted", level_twentyone_completed);
-        editor.putInt("LevelTwentyoneStarred", level_twentyone_starred);
+        editor.putInt("LevelTwentythreeCompleted", level_twentythree_completed);
+        editor.putInt("LevelTwentythreeStarred", level_twentythree_starred);
         editor.apply();
 
 
@@ -235,25 +295,15 @@ public class levelTwentyOne extends AppCompatActivity {
     }
 
     public void restart_level(){
-        if(togglecirc1.isChecked()){
-            togglecirc1.setChecked(false);
-        }
-        if (!togglecirc2.isChecked()){
-            togglecirc2.setChecked(true);
-        }
-        if(!togglecirc3.isChecked()){
-            togglecirc3.setChecked(true);
-        }
-        if(togglecirc4.isChecked()){
-            togglecirc4.setChecked(false);
-        }
 
-        toggle.clearAnimation();
-        toggle2.clearAnimation();
-        toggle3.clearAnimation();
+        togglesOff();
+        levelStartToggles();
+
+        //toggle.clearAnimation();
+        //toggle2.clearAnimation();
+        //toggle3.clearAnimation();
 
         current_toggles = 0;
-
     }
 
     public void clickked(){
@@ -272,6 +322,37 @@ public class levelTwentyOne extends AppCompatActivity {
     public void levelStartToggles(){
         togglecirc2.toggle();
         togglecirc3.toggle();
+        togglecirc4.toggle();
+        togglecirc7.toggle();
     }
 
+    public void togglesOff(){
+        if(togglecirc1.isChecked()){
+            togglecirc1.setChecked(false);
+        }
+        if(togglecirc2.isChecked()){
+            togglecirc2.setChecked(false);
+        }
+        if(togglecirc3.isChecked()){
+            togglecirc3.setChecked(false);
+        }
+        if(togglecirc4.isChecked()){
+            togglecirc4.setChecked(false);
+        }
+        if(togglecirc5.isChecked()){
+            togglecirc5.setChecked(false);
+        }
+        if(togglecirc6.isChecked()){
+            togglecirc6.setChecked(false);
+        }
+        if(togglecirc7.isChecked()){
+            togglecirc7.setChecked(false);
+        }
+        if(togglecirc8.isChecked()){
+            togglecirc8.setChecked(false);
+        }
+        if(togglecirc9.isChecked()){
+            togglecirc9.setChecked(false);
+        }
+    }
 }

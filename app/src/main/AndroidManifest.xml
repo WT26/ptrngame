@@ -235,7 +235,39 @@
         </activity>
         <activity
             android:name=".levelTwentyOne"
-            android:label="@string/title_activity_level_twenty"
+            android:label="title_activity_level_twenty_one"
+            android:parentActivityName=".thirdWorld" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.thirdWorld" />
+        </activity>
+        <activity
+            android:name=".levelTwentyTwo"
+            android:label="title_activity_level_twenty_two"
+            android:parentActivityName=".thirdWorld" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.thirdWorld" />
+        </activity>
+        <activity
+            android:name=".levelTwentyThree"
+            android:label="title_activity_level_twenty_three"
+            android:parentActivityName=".thirdWorld" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.thirdWorld" />
+        </activity>
+        <activity
+            android:name=".levelTwentyFour"
+            android:label="title_activity_level_twenty_four"
+            android:parentActivityName=".thirdWorld" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.thirdWorld" />
+        </activity>
+        <activity
+            android:name=".levelTwentyFive"
+            android:label="title_activity_level_twenty_five"
             android:parentActivityName=".thirdWorld" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

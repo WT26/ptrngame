@@ -74,14 +74,6 @@ public class thirdWorld extends AppCompatActivity {
 
     Button next;
 
-    //ImageView note;
-    //ImageView lightbulb;
-    //Button lock_button;
-    //Button orangeworld_button;
-
-    //int lock_counter;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -371,7 +363,7 @@ public class thirdWorld extends AppCompatActivity {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                     mp.start();
                 }
-                levelTwelve(view);
+                levelTwentyTwo(view);
             }
         });
         leveltwentythree_button.setOnClickListener(new View.OnClickListener() {
@@ -380,7 +372,7 @@ public class thirdWorld extends AppCompatActivity {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                     mp.start();
                 }
-                levelThirteen(view);
+                levelTwentyThree(view);
             }
         });
         leveltwentyfour_button.setOnClickListener(new View.OnClickListener() {
@@ -389,7 +381,7 @@ public class thirdWorld extends AppCompatActivity {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                     mp.start();
                 }
-                levelFourteen(view);
+                levelTwentyFour(view);
             }
         });
 
@@ -399,7 +391,7 @@ public class thirdWorld extends AppCompatActivity {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.selectsound);
                     mp.start();
                 }
-                levelFifteen(view);
+                levelTwentyFive(view);
             }
         });
 
@@ -800,9 +792,9 @@ public class thirdWorld extends AppCompatActivity {
         //super.onBackPressed();
     }
 
-    public void levelMenu(View view){
+    public void orangeWorldMenu(View view){
         finish();
-        Intent intent = new Intent(this, levelMenuActivity.class);
+        Intent intent = new Intent(this, orangeworld_menu.class);
         startActivity(intent);
     }
 
@@ -812,23 +804,23 @@ public class thirdWorld extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public  void levelTwelve(View view){
-        Intent intent2 = new Intent(this, levelTwelve.class);
+    public  void levelTwentyTwo(View view){
+        Intent intent2 = new Intent(this, levelTwentyTwo.class);
         startActivity(intent2);
     }
 
-    public  void levelThirteen(View view){
-        Intent intent3 = new Intent(this, levelThirteen.class);
+    public  void levelTwentyThree(View view){
+        Intent intent3 = new Intent(this, levelTwentyThree.class);
         startActivity(intent3);
     }
 
-    public  void levelFourteen(View view){
-        Intent intent4 = new Intent(this, levelFourteen.class);
+    public  void levelTwentyFour(View view){
+        Intent intent4 = new Intent(this, levelTwentyFour.class);
         startActivity(intent4);
     }
 
-    public  void levelFifteen(View view){
-        Intent intent5 = new Intent(this, levelFifteen.class);
+    public  void levelTwentyFive(View view){
+        Intent intent5 = new Intent(this, levelTwentyFive.class);
         startActivity(intent5);
     }
 
@@ -871,15 +863,4 @@ public class thirdWorld extends AppCompatActivity {
         Intent intent11 = new Intent(this, thirdWorld.class);
         startActivity(intent11);
     }
-
-
-    //public  void lockLevel(View view){
-    //    Intent intent11 = new Intent(this, lockLevel.class);
-    //    startActivity(intent11);
-    //}
-
-    //public  void orangeWorld(View view){
-    //    Intent intent11 = new Intent(this, orangeworld_menu.class);
-    //    startActivity(intent11);
-    //}
 }

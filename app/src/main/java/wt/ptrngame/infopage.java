@@ -101,6 +101,33 @@ public class infopage extends AppCompatActivity {
 
     int level_twentyone_completed;
     int level_twentyone_starred;
+
+    int level_twentytwo_completed;
+    int level_twentytwo_starred;
+
+    int level_twentythree_completed;
+    int level_twentythree_starred;
+
+    int level_twentyfour_completed;
+    int level_twentyfour_starred;
+
+    int level_twentyfive_completed;
+    int level_twentyfive_starred;
+
+    int level_twentysix_completed;
+    int level_twentysix_starred;
+
+    int level_twentyseven_completed;
+    int level_twentyseven_starred;
+
+    int level_twentyeight_completed;
+    int level_twentyeight_starred;
+
+    int level_twentynine_completed;
+    int level_twentynine_starred;
+
+    int level_thirty_completed;
+    int level_thirty_starred;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -182,6 +209,34 @@ public class infopage extends AppCompatActivity {
 
         level_twentyone_completed = levelsaves.getInt("LevelTwentyoneCompleted", 0);
         level_twentyone_starred = levelsaves.getInt("LevelTwentyoneStarred", 0);
+
+        level_twentytwo_completed = levelsaves.getInt("LevelTwentytwoCompleted", 0);
+        level_twentytwo_starred = levelsaves.getInt("LevelTwentytwoStarred", 0);
+
+        level_twentythree_completed = levelsaves.getInt("LevelTwentythreeCompleted", 0);
+        level_twentythree_starred = levelsaves.getInt("LevelTwentythreeStarred", 0);
+
+        level_twentyfour_completed = levelsaves.getInt("LevelTwentyfourCompleted", 0);
+        level_twentyfour_starred = levelsaves.getInt("LevelTwentyfourStarred", 0);
+
+        level_twentyfive_completed = levelsaves.getInt("LevelTwentyfiveCompleted", 0);
+        level_twentyfive_starred = levelsaves.getInt("LevelTwentyfiveStarred", 0);
+
+        level_twentysix_completed = levelsaves.getInt("LevelTwentysixCompleted", 0);
+        level_twentysix_starred = levelsaves.getInt("LevelTwentysixStarred", 0);
+
+        level_twentyseven_completed = levelsaves.getInt("LevelTwentysevenCompleted", 0);
+        level_twentyseven_starred = levelsaves.getInt("LevelTwentysevenStarred", 0);
+
+        level_twentyeight_completed = levelsaves.getInt("LevelTwentyeightCompleted", 0);
+        level_twentyeight_starred = levelsaves.getInt("LevelTwentyeightStarred", 0);
+
+        level_twentynine_completed = levelsaves.getInt("LevelTwentynineCompleted", 0);
+        level_twentynine_starred = levelsaves.getInt("LevelTwentynineStarred", 0);
+
+        level_thirty_completed = levelsaves.getInt("LevelThirtyCompleted", 0);
+        level_thirty_starred = levelsaves.getInt("LevelThirtyStarred", 0);
+
 
 
         infotext = (TextView) findViewById(R.id.textView23);
@@ -450,5 +505,60 @@ public class infopage extends AppCompatActivity {
         editor2.putInt("LevelTwentyoneStarred", level_twentyone_starred);
         editor2.apply();
 
+        level_twentytwo_completed = 0;
+        editor2.putInt("LevelTwentytwoCompleted", level_twentytwo_completed);
+        editor2.apply();
+        level_twentytwo_starred = 0;
+        editor2.putInt("LevelTwentytwoStarred", level_twentytwo_starred);
+        editor2.apply();
+
+        level_twentythree_completed = 0;
+        editor2.putInt("LevelTwentythreeCompleted", level_twentythree_completed);
+        editor2.apply();
+        level_twentythree_starred = 0;
+        editor2.putInt("LevelTwentythreeStarred", level_twentythree_starred);
+        editor2.apply();
+
+        level_twentyfour_completed = 0;
+        editor2.putInt("LevelTwentyfourCompleted", level_twentyfour_completed);
+        editor2.apply();
+        level_twentyfour_starred = 0;
+        editor2.putInt("LevelTwentyfourStarred", level_twentyfour_starred);
+        editor2.apply();
+
+        level_twentyfive_completed = 0;
+        editor2.putInt("LevelTwentyfiveCompleted", level_twentyfive_completed);
+        editor2.apply();
+        level_twentyfive_starred = 0;
+        editor2.putInt("LevelTwentyfiveStarred", level_twentyfive_starred);
+        editor2.apply();
+
+        level_twentysix_completed = 0;
+        editor2.putInt("LevelTwentysixCompleted", level_twentysix_completed);
+        editor2.apply();
+        level_twentysix_starred = 0;
+        editor2.putInt("LevelTwentysixStarred", level_twentysix_starred);
+        editor2.apply();
+
+        level_twentyeight_completed = 0;
+        editor2.putInt("LevelTwentyeightCompleted", level_twentyeight_completed);
+        editor2.apply();
+        level_twentyeight_starred = 0;
+        editor2.putInt("LevelTwentyeightStarred", level_twentyeight_starred);
+        editor2.apply();
+
+        level_twentynine_completed = 0;
+        editor2.putInt("LevelTwentynineCompleted", level_twentynine_completed);
+        editor2.apply();
+        level_twentynine_starred = 0;
+        editor2.putInt("LevelTwentynineStarred", level_twentynine_starred);
+        editor2.apply();
+
+        level_thirty_completed = 0;
+        editor2.putInt("LevelThirtyCompleted", level_thirty_completed);
+        editor2.apply();
+        level_thirty_starred = 0;
+        editor2.putInt("LevelThirtyStarred", level_thirty_starred);
+        editor2.apply();
     }
 }
