@@ -16,6 +16,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toolbar;
@@ -102,6 +105,9 @@ public class levelMenuActivity extends AppCompatActivity {
     Button lock_button;
     Button orangeworld_button;
 
+    LinearLayout level1lay;
+    FrameLayout level1frame;
+
     int lock_counter;
 
 
@@ -186,6 +192,8 @@ public class levelMenuActivity extends AppCompatActivity {
         lock_button = (Button) findViewById(R.id.button6);
         orangeworld_button = (Button) findViewById(R.id.button7);
 
+        level1lay = (LinearLayout) findViewById(R.id.level1lay);
+        level1frame = (FrameLayout) findViewById(R.id.framelevel1);
 
         lock_counter = 0;
 
@@ -198,6 +206,7 @@ public class levelMenuActivity extends AppCompatActivity {
         else if(level_one_starred == 1 && level_one_completed == 1){
             Resources res = getResources();
             Drawable drawable = res.getDrawable(R.drawable.starred);
+
             levelone_button.setBackground(drawable);
         }
         else{
@@ -593,6 +602,7 @@ public class levelMenuActivity extends AppCompatActivity {
         else if(level_one_starred == 1 && level_one_completed == 1){
             Resources res = getResources();
             Drawable drawable = res.getDrawable(R.drawable.starred);
+
             levelone_button.setBackground(drawable);
         }
         else{

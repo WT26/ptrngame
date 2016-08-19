@@ -246,7 +246,7 @@
                     android:layout_width="126dp"
                     android:layout_height="126dp"
                     android:background="@drawable/notcompletedgreen"
-                    android:onClick="levelSix"
+                    android:onClick="levelTwentySix"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
 

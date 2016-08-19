@@ -274,6 +274,14 @@
                 android:value="wt.ptrngame.thirdWorld" />
         </activity>
         <activity
+            android:name=".levelTwentySix"
+            android:label="title_activity_level_twenty_six"
+            android:parentActivityName=".thirdWorld" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wt.ptrngame.thirdWorld" />
+        </activity>
+        <activity
             android:name=".note"
             android:label="@string/title_activity_note"
             android:parentActivityName=".orangeworld_menu" >

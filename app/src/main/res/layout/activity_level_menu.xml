@@ -80,7 +80,8 @@
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:measureWithLargestChild="false">
+                android:measureWithLargestChild="false"
+                android:id="@+id/level1lay">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -90,14 +91,20 @@
                     android:textColor="#000000"
                     android:textIsSelectable="false" />
 
-                <Button
-                    android:id="@+id/level1"
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/framelevel1">
 
-                    android:layout_width="126dp"
-                    android:layout_height="126dp"
-                    android:onClick="levelOne"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true" />
+                    <Button
+                        android:id="@+id/level1"
+
+                        android:layout_width="126dp"
+                        android:layout_height="126dp"
+                        android:onClick="levelOne"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                </FrameLayout>
 
             </LinearLayout>
 

@@ -61,12 +61,12 @@ public class MainActivity extends AppCompatActivity {
                     mp.start();
                 }
 
-                if(orangelevel_completed != 0){
+                if(orangelevel_completed != 1){
                     levelMenu(view);
                 }
                 else {
-                    //orangeWorld(view);
-                    thirdWorld(view);
+                    orangeWorld(view);
+                    //thirdWorld(view);
                 }
             }
         });
